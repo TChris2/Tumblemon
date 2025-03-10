@@ -1,0 +1,35 @@
+Name: Flamizard
+Type1: Fire
+Type2: Flying
+Level: 50
+Health: 100
+Attack: 80
+SpecialAttack: 90
+Defense: 70
+SpecialDefense: 60
+Speed: 100
+Moves: Flame Burst, Fly, Fire Spin, Dragon Claw, Gun
+
+Name: Aquagon
+Type1: Water
+Type2: Dragon
+Level: 50
+Health: 120
+Attack: 85
+SpecialAttack: 95
+Defense: 80
+SpecialDefense: 75
+Speed: 90
+Moves: Water Pulse, Dragon Breath, Aqua Tail, Hydro Pump
+
+Name: Arceus
+Type1: Normal
+Type2: None
+Level: 50
+Health: 120
+Attack: 120
+SpecialAttack: 120
+Defense: 120
+SpecialDefense: 120
+Speed: 120
+Moves: Water Pulse, Dragon Breath, Aqua Tail, Hydro Pump

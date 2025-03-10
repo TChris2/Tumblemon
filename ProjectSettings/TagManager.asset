@@ -11,6 +11,7 @@ TagManager:
   - NavMesh
   - RT Attack
   - RT
+  - RT Kick
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Player
-  - TMachine
-  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 

@@ -1,0 +1,15 @@
+Name: Flame Burst
+Type: Fire
+Power: 50
+Accuracy: 100
+PP: 14
+Status: Burn
+Status Odds: 20
+
+Name: Fly
+Type: Flying
+Power: 20
+Accuracy: 90
+PP: 112
+Status: None
+Status Odds: 0

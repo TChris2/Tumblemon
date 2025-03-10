@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MonDatabase
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 5157aae955c823547839f7ab00417d48, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].name
+    value: Flamizard
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].type1
+    value: Fire
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].type2
+    value: Flying
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].level
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.total_health
+    value: 140
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.health
+    value: 140
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.attack
+    value: 100
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.special_attack
+    value: 110
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.defense
+    value: 90
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.special_defense
+    value: 80
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].stats.speed
+    value: 140
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].moveList.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].moveList.Array.data[0]
+    value: Flame Burst
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].moveList.Array.data[1]
+    value: Fly
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].moveList.Array.data[2]
+    value: Fire Spin
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].moveList.Array.data[3]
+    value: Dragon Claw
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].moves.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].attack_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].attack_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].special_attack_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].special_attack_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].special_defense_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].special_defense_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].defense_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].defense_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].speed_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].speed_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].accuracy_mult.numerator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].accuracy_mult.denominator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].evasion_mult.numerator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].evasion_mult.denominator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[0].status
+    value: None
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].name
+    value: Aquagon
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].type1
+    value: Water
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].type2
+    value: Dragon
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].level
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.total_health
+    value: 160
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.health
+    value: 160
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.attack
+    value: 105
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.special_attack
+    value: 115
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.defense
+    value: 100
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.special_defense
+    value: 95
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].stats.speed
+    value: 110
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].moveList.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].moveList.Array.data[0]
+    value: Water Pulse
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].moveList.Array.data[1]
+    value: Dragon Breath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].moveList.Array.data[2]
+    value: Aqua Tail
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].moveList.Array.data[3]
+    value: Hydro Pump
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].moves.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].attack_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].attack_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].special_attack_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].special_attack_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].special_defense_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].special_defense_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].defense_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].defense_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].speed_mult.numerator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].speed_mult.denominator
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].accuracy_mult.numerator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].accuracy_mult.denominator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].evasion_mult.numerator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].evasion_mult.denominator
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TumblemonList.Array.data[1].status
+    value: None
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
