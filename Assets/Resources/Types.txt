@@ -1,0 +1,5 @@
+Type: Normal
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective:
+Weak: Rock, Steel
+No Effect: Ghost

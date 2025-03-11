@@ -7,6 +7,7 @@ public class MoveInfo
 {
     public string name;
     public string type;
+    public string attackType;
     public int power;
     public int accuracy;
     public int total_pp;
@@ -14,10 +15,11 @@ public class MoveInfo
     public string status;
     public int statusOdds;
 
-    public MoveInfo (string name, string type, int power, int accuracy, int pp, string status, int statusOdds)
+    public MoveInfo (string name, string type, string attackType, int power, int accuracy, int pp, string status, int statusOdds)
     {
         this.name = name;
         this.type = type;
+        this.attackType = attackType;
         this.power = power;
         this.accuracy = accuracy;
         this.total_pp = pp;

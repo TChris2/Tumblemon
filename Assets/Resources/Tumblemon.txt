@@ -1,35 +1,23 @@
-Name: Flamizard
-Type1: Fire
-Type2: Flying
+Name: Garchomp
+Type1: Dragon
+Type2: Ground
 Level: 50
-Health: 100
-Attack: 80
-SpecialAttack: 90
-Defense: 70
-SpecialDefense: 60
-Speed: 100
-Moves: Flame Burst, Fly, Fire Spin, Dragon Claw, Gun
+Health: 108
+Attack: 130
+SpecialAttack: 80
+Defense: 95
+SpecialDefense: 85
+Speed: 102
+Moves: Dragon Breath, Crunch
 
-Name: Aquagon
+Name: Dewott
 Type1: Water
-Type2: Dragon
+Type2: 
 Level: 50
-Health: 120
-Attack: 85
-SpecialAttack: 95
-Defense: 80
-SpecialDefense: 75
-Speed: 90
-Moves: Water Pulse, Dragon Breath, Aqua Tail, Hydro Pump
-
-Name: Arceus
-Type1: Normal
-Type2: None
-Level: 50
-Health: 120
-Attack: 120
-SpecialAttack: 120
-Defense: 120
-SpecialDefense: 120
-Speed: 120
-Moves: Water Pulse, Dragon Breath, Aqua Tail, Hydro Pump
+Health: 75
+Attack: 75
+SpecialAttack: 83
+Defense: 60
+SpecialDefense: 60
+Speed: 60
+Moves: Razor Shell, Aerial Ace

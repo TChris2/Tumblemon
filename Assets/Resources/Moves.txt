@@ -1,15 +1,35 @@
-Name: Flame Burst
-Type: Fire
-Power: 50
+Name: Dragon Breath
+Type: Dragon
+Attack Type: Special
+Power: 60
 Accuracy: 100
-PP: 14
-Status: Burn
-Status Odds: 20
+PP: 20
+Status: Paralysis
+Status Odds: 30
 
-Name: Fly
+Name: Crunch
+Type: Dark
+Attack Type: Physical
+Power: 80
+Accuracy: 100
+PP: 15
+Status: None
+Status Odds: 0
+
+Name: Razor Shell
+Type: Water
+Attack Type: Physical
+Power: 75
+Accuracy: 95
+PP: 10
+Status: None
+Status Odds: 0
+
+Name: Aerial Ace
 Type: Flying
-Power: 20
-Accuracy: 90
-PP: 112
+Attack Type: Physical
+Power: 60
+Accuracy: 100
+PP: 20
 Status: None
 Status Odds: 0
