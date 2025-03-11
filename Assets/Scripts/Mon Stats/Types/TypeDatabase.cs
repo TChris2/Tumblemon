@@ -1,30 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 [System.Serializable]
 public class TypeDatabase : MonoBehaviour
 {
-    public List<MoveInfo> MoveList = new List<MoveInfo>();
+    public List<TypeInfo> TypeList = new List<TypeInfo>();
 
-    private void Start()
+    private void Awake()
     {
-        LoadMoveData();
+        LoadTypeData();
     }
 
-    private void LoadMoveData()
+    private void LoadTypeData()
     {
         // Load the text file from Resources
-        TextAsset textAsset = Resources.Load<TextAsset>("Moves");
+        TextAsset textAsset = Resources.Load<TextAsset>("Types");
 
         if (textAsset == null)
         {
-            Debug.LogError("Moves.txt not found in Resources folder.");
+            Debug.LogError("Types.txt not found in Resources folder.");
             return;
         }
 
         string[] lines = textAsset.text.Split('\n');
-        MoveInfo currentMove = null;
+        TypeInfo currentType = null;
 
         foreach (string line in lines)
         {
@@ -40,55 +41,65 @@ public class TypeDatabase : MonoBehaviour
             switch (key)
             {
                 case "Name":
-                    if (currentMove != null) 
+                    if (currentType != null) 
                     {
-                        MoveInfo newMove = new MoveInfo(currentMove.name, currentMove.type, currentMove.attackType, 
-                            currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds);
-                        MoveList.Add(newMove);
+                        TypeInfo newType = currentType;
+                        TypeList.Add(newType);
                     }
-                    currentMove = new MoveInfo(value, "", "", 0, 0, 0, "", 0);
+                    currentType = new TypeInfo();
+                    currentType.name = value;
                     break;
-                case "Type":
-                    if (currentMove != null) currentMove.type = value;
+                case "Normal":
+                    if (currentType != null) 
+                    {
+                        string[] types = value.Split(new string[] { ", " }, System.StringSplitOptions.None);
+                        foreach (string type in types)
+                        {
+                            currentType.normal.Add((type.Trim()));
+                        }
+                    }
                     break;
-                case "Attack Type":
-                    if (currentMove != null) currentMove.attackType = value;
+                case "Effective":
+                    if (currentType != null) 
+                    {
+                        string[] types = value.Split(new string[] { ", " }, System.StringSplitOptions.None);
+                        foreach (string type in types)
+                        {
+                            currentType.effective.Add((type.Trim()));
+                        }
+                    }
                     break;
-                case "Power":
-                    if (currentMove != null) currentMove.power = int.Parse(value);
+                case "Weak":
+                    if (currentType != null) 
+                    {
+                        string[] types = value.Split(new string[] { ", " }, System.StringSplitOptions.None);
+                        foreach (string type in types)
+                        {
+                            currentType.weak.Add((type.Trim()));
+                        }
+                    }
                     break;
-                case "Accuracy":
-                    if (currentMove != null) currentMove.accuracy = int.Parse(value);
-                    break;
-                case "PP":
-                    if (currentMove != null) currentMove.pp = int.Parse(value);
-                    break;
-                case "Status":
-                    if (currentMove != null) currentMove.status = value;
-                    break;
-                case "Status Odds":
-                    if (currentMove != null) currentMove.statusOdds = int.Parse(value);
+                case "No Effect":
+                    if (currentType != null) 
+                    {
+                        string[] types = value.Split(new string[] { ", " }, System.StringSplitOptions.None);
+                        foreach (string type in types)
+                        {
+                            currentType.no_effect.Add((type.Trim()));
+                        }
+                    }
                     break;
             }
         }
 
-        if (currentMove != null) 
+        if (currentType != null) 
         {
-            MoveInfo newMove = new MoveInfo(currentMove.name, currentMove.type, currentMove.attackType, 
-                currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds);
-            MoveList.Add(newMove);
+            TypeList.Add(currentType);
         }
     }
 
-    public MoveInfo GetMoveByName(string moveName)
+    public TypeInfo GetTypeByName(string typeName)
     {
-        MoveInfo move = MoveList.Find(move => move.name == moveName);
-
-        if (move == null)
-        {
-            return new MoveInfo("", "", "", 0, 0, 0, "", 0);
-        }
-
-        return move;
+        return TypeList.Find(type => type.name == typeName);
     }
 }

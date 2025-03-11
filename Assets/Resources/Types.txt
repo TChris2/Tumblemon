@@ -1,5 +1,107 @@
-Type: Normal
-Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground Flying, Psychic, Bug, Dragon, Dark, Fairy
-Effective:
+Name: Normal
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: 
 Weak: Rock, Steel
 No Effect: Ghost
+
+Name: Fire
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Grass, Ice, Bug, Steel
+Weak: Fire, Water, Rock, Dragon
+No Effect: 
+
+Name: Water
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Fire, Ground, Rock
+Weak: Water, Grass, Dragon
+No Effect: 
+
+Name: Electric
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Water, Flying
+Weak: Electric, Grass, Dragon
+No Effect: Ground
+
+Name: Grass
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Water, Ground, Rock
+Weak: Fire, Grass, Poison, Flying, Bug, Dragon, Steel
+No Effect: 
+
+Name: Ice
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Grass, Ground, Flying, Dragon
+Weak: Fire, Water, Ice, Steel
+No Effect: 
+
+Name: Fighting
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Normal, Ice, Rock, Dark, Steel
+Weak: Poison, Flying, Psychic, Bug, Fairy
+No Effect: Ghost
+
+Name: Poison
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Grass, Fairy
+Weak: Poison, Ground, Rock, Ghost
+No Effect: Steel
+
+Name: Ground
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Fire, Electric, Poison, Rock, Steel
+Weak: Grass, Bug
+No Effect: Flying
+
+Name: Flying
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Grass, Fighting, Bug
+Weak: Electric, Rock, Steel
+No Effect: 
+
+Name: Psychic
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Fighting, Poison
+Weak: Psychic, Steel
+No Effect: Dark
+
+Name: Bug
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Grass, Psychic, Dark
+Weak: Fire, Fighting, Poison, Flying, Ghost, Steel, Fairy
+No Effect: 
+
+Name: Rock
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Fire, Ice, Flying, Bug
+Weak: Fighting, Ground, Steel
+No Effect: 
+
+Name: Ghost
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Psychic, Ghost
+Weak: Dark
+No Effect: Normal
+
+Name: Dragon
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Dragon
+Weak: Steel
+No Effect: Fairy
+
+Name: Dark
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Psychic, Ghost
+Weak: Fighting, Dark, Fairy
+No Effect: 
+
+Name: Steel
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Ice, Rock, Fairy
+Weak: Fire, Water, Electric, Steel
+No Effect: 
+
+Name: Fairy
+Normal: Normal, Fire, Water, Electric, Grass, Ice, Fighting, Poison, Ground, Flying, Psychic, Bug, Dragon, Dark, Fairy
+Effective: Fighting, Dragon, Dark
+Weak: Fire, Poison, Steel
+No Effect: 

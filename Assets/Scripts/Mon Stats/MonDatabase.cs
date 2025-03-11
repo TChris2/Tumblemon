@@ -8,10 +8,12 @@ public class MonDatabase : MonoBehaviour
 {
     public List<MonInfo> TumblemonList = new List<MonInfo>();
     private MoveDatabase moveDatabase;
+    private TypeDatabase typeDatabase;
 
     private void Start()
     {
         moveDatabase = FindObjectOfType<MoveDatabase>();
+        typeDatabase = FindObjectOfType<TypeDatabase>();
         LoadTumblemonData();
     }
 
@@ -45,19 +47,21 @@ public class MonDatabase : MonoBehaviour
                 case "Name":
                     if (currentMon != null) 
                     {
-                        MonInfo newMon = new MonInfo(currentMon.name, currentMon.type1, currentMon.type2, 
-                            currentMon.level, new Stats(currentMon.stats.health, currentMon.stats.attack, currentMon.stats.special_attack, 
-                            currentMon.stats.defense, currentMon.stats.special_defense, currentMon.stats.speed, currentMon.level));
-                        newMon.moveList = currentMon.moveList;
-                        TumblemonList.Add(newMon);
+                        SaveMon(currentMon);
                     }
-                    currentMon = new MonInfo(value, "", "", 1, new Stats(0, 0, 0, 0, 0, 0, 0));
+                    currentMon = new MonInfo(value, 1, new Stats(0, 0, 0, 0, 0, 0, 0));
                     break;
                 case "Type1":
-                    if (currentMon != null) currentMon.type1 = value;
+                    if (currentMon != null)
+                    {
+                        currentMon.type1 = typeDatabase.GetTypeByName(value);
+                    } 
                     break;
                 case "Type2":
-                    if (currentMon != null) currentMon.type2 = value;
+                    if (currentMon != null)
+                    {
+                        currentMon.type2 = typeDatabase.GetTypeByName(value);
+                    }  
                     break;
                 case "Level":
                     if (currentMon != null) currentMon.level = int.Parse(value);
@@ -68,13 +72,13 @@ public class MonDatabase : MonoBehaviour
                 case "Attack":
                     if (currentMon != null) currentMon.stats.attack = int.Parse(value);
                     break;
-                case "SpecialAttack":
+                case "Special Attack":
                     if (currentMon != null) currentMon.stats.special_attack = int.Parse(value);
                     break;
                 case "Defense":
                     if (currentMon != null) currentMon.stats.defense = int.Parse(value);
                     break;
-                case "SpecialDefense":
+                case "Special Defense":
                     if (currentMon != null) currentMon.stats.special_defense = int.Parse(value);
                     break;
                 case "Speed":
@@ -97,12 +101,20 @@ public class MonDatabase : MonoBehaviour
 
         if (currentMon != null) 
         {
-            MonInfo newMon = new MonInfo(currentMon.name, currentMon.type1, currentMon.type2, 
-                currentMon.level, new Stats(currentMon.stats.health, currentMon.stats.attack, currentMon.stats.special_attack, 
-                currentMon.stats.defense, currentMon.stats.special_defense, currentMon.stats.speed, currentMon.level));
-            newMon.moveList = currentMon.moveList;
-            TumblemonList.Add(newMon);
+            SaveMon(currentMon);
         }
+    }
+    
+    private void SaveMon(MonInfo currentMon)
+    {
+        MonInfo newMon = new MonInfo(currentMon.name, currentMon.level, 
+        new Stats(currentMon.stats.health, currentMon.stats.attack, currentMon.stats.special_attack, 
+            currentMon.stats.defense, currentMon.stats.special_defense, currentMon.stats.speed, currentMon.level));
+        newMon.moveList = currentMon.moveList;
+        newMon.type1 = currentMon.type1;
+        newMon.type2 = currentMon.type2;
+        newMon.moveList = currentMon.moveList;
+        TumblemonList.Add(newMon);
     }
 
     public MonInfo GetMonByName(string monName)

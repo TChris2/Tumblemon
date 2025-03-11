@@ -26,7 +26,7 @@ public class MonParty : MonoBehaviour
         if (selectedMon != null & tumblemonParty.Count < 6)
         {
             // Create a new instance to avoid reference issues
-            MonInfo newMon = new MonInfo(selectedMon.name, selectedMon.type1, selectedMon.type2, selectedMon.level, selectedMon.stats);
+            MonInfo newMon = new MonInfo(selectedMon.name, selectedMon.level, selectedMon.stats);
             
             tumblemonParty.Add(newMon);
             Debug.Log(monName + " added to party!");

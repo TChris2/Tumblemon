@@ -6,8 +6,8 @@ using UnityEngine;
 public class MonInfo
 {
     public string name;
-    public string type1;
-    public string type2;
+    public TypeInfo type1;
+    public TypeInfo type2;
     public int level;
     public Stats stats;
     // List of all moves
@@ -24,11 +24,9 @@ public class MonInfo
     public StageMultiplier evasion_mult; 
     public string status;
 
-    public MonInfo (string name, string type1, string type2, int level, Stats stats)
+    public MonInfo (string name, int level, Stats stats)
     {
         this.name = name;
-        this.type1 = type1;
-        this.type2 = type2;
         this.level = level;
         this.stats = stats;
         this.attack_mult = new StageMultiplier(2,2);

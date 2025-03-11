@@ -42,9 +42,7 @@ public class MoveDatabase : MonoBehaviour
                 case "Name":
                     if (currentMove != null) 
                     {
-                        MoveInfo newMove = new MoveInfo(currentMove.name, currentMove.type, currentMove.attackType, 
-                            currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds);
-                        MoveList.Add(newMove);
+                        SaveMove(currentMove);
                     }
                     currentMove = new MoveInfo(value, "", "", 0, 0, 0, "", 0);
                     break;
@@ -74,21 +72,19 @@ public class MoveDatabase : MonoBehaviour
 
         if (currentMove != null) 
         {
-            MoveInfo newMove = new MoveInfo(currentMove.name, currentMove.type, currentMove.attackType, 
-                currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds);
-            MoveList.Add(newMove);
+            SaveMove(currentMove);
         }
+    }
+
+    private void SaveMove(MoveInfo currentMove)
+    {
+        MoveInfo newMove = new MoveInfo(currentMove.name, currentMove.type, currentMove.attackType, 
+            currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds);
+        MoveList.Add(newMove);
     }
 
     public MoveInfo GetMoveByName(string moveName)
     {
-        MoveInfo move = MoveList.Find(move => move.name == moveName);
-
-        if (move == null)
-        {
-            return new MoveInfo("", "", "", 0, 0, 0, "", 0);
-        }
-
-        return move;
+        return MoveList.Find(move => move.name == moveName);
     }
 }

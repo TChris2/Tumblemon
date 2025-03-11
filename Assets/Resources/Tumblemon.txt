@@ -4,9 +4,9 @@ Type2: Ground
 Level: 50
 Health: 108
 Attack: 130
-SpecialAttack: 80
+Special Attack: 80
 Defense: 95
-SpecialDefense: 85
+Special Defense: 85
 Speed: 102
 Moves: Dragon Breath, Crunch
 
@@ -16,8 +16,8 @@ Type2:
 Level: 50
 Health: 75
 Attack: 75
-SpecialAttack: 83
+Special Attack: 83
 Defense: 60
-SpecialDefense: 60
+Special Defense: 60
 Speed: 60
 Moves: Razor Shell, Aerial Ace

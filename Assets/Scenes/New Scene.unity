@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 552614110}
   - component: {fileID: 552614109}
   - component: {fileID: 552614108}
+  - component: {fileID: 552614111}
   m_Layer: 0
   m_Name: Tumblemon Database
   m_TagString: Untagged
@@ -345,6 +346,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552614111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552614107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afbb0c7508b744459b897b3ee257033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeList: []
 --- !u!1 &2057341315
 GameObject:
   m_ObjectHideFlags: 0
