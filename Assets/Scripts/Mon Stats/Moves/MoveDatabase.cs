@@ -7,7 +7,7 @@ public class MoveDatabase : MonoBehaviour
 {
     public List<MoveInfo> MoveList = new List<MoveInfo>();
 
-    private void Start()
+    private void Awake()
     {
         LoadMoveData();
     }

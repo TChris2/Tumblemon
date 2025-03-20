@@ -23,6 +23,7 @@ public class MonInfo
     public StageMultiplier accuracy_mult; 
     public StageMultiplier evasion_mult; 
     public string status;
+    public int priority;
 
     public MonInfo (string name, int level, Stats stats)
     {
@@ -37,5 +38,6 @@ public class MonInfo
         this.accuracy_mult = new StageMultiplier(3,3); 
         this.evasion_mult = new StageMultiplier(3,3);
         this.status = "None";
+        this.priority = 0;
     }
 }

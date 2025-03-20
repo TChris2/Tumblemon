@@ -14,6 +14,7 @@ public class MoveInfo
     public int pp;
     public string status;
     public int statusOdds;
+    public int priority;
 
     public MoveInfo (string name, string type, string attackType, int power, int accuracy, int pp, string status, int statusOdds)
     {
@@ -26,5 +27,6 @@ public class MoveInfo
         this.pp = total_pp;
         this.status = status;
         this.statusOdds = statusOdds;
+        this.priority = 0;
     }
 }

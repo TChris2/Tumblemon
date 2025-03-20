@@ -9,9 +9,12 @@ public class MonDatabase : MonoBehaviour
     public List<MonInfo> TumblemonList = new List<MonInfo>();
     private MoveDatabase moveDatabase;
     private TypeDatabase typeDatabase;
+    public bool isMonDatabaseLoaded;
 
     private void Start()
     {
+        isMonDatabaseLoaded = false;
+
         moveDatabase = FindObjectOfType<MoveDatabase>();
         typeDatabase = FindObjectOfType<TypeDatabase>();
         LoadTumblemonData();
@@ -103,6 +106,8 @@ public class MonDatabase : MonoBehaviour
         {
             SaveMon(currentMon);
         }
+
+        isMonDatabaseLoaded = true;
     }
     
     private void SaveMon(MonInfo currentMon)

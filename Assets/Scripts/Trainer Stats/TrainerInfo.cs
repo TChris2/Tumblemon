@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class TrainerInfo
+{
+    public string name;
+    public int attack_priority;
+    public int heal_priority;
+    public int swap_priority;
+
+    public TrainerInfo(string name, int attack_priority, int heal_priority, int swap_priority)
+    {
+        this.name = name;
+        this.attack_priority = attack_priority;
+        this.heal_priority = heal_priority;
+        this.swap_priority = swap_priority;
+    }
+}
