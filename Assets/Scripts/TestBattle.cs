@@ -197,6 +197,7 @@ public class TestBattle : MonoBehaviour
 
         for (int i = 0; i < moves.Count; i++)
         {
+            AttackingParty.moveSelected = moves[i];
             if (DamageCal(AttackingParty, DefendingParty) > bestDamage)
                 bestMove = moves[i];
         }
