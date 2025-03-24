@@ -158,7 +158,7 @@ public class TestBattle : MonoBehaviour
     (string, MoveInfo, int) TrainerActionDecide(MonParty AttackingParty, MonParty DefendingParty)
     {
         // Deciding which move is best +priority of it
-        MoveInfo moveSelected = MoveSelect(AttackingParty.MonTeam[AttackingParty.currentMon].moves);
+        MoveInfo moveSelected = MoveSelect(AttackingParty.MonTeam[AttackingParty.currentMon].moves, AttackingParty, DefendingParty);
 
         // Thing for deciding to heal + priority
 
@@ -182,7 +182,7 @@ public class TestBattle : MonoBehaviour
         return (AttackingParty, DefendingParty);
     }
 
-    MoveInfo MoveSelect(List<MoveInfo> moves)
+    MoveInfo MoveSelect(List<MoveInfo> moves, MonParty AttackingParty, MonParty DefendingParty)
     {
         /*Function recieves:
          * None
@@ -192,9 +192,18 @@ public class TestBattle : MonoBehaviour
          * INT 1-4
         */
 
-        int randomNum = Random.Range(0, moves.Count);
-        MoveInfo move = moves[randomNum];
-        return move;
+        int bestDamage = 0;
+        MoveInfo bestMove = moves[0];
+
+        for (int i = 0; i < moves.Count; i++)
+        {
+            if (DamageCal(AttackingParty, DefendingParty) > bestDamage)
+                bestMove = moves[i];
+        }
+
+        //int randomNum = Random.Range(0, moves.Count);
+        //MoveInfo move = moves[randomNum];
+        return bestMove;
     }
 
     int DamageCal(MonParty AttackingParty, MonParty DefendingParty)
