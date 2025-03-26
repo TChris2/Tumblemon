@@ -1,9 +1,11 @@
 Name: Trainer 1
 Attack Priority: 2
+Heal Threshold: 40
 Heal Priority: 2
 Swap Priority: 2
 
 Name: Trainer 2
 Attack Priority: 2
+Heal Threshold: 40
 Heal Priority: 2
 Swap Priority: 2

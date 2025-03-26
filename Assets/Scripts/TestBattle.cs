@@ -22,18 +22,17 @@ public class TestBattle : MonoBehaviour
         StartCoroutine(TumblemonBattle());
     }
 
-    void UpdateText()
+    void UpdateText(MonParty Party1, MonParty Party2)
     {
-        Mon1Text.text = $"{Trainer1Party.MonTeam[Trainer1Party.currentMon].name}: {Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health}";
-        Mon2Text.text = $"{Trainer2Party.MonTeam[Trainer2Party.currentMon].name}: {Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health}";
+        Mon1Text.text = $"{Party1.MonTeam[Party1.currentMon].name}: {Party1.MonTeam[Party1.currentMon].stats.health}";
+        Mon2Text.text = $"{Party2.MonTeam[Party2.currentMon].name}: {Party2.MonTeam[Party2.currentMon].stats.health}";
     }
 
     private IEnumerator TumblemonBattle()
     {
         yield return new WaitForSeconds(1);
         Debug.Log("BATTLE BEGINS NOW");
-        Mon1Text.text = $"{Trainer1Party.MonTeam[Trainer1Party.currentMon].name}: {Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health}";
-        Mon2Text.text = $"{Trainer2Party.MonTeam[Trainer2Party.currentMon].name}: {Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health}";
+        UpdateText(Trainer1Party, Trainer2Party);
 
         // Loops until on of the trainers runs out of mons
         while (true)
@@ -50,8 +49,8 @@ public class TestBattle : MonoBehaviour
             Trainer2Party.action = T2action;
             Trainer2Party.moveSelected = T2moveSelected;
 
-            // Intializes var
-            var(AttackingParty, DefendingParty) = (Trainer1Party, Trainer1Party);
+            // Intializes vars
+            var(AttackingParty, DefendingParty, isGameOver) = (Trainer1Party, Trainer1Party, false);
 
             // ADD HEAL & SWAP LOGIC HERE AS THOSE OCCUR BEFORE EITHER CAN ATTACK
             
@@ -59,69 +58,33 @@ public class TestBattle : MonoBehaviour
             if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.speed > Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.speed)
             {
                 Debug.Log($"{Trainer1Party.Trainer.name} GOES FIRST!");
-                
-                if (Trainer1Party.action == "Attack")
-                {
-                    (AttackingParty, DefendingParty) = TrainerAttack(Trainer1Party, Trainer2Party);
-                    Trainer1Party = AttackingParty;
-                    Trainer2Party = DefendingParty;
-                }
-                UpdateText();
-                if (Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health <= 0)
-                {
-                    Debug.Log($"{Trainer2Party.MonTeam[Trainer2Party.currentMon].name} HAS FAINTED!");
+                (AttackingParty, DefendingParty, isGameOver) = TrainerActionEnact(Trainer1Party, Trainer2Party, true, true);
+                Trainer1Party = AttackingParty;
+                Trainer2Party = DefendingParty;
 
-                    // Checks to see if trainer has run of mons
-                    trainer2Loss = IsPartyDead(Trainer2Party);
-                    if (trainer2Loss)
-                    {
-                        winningTrainer = Trainer1Party.Trainer.name;
-                        break;
-                    }
-                    // ADD LOGIC HERE FOR SWAPPING IF MON IS DEAD
-                }
-                else if (Trainer2Party.action == "Attack")
-                {
-                    Debug.Log($"{Trainer2Party.Trainer.name} GOES SECOND!");
-                    (AttackingParty, DefendingParty) = TrainerAttack(Trainer2Party, Trainer1Party);
-                    Trainer2Party = AttackingParty;
-                    Trainer1Party = DefendingParty;
-                }
-                UpdateText();
+                Debug.Log($"{Trainer2Party.Trainer.name} GOES SECOND!");
+                (AttackingParty, DefendingParty, isGameOver) = TrainerActionEnact(Trainer2Party, Trainer1Party, false, false);
+                Trainer2Party = AttackingParty;
+                Trainer1Party = DefendingParty;
+
+                if (isGameOver)
+                    break;
             }
             // Trainer 2 goes first
             else
             {
                 Debug.Log($"{Trainer2Party.Trainer.name} GOES FIRST!");
+                (AttackingParty, DefendingParty, isGameOver) = TrainerActionEnact(Trainer2Party, Trainer1Party, true, false);
+                Trainer2Party = AttackingParty;
+                Trainer1Party = DefendingParty;
 
-                if (Trainer2Party.action == "Attack")
-                {
-                    (AttackingParty, DefendingParty) = TrainerAttack(Trainer2Party, Trainer1Party);
-                    Trainer2Party = AttackingParty;
-                    Trainer1Party = DefendingParty;
-                }
-                UpdateText();
-                if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health <= 0)
-                {
-                    Debug.Log($"{Trainer1Party.MonTeam[Trainer1Party.currentMon].name} HAS FAINTED!");
+                Debug.Log($"{Trainer1Party.Trainer.name} GOES SECOND!");
+                (AttackingParty, DefendingParty, isGameOver) = TrainerActionEnact(Trainer1Party, Trainer2Party, false, true);
+                Trainer1Party = AttackingParty;
+                Trainer2Party = DefendingParty;
 
-                    // Checks to see if trainer has run of mons
-                    trainer1Loss = IsPartyDead(Trainer1Party);
-                    if (trainer1Loss)
-                    {
-                        winningTrainer = Trainer2Party.Trainer.name;
-                        break;
-                    }
-                    // ADD LOGIC HERE FOR SWAPPING IF MON IS DEAD
-                }
-                else if (Trainer1Party.action == "Attack")
-                {
-                    Debug.Log($"{Trainer1Party.Trainer.name} GOES SECOND!");
-                    (AttackingParty, DefendingParty) = TrainerAttack(Trainer1Party, Trainer2Party);
-                    Trainer1Party = AttackingParty;
-                    Trainer2Party = DefendingParty;
-                }
-                UpdateText();
+                if (isGameOver)
+                    break;
             }
 
             // 2nd check to see if the trainer has run out of mons after they both do their actions
@@ -157,21 +120,83 @@ public class TestBattle : MonoBehaviour
     // Decides Trainer action
     (string, MoveInfo, int) TrainerActionDecide(MonParty AttackingParty, MonParty DefendingParty)
     {
+        int attack_priority = 0;
+        int heal_priority = 0;
+        int swap_priority = 0;
+        string action = "";
+
         // Deciding which move is best +priority of it
         MoveInfo moveSelected = MoveSelect(AttackingParty.MonTeam[AttackingParty.currentMon].moves, AttackingParty, DefendingParty);
 
         // Thing for deciding to heal + priority
+        if ((float)AttackingParty.MonTeam[AttackingParty.currentMon].stats.health / 
+            (float)AttackingParty.MonTeam[AttackingParty.currentMon].stats.total_health <= (float)AttackingParty.Trainer.heal_threshold / 100)
+            heal_priority = AttackingParty.Trainer.heal_priority;
 
         // Thing for deciding to swap mons + their priority
         int currentMon = 0;
 
-        //ADD IF STATEMENTS here to decide which has the highest priority
-        string action = "Attack";
+        // ADD IF STATEMENTS here to decide which has the highest priority
+        if (attack_priority >= heal_priority && attack_priority >= swap_priority)
+            action = "Attack";
+        else if (heal_priority >= attack_priority && heal_priority >= swap_priority)
+            action = "Heal";
+        else if (swap_priority >= attack_priority && swap_priority >= heal_priority)
+            action = "Swap";
         return (action, moveSelected, currentMon);
     }
 
+    // Enacts Trainer's Attack
+    (MonParty, MonParty, bool) TrainerActionEnact(MonParty ActingParty, MonParty NonActingParty, bool isFirst, bool isTrainer1)
+    {
+        // Intializes var
+        var(AttackingParty, DefendingParty) = (ActingParty, ActingParty);
+
+        if (isFirst) {
+            if (ActingParty.action == "Attack")
+            {
+                (AttackingParty, DefendingParty) = Attack(ActingParty, NonActingParty);
+                ActingParty = AttackingParty;
+                NonActingParty = DefendingParty;
+
+                if (isTrainer1)
+                    UpdateText(ActingParty, NonActingParty);
+                else   
+                    UpdateText(NonActingParty, ActingParty);
+            }
+        }    
+        else
+        {
+            if (ActingParty.MonTeam[ActingParty.currentMon].stats.health <= 0)
+            {
+                Debug.Log($"{ActingParty.MonTeam[ActingParty.currentMon].name} HAS FAINTED!");
+
+                // Checks to see if trainer has run of mons
+                trainer2Loss = IsPartyDead(ActingParty);
+                if (trainer2Loss)
+                {
+                    winningTrainer = NonActingParty.Trainer.name;
+                    return (ActingParty, NonActingParty, true);
+                }
+                // ADD LOGIC HERE FOR SWAPPING IF MON IS DEAD
+            }
+            else if (ActingParty.action == "Attack")
+            {
+                (AttackingParty, DefendingParty) = Attack(ActingParty, NonActingParty);
+                ActingParty = AttackingParty;
+                NonActingParty = DefendingParty;
+            }
+            if (isTrainer1)
+                UpdateText(ActingParty, NonActingParty);
+            else   
+                UpdateText(NonActingParty, ActingParty);
+        }
+
+        return (ActingParty, NonActingParty, false);
+    }
+
     // Enacts Trainer Attack
-    (MonParty, MonParty) TrainerAttack(MonParty AttackingParty, MonParty DefendingParty)
+    (MonParty, MonParty) Attack(MonParty AttackingParty, MonParty DefendingParty)
     {
         Debug.Log($"{AttackingParty.Trainer.name} Attacks");
         DefendingParty.MonTeam[DefendingParty.currentMon].stats.health -= DamageCal(AttackingParty, DefendingParty);
