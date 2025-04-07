@@ -52,7 +52,7 @@ public class MonDatabase : MonoBehaviour
                     {
                         SaveMon(currentMon);
                     }
-                    currentMon = new MonInfo(value, 1, new Stats(0, 0, 0, 0, 0, 0, 0));
+                    currentMon = new MonInfo(value, 1, new Stats(0, 0, 0, 0, 0, 0, 0), "");
                     break;
                 case "Type1":
                     if (currentMon != null)
@@ -99,6 +99,9 @@ public class MonDatabase : MonoBehaviour
                         }
                     }
                     break;
+                case "Sprite Name":
+                    if (currentMon != null) currentMon.spriteName = value;
+                    break;
             }
         }
 
@@ -114,7 +117,7 @@ public class MonDatabase : MonoBehaviour
     {
         MonInfo newMon = new MonInfo(currentMon.name, currentMon.level, 
         new Stats(currentMon.stats.health, currentMon.stats.attack, currentMon.stats.special_attack, 
-            currentMon.stats.defense, currentMon.stats.special_defense, currentMon.stats.speed, currentMon.level));
+            currentMon.stats.defense, currentMon.stats.special_defense, currentMon.stats.speed, currentMon.level), currentMon.spriteName);
         newMon.moveList = currentMon.moveList;
         newMon.type1 = currentMon.type1;
         newMon.type2 = currentMon.type2;

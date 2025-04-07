@@ -6,6 +6,7 @@ Accuracy: 100
 PP: 20
 Status: Paralysis
 Status Odds: 30
+Animation Name: None
 
 Name: Crunch
 Type: Dark
@@ -15,6 +16,7 @@ Accuracy: 100
 PP: 15
 Status: None
 Status Odds: 0
+Animation Name: None
 
 Name: Razor Shell
 Type: Water
@@ -24,6 +26,7 @@ Accuracy: 95
 PP: 10
 Status: None
 Status Odds: 0
+Animation Name: None
 
 Name: Aerial Ace
 Type: Flying
@@ -33,3 +36,4 @@ Accuracy: 100
 PP: 20
 Status: None
 Status Odds: 0
+Animation Name: None

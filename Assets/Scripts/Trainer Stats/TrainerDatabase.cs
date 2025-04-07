@@ -44,7 +44,7 @@ public class TrainerDatabase : MonoBehaviour
                     {
                         SaveTrainer(currentTrainer);
                     }
-                    currentTrainer = new TrainerInfo(value, 0, 0, 0, 0);
+                    currentTrainer = new TrainerInfo(value, 0, 0, 0, 0, "");
                     break;
                 case "Attack Priority":
                     if (currentTrainer != null) currentTrainer.attack_priority = int.Parse(value);
@@ -58,6 +58,9 @@ public class TrainerDatabase : MonoBehaviour
                 case "Swap Priority":
                     if (currentTrainer != null) currentTrainer.swap_priority = int.Parse(value);
                     break;
+                case "Sprite Name":
+                    if (currentTrainer != null) currentTrainer.spriteName = value;
+                    break;
             }
         }
 
@@ -69,8 +72,8 @@ public class TrainerDatabase : MonoBehaviour
 
     private void SaveTrainer(TrainerInfo currentTrainer)
     {
-        TrainerInfo newTrainer = new TrainerInfo(currentTrainer.name, currentTrainer.attack_priority, currentTrainer.heal_threshold, currentTrainer.heal_priority, 
-            currentTrainer.swap_priority);
+        TrainerInfo newTrainer = new TrainerInfo(currentTrainer.name, currentTrainer.attack_priority, 
+            currentTrainer.heal_threshold, currentTrainer.heal_priority, currentTrainer.swap_priority, currentTrainer.spriteName);
         TrainerList.Add(newTrainer);
     }
 

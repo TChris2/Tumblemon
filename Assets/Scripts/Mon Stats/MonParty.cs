@@ -11,6 +11,8 @@ public class MonParty : MonoBehaviour
     private MonDatabase monDatabase;
     private MoveDatabase moveDatabase;
     private TrainerDatabase trainerDatabase;
+    // Keeps Track of the amt of potions the user has
+    public int potionCount = 3;
     // Keeps track of which mon is currently on the field
     public int currentMon = 0;
     // Keeps track of which move the current mon will use in battle

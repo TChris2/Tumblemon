@@ -15,8 +15,10 @@ public class MoveInfo
     public string status;
     public int statusOdds;
     public int priority;
+    public string animationName;
 
-    public MoveInfo (string name, string type, string attackType, int power, int accuracy, int pp, string status, int statusOdds)
+    public MoveInfo (string name, string type, string attackType, int power, int accuracy, int pp, string status, 
+        int statusOdds, string animationName)
     {
         this.name = name;
         this.type = type;
@@ -28,5 +30,6 @@ public class MoveInfo
         this.status = status;
         this.statusOdds = statusOdds;
         this.priority = 0;
+        this.animationName = animationName;
     }
 }

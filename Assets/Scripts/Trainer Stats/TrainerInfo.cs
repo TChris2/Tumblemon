@@ -10,13 +10,15 @@ public class TrainerInfo
     public int heal_threshold;
     public int heal_priority;
     public int swap_priority;
+    public string spriteName;
 
-    public TrainerInfo(string name, int attack_priority, int heal_threshold, int heal_priority, int swap_priority)
+    public TrainerInfo(string name, int attack_priority, int heal_threshold, int heal_priority, int swap_priority, string spriteName)
     {
         this.name = name;
         this.attack_priority = attack_priority;
         this.heal_threshold = heal_threshold;
         this.heal_priority = heal_priority;
         this.swap_priority = swap_priority;
+        this.spriteName = spriteName;
     }
 }

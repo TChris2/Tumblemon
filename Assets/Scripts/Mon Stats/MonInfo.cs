@@ -24,8 +24,9 @@ public class MonInfo
     public StageMultiplier evasion_mult; 
     public string status;
     public int priority;
+    public string spriteName;
 
-    public MonInfo (string name, int level, Stats stats)
+    public MonInfo (string name, int level, Stats stats, string spriteName)
     {
         this.name = name;
         this.level = level;
@@ -39,5 +40,6 @@ public class MonInfo
         this.evasion_mult = new StageMultiplier(3,3);
         this.status = "None";
         this.priority = 0;
+        this.spriteName = spriteName;
     }
 }

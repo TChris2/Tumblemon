@@ -9,6 +9,7 @@ Defense: 95
 Special Defense: 85
 Speed: 102
 Moves: Dragon Breath, Crunch
+Sprite Name: None
 
 Name: Dewott
 Type1: Water
@@ -21,3 +22,4 @@ Defense: 60
 Special Defense: 60
 Speed: 60
 Moves: Razor Shell, Aerial Ace
+Sprite Name: None

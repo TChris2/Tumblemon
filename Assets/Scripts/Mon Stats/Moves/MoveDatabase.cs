@@ -44,7 +44,7 @@ public class MoveDatabase : MonoBehaviour
                     {
                         SaveMove(currentMove);
                     }
-                    currentMove = new MoveInfo(value, "", "", 0, 0, 0, "", 0);
+                    currentMove = new MoveInfo(value, "", "", 0, 0, 0, "", 0, "");
                     break;
                 case "Type":
                     if (currentMove != null) currentMove.type = value;
@@ -67,6 +67,9 @@ public class MoveDatabase : MonoBehaviour
                 case "Status Odds":
                     if (currentMove != null) currentMove.statusOdds = int.Parse(value);
                     break;
+                case "Animation Name":
+                    if (currentMove != null) currentMove.animationName = value;
+                    break;
             }
         }
 
@@ -79,7 +82,7 @@ public class MoveDatabase : MonoBehaviour
     private void SaveMove(MoveInfo currentMove)
     {
         MoveInfo newMove = new MoveInfo(currentMove.name, currentMove.type, currentMove.attackType, 
-            currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds);
+            currentMove.power, currentMove.accuracy, currentMove.pp, currentMove.status, currentMove.statusOdds, "");
         MoveList.Add(newMove);
     }
 

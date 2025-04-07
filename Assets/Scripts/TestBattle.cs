@@ -52,8 +52,18 @@ public class TestBattle : MonoBehaviour
             // Intializes vars
             var(AttackingParty, DefendingParty, isGameOver) = (Trainer1Party, Trainer1Party, false);
 
-            // ADD HEAL & SWAP LOGIC HERE AS THOSE OCCUR BEFORE EITHER CAN ATTACK
+            // Swapping current mon
+            if (Trainer1Party.action == "Swap")
+                Swap(Trainer1Party, T1currentMon);
+            if (Trainer2Party.action == "Swap")
+                Swap(Trainer1Party, T2currentMon);
             
+            // Healing current mon
+            if (Trainer1Party.action == "Heal")
+                Heal(Trainer1Party);
+            if (Trainer2Party.action == "Heal")
+                Heal(Trainer1Party);
+
             // Trainer 1 goes first
             if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.speed > Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.speed)
             {
@@ -118,32 +128,99 @@ public class TestBattle : MonoBehaviour
     }
 
     // Decides Trainer action
-    (string, MoveInfo, int) TrainerActionDecide(MonParty AttackingParty, MonParty DefendingParty)
+    (string, MoveInfo, int) TrainerActionDecide(MonParty myParty, MonParty opponentParty)
     {
-        int attack_priority = 0;
-        int heal_priority = 0;
-        int swap_priority = 0;
-        string action = "";
+        MonInfo myMon = myParty.MonTeam[myParty.currentMon];
+        MonInfo opponentMon = opponentParty.MonTeam[opponentParty.currentMon];
 
-        // Deciding which move is best +priority of it
-        MoveInfo moveSelected = MoveSelect(AttackingParty.MonTeam[AttackingParty.currentMon].moves, AttackingParty, DefendingParty);
+        float bestScore = float.NegativeInfinity;
+        // Defaults action is to attack
+        string bestAction = "Attack";
+        MoveInfo bestMove = null;
+        int bestSwapMon = -1;
 
-        // Thing for deciding to heal + priority
-        if ((float)AttackingParty.MonTeam[AttackingParty.currentMon].stats.health / 
-            (float)AttackingParty.MonTeam[AttackingParty.currentMon].stats.total_health <= (float)AttackingParty.Trainer.heal_threshold / 100)
-            heal_priority = AttackingParty.Trainer.heal_priority;
+        // Evaluates score for attacking
+        foreach (var move in myMon.moves)
+        {
+            float score = EvaluateAttack(myParty, opponentParty, myParty.currentMon, move);
+            score += myParty.Trainer.attack_priority;
+            // If attacking is currently the best action
+            if (score > bestScore)
+            {
+                bestScore = score;
+                bestAction = "Attack";
+                bestMove = move;
+            }
+        }
 
-        // Thing for deciding to swap mons + their priority
-        int currentMon = 0;
+        // Evaluates score for healing
+        if (myParty.potionCount > 0 && (float)myParty.MonTeam[myParty.currentMon].stats.health / 
+            (float)myParty.MonTeam[myParty.currentMon].stats.total_health <= (float)myParty.Trainer.heal_threshold / 100)
+        {
+            float healScore = myParty.Trainer.heal_priority;
+            // If healing is currently the best action
+            if (healScore > bestScore)
+            {
+                bestScore = healScore;
+                bestAction = "Heal";
+            }
+        }
 
-        // ADD IF STATEMENTS here to decide which has the highest priority
-        if (attack_priority >= heal_priority && attack_priority >= swap_priority)
-            action = "Attack";
-        else if (heal_priority >= attack_priority && heal_priority >= swap_priority)
-            action = "Heal";
-        else if (swap_priority >= attack_priority && swap_priority >= heal_priority)
-            action = "Swap";
-        return (action, moveSelected, currentMon);
+        // Evaluates score for swaping
+        for (int i = 0; i < myParty.MonTeam.Count; i++)
+        {
+            // Skips current & fainted mons
+            if (i == myParty.currentMon || myParty.MonTeam[i].stats.health <= 0) 
+                continue;
+
+            float score = EvaluateSwap(myParty.MonTeam[i], opponentMon);
+            score += myParty.Trainer.swap_priority;
+            // If swapping is currently the best action
+            if (score > bestScore)
+            {
+                bestScore = score;
+                bestAction = "Swap";
+                bestSwapMon = i;
+            }
+        }
+
+        return (bestAction, bestMove, bestSwapMon);
+    }
+
+    private float EvaluateAttack(MonParty AttackingParty, MonParty DefendingParty, int mon, MoveInfo move)
+    {
+        AttackingParty.moveSelected = move;
+        AttackingParty.currentMon = mon;
+        float damage = DamageCal(AttackingParty, DefendingParty);
+        float score = damage;
+
+        // Check if move is guaranteed to KO
+        if (damage >= DefendingParty.MonTeam[DefendingParty.currentMon].stats.health)
+        {
+            score += 100f; // lethal bonus
+        }
+
+        return score;
+    }
+
+    private float EvaluateSwap(MonInfo candidate, MonInfo opponent)
+    {
+        float effectiveness = 0f;
+        foreach (var move in candidate.moves)
+        {
+            effectiveness += GetTypeEffectiveness(move.type, opponent.type1);
+            if (opponent.type2 != null) effectiveness += GetTypeEffectiveness(move.type, opponent.type2);
+        }
+        return effectiveness / Mathf.Max(candidate.moves.Count, 1); // avg effectiveness
+    }
+
+    private float GetTypeEffectiveness(string moveType, TypeInfo targetType)
+    {
+        if (targetType == null) return 1f;
+        if (targetType.effective.Contains(moveType)) return 2f;
+        if (targetType.weak.Contains(moveType)) return 0.5f;
+        if (targetType.no_effect.Contains(moveType)) return 0f;
+        return 1f;
     }
 
     // Enacts Trainer's Attack
@@ -205,6 +282,26 @@ public class TestBattle : MonoBehaviour
             DefendingParty.MonTeam[DefendingParty.currentMon].stats.health = 0;
 
         return (AttackingParty, DefendingParty);
+    }
+
+    // Heals Current Mon
+    MonParty Heal(MonParty ActingParty)
+    {
+        Debug.Log($"{ActingParty.Trainer.name} Heals {ActingParty.MonTeam[ActingParty.currentMon]}");
+        ActingParty.MonTeam[ActingParty.currentMon].stats.health = ActingParty.MonTeam[ActingParty.currentMon].stats.total_health;
+        ActingParty.MonTeam[ActingParty.currentMon].status = "None";
+        ActingParty.potionCount -= 1;
+
+        return ActingParty;
+    }
+
+    // Swaps Current Mon
+    MonParty Swap(MonParty ActingParty, int currentMon)
+    {
+        Debug.Log($"{ActingParty.Trainer.name} Swaps {ActingParty.MonTeam[ActingParty.currentMon]} to {ActingParty.MonTeam[currentMon]}"); 
+        ActingParty.currentMon = currentMon;        
+
+        return ActingParty;
     }
 
     MoveInfo MoveSelect(List<MoveInfo> moves, MonParty AttackingParty, MonParty DefendingParty)

@@ -3,9 +3,11 @@ Attack Priority: 2
 Heal Threshold: 40
 Heal Priority: 2
 Swap Priority: 2
+Sprite Name: None
 
 Name: Trainer 2
 Attack Priority: 2
 Heal Threshold: 40
 Heal Priority: 2
 Swap Priority: 2
+Sprite Name: None
