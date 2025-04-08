@@ -146,6 +146,10 @@ public class TestBattle : MonoBehaviour
         // Evaluates score for attacking
         foreach (var move in myMon.moves)
         {
+            // Skips moves which are out of power points
+            if (move.pp <= 0) 
+                continue;
+
             float score = EvaluateAttack(myParty, opponentParty, myParty.currentMon, move);
             score += myParty.Trainer.attack_priority;
             // If attacking is currently the best action
@@ -319,6 +323,8 @@ public class TestBattle : MonoBehaviour
     (MonParty, MonParty) Attack(MonParty AttackingParty, MonParty DefendingParty)
     {
         Debug.Log($"{AttackingParty.Trainer.name}'s {AttackingParty.MonTeam[AttackingParty.currentMon].name} USES {AttackingParty.moveSelected.name}");
+        // Decreases the attacking mon move's power points
+        AttackingParty.moveSelected.pp -= 1;
         DefendingParty.MonTeam[DefendingParty.currentMon].stats.health -= DamageCal(AttackingParty, DefendingParty);
         Debug.Log($"{DefendingParty.Trainer.name}'s {DefendingParty.MonTeam[DefendingParty.currentMon].name} Health: {DefendingParty.MonTeam[DefendingParty.currentMon].stats.health}");
 
