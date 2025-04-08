@@ -32,4 +32,19 @@ public class MoveInfo
         this.priority = 0;
         this.animationName = animationName;
     }
+
+    public MoveInfo Clone()
+    {
+        return new MoveInfo(
+            name,
+            type,
+            attackType,
+            power,
+            accuracy,
+            total_pp,
+            status,
+            statusOdds,
+            animationName
+        );
+    }
 }

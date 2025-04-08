@@ -42,4 +42,31 @@ public class MonInfo
         this.priority = 0;
         this.spriteName = spriteName;
     }
+
+    public MonInfo Clone()
+    {
+        MonInfo clone = new MonInfo(name, level, stats.Clone(), spriteName)
+        {
+            type1 = type1,
+            type2 = type2,
+            moveList = new List<MoveInfo>(moveList), // assuming these are reference-only templates
+            moves = new List<MoveInfo>(),
+            attack_mult = new StageMultiplier(attack_mult.numerator, attack_mult.denominator),
+            special_attack_mult = new StageMultiplier(special_attack_mult.numerator, special_attack_mult.denominator),
+            special_defense_mult = new StageMultiplier(special_defense_mult.numerator, special_defense_mult.denominator),
+            defense_mult = new StageMultiplier(defense_mult.numerator, defense_mult.denominator),
+            speed_mult = new StageMultiplier(speed_mult.numerator, speed_mult.denominator),
+            accuracy_mult = new StageMultiplier(accuracy_mult.numerator, accuracy_mult.denominator),
+            evasion_mult = new StageMultiplier(evasion_mult.numerator, evasion_mult.denominator),
+            status = status,
+            priority = priority
+        };
+
+        foreach (MoveInfo move in moves)
+        {
+            clone.moves.Add(move.Clone());
+        }
+
+        return clone;
+    }
 }

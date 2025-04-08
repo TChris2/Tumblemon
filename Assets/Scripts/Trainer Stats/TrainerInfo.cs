@@ -21,4 +21,16 @@ public class TrainerInfo
         this.swap_priority = swap_priority;
         this.spriteName = spriteName;
     }
+
+    public TrainerInfo Clone()
+    {
+        return new TrainerInfo(
+            name,
+            attack_priority,
+            heal_threshold,
+            heal_priority,
+            swap_priority,
+            spriteName
+        );
+    }
 }

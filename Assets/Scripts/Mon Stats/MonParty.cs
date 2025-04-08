@@ -50,6 +50,8 @@ public class MonParty : MonoBehaviour
         AddTrainer("Trainer 1");
         SelectMon("Dewott");
         AddMove(0, "Razor Shell");
+        SelectMon("Garchomp");
+        AddMove(1, "Dragon Breath");
     }
 
     private void TestPartySelect2()
@@ -57,6 +59,8 @@ public class MonParty : MonoBehaviour
         AddTrainer("Trainer 2");
         SelectMon("Garchomp");
         AddMove(0, "Dragon Breath");
+        SelectMon("Dewott");
+        AddMove(1, "Razor Shell");
     }
 
     public void SelectMon(string monName)
@@ -67,7 +71,7 @@ public class MonParty : MonoBehaviour
         MonInfo selectedMon = monDatabase.GetMonByName(monName);
         if (selectedMon != null & MonTeam.Count <= 6)
         {
-            MonTeam.Add(selectedMon);
+            MonTeam.Add(selectedMon.Clone());
             Debug.Log(monName + " added to party!");
         }
         else
@@ -92,7 +96,7 @@ public class MonParty : MonoBehaviour
 
         if (selectedMove != null & MonTeam[partyMon].moves.Count <= 4)
         {       
-            MonTeam[partyMon].moves.Add(selectedMove);
+            MonTeam[partyMon].moves.Add(selectedMove.Clone());
             Debug.Log(moveName + " added to " + MonTeam[partyMon].name + "!");
         }
         else
@@ -114,7 +118,7 @@ public class MonParty : MonoBehaviour
 
         if (selectedTrainer != null)
         {       
-            Trainer = selectedTrainer;
+            Trainer = selectedTrainer.Clone();
             Debug.Log(trainerName + " assigned! ");
         }
         else

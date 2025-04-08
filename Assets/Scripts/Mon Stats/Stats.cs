@@ -23,4 +23,17 @@ public class Stats
         this.special_defense = special_defense + (special_defense/50)*level;
         this.speed = speed + (speed/50)*level;
     }
+
+    public Stats Clone()
+    {
+        return new Stats(
+            total_health, 
+            attack, 
+            special_attack, 
+            defense, 
+            special_defense, 
+            speed, 
+            level: 0 // level is already baked into stats
+        );
+    }
 }
