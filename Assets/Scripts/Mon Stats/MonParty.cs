@@ -21,6 +21,11 @@ public class MonParty : MonoBehaviour
     public string action;
     // For preset teams with testpartyselect
     public int select;
+    // Keeps track of damage amounts for counter moves
+    public int currentDmg;
+    public TMPro.TMP_Text HealthBarText;
+    public TMPro.TMP_Text ThoughtText1;
+    public TMPro.TMP_Text ThoughtText2;
 
     private void Start()
     {

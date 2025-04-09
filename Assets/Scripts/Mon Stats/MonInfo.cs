@@ -23,7 +23,6 @@ public class MonInfo
     public StageMultiplier accuracy_mult; 
     public StageMultiplier evasion_mult; 
     public string status;
-    public int priority;
     public string spriteName;
 
     public MonInfo (string name, int level, Stats stats, string spriteName)
@@ -39,7 +38,6 @@ public class MonInfo
         this.accuracy_mult = new StageMultiplier(3,3); 
         this.evasion_mult = new StageMultiplier(3,3);
         this.status = "None";
-        this.priority = 0;
         this.spriteName = spriteName;
     }
 
@@ -59,7 +57,6 @@ public class MonInfo
             accuracy_mult = new StageMultiplier(accuracy_mult.numerator, accuracy_mult.denominator),
             evasion_mult = new StageMultiplier(evasion_mult.numerator, evasion_mult.denominator),
             status = status,
-            priority = priority
         };
 
         foreach (MoveInfo move in moves)

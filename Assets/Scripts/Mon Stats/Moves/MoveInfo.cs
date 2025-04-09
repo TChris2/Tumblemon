@@ -14,11 +14,12 @@ public class MoveInfo
     public int pp;
     public string status;
     public int statusOdds;
-    public int priority;
+    public float recoil;
+    public string recoilType;
     public string animationName;
 
     public MoveInfo (string name, string type, string attackType, int power, int accuracy, int pp, string status, 
-        int statusOdds, string animationName)
+        int statusOdds, float recoil, string recoilType, string animationName)
     {
         this.name = name;
         this.type = type;
@@ -29,8 +30,9 @@ public class MoveInfo
         this.pp = total_pp;
         this.status = status;
         this.statusOdds = statusOdds;
-        this.priority = 0;
         this.animationName = animationName;
+        this.recoil = recoil;
+        this.recoilType = recoilType;
     }
 
     public MoveInfo Clone()
@@ -44,6 +46,8 @@ public class MoveInfo
             total_pp,
             status,
             statusOdds,
+            recoil,
+            recoilType,
             animationName
         );
     }

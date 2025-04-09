@@ -121,7 +121,6 @@ public class MonDatabase : MonoBehaviour
         newMon.moveList = currentMon.moveList;
         newMon.type1 = currentMon.type1;
         newMon.type2 = currentMon.type2;
-        newMon.moveList = currentMon.moveList;
         TumblemonList.Add(newMon);
     }
 

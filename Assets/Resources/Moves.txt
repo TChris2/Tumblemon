@@ -6,6 +6,8 @@ Accuracy: 100
 PP: 20
 Status: Paralysis
 Status Odds: 30
+Recoil: 0
+Recoil Type: None
 Animation Name: None
 
 Name: Crunch
@@ -16,6 +18,8 @@ Accuracy: 100
 PP: 15
 Status: None
 Status Odds: 0
+Recoil: 0
+Recoil Type: None
 Animation Name: None
 
 Name: Razor Shell
@@ -26,6 +30,8 @@ Accuracy: 95
 PP: 10
 Status: None
 Status Odds: 0
+Recoil: 0
+Recoil Type: None
 Animation Name: None
 
 Name: Aerial Ace
@@ -36,4 +42,18 @@ Accuracy: 100
 PP: 20
 Status: None
 Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Struggle
+Type: Typeless
+Attack Type: Physical
+Power: 50
+Accuracy: 100
+PP: 1000000
+Status: None
+Status Odds: 0
+Recoil: .25
+Recoil Type: Total Health
 Animation Name: None

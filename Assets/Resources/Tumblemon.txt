@@ -21,5 +21,5 @@ Special Attack: 83
 Defense: 60
 Special Defense: 60
 Speed: 60
-Moves: Razor Shell, Aerial Ace
+Moves: Razor Shell, Aerial Ace, Struggle
 Sprite Name: None
