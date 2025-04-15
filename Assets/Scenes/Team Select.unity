@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114496470}
   - component: {fileID: 114496469}
+  - component: {fileID: 114496471}
   m_Layer: 0
   m_Name: Battle
   m_TagString: Untagged
@@ -152,19 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b3a09aa2d7f774fa502439d2f9d27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  struggle:
-    name: 
-    type: 
-    attackType: 
-    power: 0
-    accuracy: 0
-    total_pp: 0
-    pp: 0
-    status: 
-    statusOdds: 0
-    recoil: 0
-    recoilType: 
-    animationName: 
+  waitTime: 1
 --- !u!4 &114496470
 Transform:
   m_ObjectHideFlags: 0
@@ -180,79 +169,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &220513883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 220513885}
-  - component: {fileID: 220513884}
-  m_Layer: 0
-  m_Name: Trainer 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &220513884
+--- !u!114 &114496471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220513883}
+  m_GameObject: {fileID: 114496468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac5a31fa95979e4cb6a988cdd4df88f, type: 3}
+  m_Script: {fileID: 11500000, guid: 336f8ab6f310e7048bb562eeddf340c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trainer:
-    name: 
-    attack_priority: 0
-    heal_threshold: 0
-    heal_priority: 0
-    swap_priority: 0
-    spriteName: 
-  MonTeam: []
-  potionCount: 3
-  currentMon: 0
-  moveSelected:
-    name: 
-    type: 
-    attackType: 
-    power: 0
-    accuracy: 0
-    total_pp: 0
-    pp: 0
-    status: 
-    statusOdds: 0
-    recoil: 0
-    recoilType: 
-    animationName: 
-  action: 
-  select: 1
-  currentDmg: 0
-  HealthBarText: {fileID: 0}
-  ThoughtText1: {fileID: 0}
-  ThoughtText2: {fileID: 0}
---- !u!4 &220513885
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220513883}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1130.8679, y: 788.51715, z: -482.8022}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  time: 1
 --- !u!1 &224887847
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552614110}
+  - component: {fileID: 552614113}
   - component: {fileID: 552614109}
   - component: {fileID: 552614108}
   - component: {fileID: 552614111}
@@ -964,6 +894,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrainerList: []
+--- !u!114 &552614113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552614107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5deec472dc5f517418b627bf3c2c3914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trainer1Party:
+    Trainer:
+      name: 
+      attack_priority: 0
+      heal_threshold: 0
+      heal_priority: 0
+      swap_priority: 0
+      spriteName: 
+    MonTeam: []
+    potionCount: 0
+    currentMon: 0
+    moveSelected:
+      name: 
+      type: 
+      attackType: 
+      power: 0
+      accuracy: 0
+      total_pp: 0
+      pp: 0
+      status: 
+      statusOdds: 0
+      recoil: 0
+      recoilType: 
+      animationName: 
+    action: 
+    currentDmg: 0
+    HealthBarText: {fileID: 0}
+    ThoughtText1: {fileID: 0}
+    ThoughtText2: {fileID: 0}
+  Trainer2Party:
+    Trainer:
+      name: 
+      attack_priority: 0
+      heal_threshold: 0
+      heal_priority: 0
+      swap_priority: 0
+      spriteName: 
+    MonTeam: []
+    potionCount: 0
+    currentMon: 0
+    moveSelected:
+      name: 
+      type: 
+      attackType: 
+      power: 0
+      accuracy: 0
+      total_pp: 0
+      pp: 0
+      status: 
+      statusOdds: 0
+      recoil: 0
+      recoilType: 
+      animationName: 
+    action: 
+    currentDmg: 0
+    HealthBarText: {fileID: 0}
+    ThoughtText1: {fileID: 0}
+    ThoughtText2: {fileID: 0}
 --- !u!1 &609888731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,79 +1743,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773458146}
   m_CullTransparentMesh: 1
---- !u!1 &2057341315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2057341317}
-  - component: {fileID: 2057341316}
-  m_Layer: 0
-  m_Name: Trainer 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2057341316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057341315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac5a31fa95979e4cb6a988cdd4df88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Trainer:
-    name: 
-    attack_priority: 0
-    heal_threshold: 0
-    heal_priority: 0
-    swap_priority: 0
-    spriteName: 
-  MonTeam: []
-  potionCount: 3
-  currentMon: 0
-  moveSelected:
-    name: 
-    type: 
-    attackType: 
-    power: 0
-    accuracy: 0
-    total_pp: 0
-    pp: 0
-    status: 
-    statusOdds: 0
-    recoil: 0
-    recoilType: 
-    animationName: 
-  action: 
-  select: 2
-  currentDmg: 0
-  HealthBarText: {fileID: 0}
-  ThoughtText1: {fileID: 0}
-  ThoughtText2: {fileID: 0}
---- !u!4 &2057341317
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057341315}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1130.8679, y: 788.51715, z: -482.8022}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061574214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,8 +1886,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2061574217}
   - {fileID: 224887849}
-  - {fileID: 220513885}
-  - {fileID: 2057341317}
   - {fileID: 552614110}
   - {fileID: 114496470}
   - {fileID: 261386907}
