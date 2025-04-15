@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: acb7c2747bbc93d4f8af166d922069b0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rock Slide_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 158
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: -15}
+        - {x: -31, y: -19}
+        - {x: -32, y: -24}
+        - {x: -32, y: -28}
+        - {x: -30, y: -33}
+        - {x: -19, y: -33}
+        - {x: -14, y: -32}
+        - {x: -13, y: -31}
+        - {x: -13, y: -19}
+        - {x: -15, y: -15}
+      - - {x: -47, y: 17}
+        - {x: -54, y: 11}
+        - {x: -54, y: 1}
+        - {x: -51, y: -6}
+        - {x: -24, y: -6}
+        - {x: -22, y: -5}
+        - {x: -22, y: 7}
+        - {x: -27, y: 17}
+      - - {x: 49, y: 30}
+        - {x: 37, y: 30}
+        - {x: 30, y: 28}
+        - {x: 30, y: 14}
+        - {x: 35, y: 9}
+        - {x: 48, y: 9}
+        - {x: 52, y: 14}
+        - {x: 52, y: 22}
+        - {x: 51, y: 27}
+      - - {x: 54, y: 38}
+        - {x: 49, y: 33}
+        - {x: 49, y: 25}
+        - {x: 54, y: 22}
+        - {x: 61, y: 22}
+        - {x: 64, y: 28}
+        - {x: 64, y: 34}
+        - {x: 61, y: 38}
+      - - {x: -6, y: 45}
+        - {x: -8, y: 43}
+        - {x: -8, y: 39}
+        - {x: -6, y: 37}
+        - {x: -3, y: 37}
+        - {x: -1, y: 38}
+        - {x: 0, y: 42}
+        - {x: -3, y: 45}
+      - - {x: -21, y: 49}
+        - {x: -25, y: 47}
+        - {x: -25, y: 42}
+        - {x: -24, y: 38}
+        - {x: -17, y: 38}
+        - {x: -14, y: 40}
+        - {x: -13, y: 44}
+        - {x: -17, y: 49}
+      - - {x: -28, y: 59}
+        - {x: -29, y: 57}
+        - {x: -29, y: 54}
+        - {x: -26, y: 50}
+        - {x: -19, y: 50}
+        - {x: -14, y: 55}
+        - {x: -14, y: 56}
+        - {x: -17, y: 59}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9db66eb39e9254b8c03ddf56cae8d7
+      internalID: 666467792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock Slide_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 158
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 48}
+        - {x: -34, y: 40}
+        - {x: -34, y: 33}
+        - {x: -33, y: 32}
+        - {x: -22, y: 16}
+        - {x: -15, y: 10}
+        - {x: -3, y: 10}
+        - {x: -1, y: 16}
+        - {x: -1, y: 25}
+        - {x: -15, y: 48}
+      - - {x: 19, y: 56}
+        - {x: 18, y: 52}
+        - {x: 18, y: 35}
+        - {x: 24, y: 31}
+        - {x: 29, y: 31}
+        - {x: 37, y: 33}
+        - {x: 46, y: 44}
+        - {x: 46, y: 54}
+        - {x: 42, y: 56}
+      - - {x: -13, y: 60}
+        - {x: -13, y: 47}
+        - {x: -10, y: 44}
+        - {x: -8, y: 43}
+        - {x: -1, y: 43}
+        - {x: 2, y: 49}
+        - {x: 2, y: 54}
+        - {x: -2, y: 60}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7df788149ec6ce41882b54894128fd4
+      internalID: -1684558102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock Slide_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 194
+        width: 158
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -57}
+        - {x: 36, y: -59}
+        - {x: 37, y: -60}
+        - {x: 46, y: -60}
+        - {x: 46, y: -58}
+        - {x: 43, y: -54}
+        - {x: 39, y: -54}
+      - - {x: -14, y: -55}
+        - {x: -11, y: -54}
+        - {x: -11, y: -51}
+        - {x: -14, y: -50}
+        - {x: -16, y: -52}
+      - - {x: 46, y: -38}
+        - {x: 42, y: -40}
+        - {x: 42, y: -50}
+        - {x: 44, y: -54}
+        - {x: 52, y: -54}
+        - {x: 57, y: -51}
+        - {x: 57, y: -41}
+        - {x: 52, y: -38}
+      - - {x: -68, y: -26}
+        - {x: -73, y: -31}
+        - {x: -73, y: -39}
+        - {x: -70, y: -45}
+        - {x: -68, y: -47}
+        - {x: -59, y: -47}
+        - {x: -51, y: -44}
+        - {x: -51, y: -37}
+        - {x: -52, y: -32}
+        - {x: -57, y: -26}
+      - - {x: -52, y: -32}
+        - {x: -50, y: -34}
+        - {x: -44, y: -34}
+        - {x: -40, y: -32}
+        - {x: -40, y: -24}
+        - {x: -41, y: -22}
+        - {x: -50, y: -22}
+        - {x: -52, y: -26}
+      - - {x: 50, y: 0}
+        - {x: 42, y: -5}
+        - {x: 42, y: -16}
+        - {x: 45, y: -22}
+        - {x: 51, y: -23}
+        - {x: 58, y: -23}
+        - {x: 63, y: -20}
+        - {x: 63, y: -5}
+        - {x: 59, y: 0}
+      - - {x: -55, y: -8}
+        - {x: -58, y: -11}
+        - {x: -58, y: -15}
+        - {x: -54, y: -19}
+        - {x: -52, y: -19}
+        - {x: -47, y: -15}
+        - {x: -47, y: -12}
+        - {x: -51, y: -8}
+      - - {x: 72, y: 11}
+        - {x: 66, y: 7}
+        - {x: 66, y: 0}
+        - {x: 68, y: -4}
+        - {x: 76, y: -4}
+        - {x: 79, y: -3}
+        - {x: 79, y: 7}
+        - {x: 76, y: 10}
+      - - {x: -26, y: 27}
+        - {x: -35, y: 27}
+        - {x: -36, y: 24}
+        - {x: -36, y: 18}
+        - {x: -33, y: 16}
+        - {x: -29, y: 16}
+        - {x: -25, y: 19}
+        - {x: -25, y: 26}
+      - - {x: -12, y: 28}
+        - {x: -15, y: 25}
+        - {x: -15, y: 23}
+        - {x: -12, y: 20}
+        - {x: -10, y: 20}
+        - {x: -7, y: 23}
+        - {x: -7, y: 25}
+        - {x: -10, y: 28}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc92196891e2204893bd4c043189751
+      internalID: 1463496926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock Slide_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 158
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: -11}
+        - {x: -61, y: -16}
+        - {x: -61, y: -24}
+        - {x: -58, y: -25}
+        - {x: -48, y: -25}
+        - {x: -46, y: -22}
+        - {x: -46, y: -14}
+        - {x: -53, y: -11}
+      - - {x: -37, y: 60}
+        - {x: -44, y: 54}
+        - {x: -44, y: 51}
+        - {x: -43, y: 48}
+        - {x: -39, y: 41}
+        - {x: -28, y: 41}
+        - {x: -24, y: 47}
+        - {x: -24, y: 55}
+        - {x: -29, y: 60}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25685e01a855cae4ca733bfda098a300
+      internalID: -1405272810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock Slide_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 158
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68, y: -50}
+        - {x: -72, y: -52}
+        - {x: -72, y: -60}
+        - {x: -61, y: -60}
+        - {x: -60, y: -59}
+        - {x: -60, y: -53}
+        - {x: -63, y: -50}
+      - - {x: -76, y: -31}
+        - {x: -79, y: -32}
+        - {x: -79, y: -41}
+        - {x: -78, y: -42}
+        - {x: -71, y: -42}
+        - {x: -70, y: -40}
+        - {x: -70, y: -32}
+        - {x: -72, y: -31}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02796c26fa9cd640bd91bb1127dd190
+      internalID: 366968486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3b15a9506a9bc6946aa3c8a1cbcce51e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Rock Slide_0: 666467792
+      Rock Slide_1: -1684558102
+      Rock Slide_2: 1463496926
+      Rock Slide_3: -1405272810
+      Rock Slide_4: 366968486
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

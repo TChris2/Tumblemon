@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a48cd10553baeb94cb1c5ede5fcd1ac7
+guid: c449d66ffe861a04889a08892bad2936
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,169 +110,193 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fore Garchomp_0
+      name: Surf_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 91
+        x: 444
+        y: 450
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -113.5, y: 50}
+        - {x: -113.5, y: -11}
+        - {x: -107.5, y: -49}
+        - {x: -5.5, y: -49}
+        - {x: -5.5, y: 29}
+        - {x: -15.5, y: 50}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c544fd2d8ed8da49abf8aece97b0922
-      internalID: 953247030
+      spriteID: 361ae744e038529438785898f12d9910
+      internalID: -1172507295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_1
+      name: Surf_4
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 100
-        height: 91
+        x: 444
+        y: 353
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -113.5, y: 41}
+        - {x: -113.5, y: -15}
+        - {x: -107.5, y: -50}
+        - {x: 18.5, y: -50}
+        - {x: 18.5, y: 20}
+        - {x: 16.5, y: 41}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f2ddc10f0de5d844b1d24b386ef6957
-      internalID: 443654466
+      spriteID: 4b7e32fe244da294b8e35360a5830dc6
+      internalID: -2144529989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_2
+      name: Surf_6
       rect:
         serializedVersion: 2
-        x: 211
-        y: 0
-        width: 100
-        height: 91
+        x: 444
+        y: 259
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -113.5, y: 32}
+        - {x: -113.5, y: -11}
+        - {x: -102.5, y: -50}
+        - {x: 33.5, y: -50}
+        - {x: 33.5, y: -1}
+        - {x: 28.5, y: 32}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25a23de3919d53949a84e0b24536985f
-      internalID: -191206670
+      spriteID: 2deb0c54f52ec574eaa6f3ffedcf6dfb
+      internalID: 116595085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_3
+      name: Surf_8
       rect:
         serializedVersion: 2
-        x: 316
-        y: 0
-        width: 100
-        height: 91
+        x: 443
+        y: 182
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -112.5, y: 22}
+        - {x: -113.5, y: 19}
+        - {x: -113.5, y: -22}
+        - {x: -99.5, y: -50}
+        - {x: 47.5, y: -50}
+        - {x: 47.5, y: -3}
+        - {x: 46.5, y: 8}
+        - {x: 26.5, y: 22}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2609424debf77024a8520c209d41d8cb
-      internalID: 1914349887
+      spriteID: 2885192a5422b9944b6dedddd9299236
+      internalID: 171233062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_4
+      name: Surf_10
       rect:
         serializedVersion: 2
-        x: 422
-        y: 0
-        width: 100
-        height: 91
+        x: 438
+        y: 113
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -113.5, y: 16}
+        - {x: -113.5, y: -20}
+        - {x: -95.5, y: -50}
+        - {x: 76.5, y: -50}
+        - {x: 76.5, y: -9}
+        - {x: 57.5, y: 16}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e0ca92624e77eb44a2a002ae0809fb1
-      internalID: 1056096572
+      spriteID: 5b8c44a0d7baa924191d860458a415e0
+      internalID: -2071386772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_5
+      name: Surf_12
       rect:
         serializedVersion: 2
-        x: 529
-        y: 0
-        width: 100
-        height: 91
+        x: 440
+        y: 57
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -113.5, y: 3.0184708}
+        - {x: -104.5, y: -50}
+        - {x: 96.5, y: -50}
+        - {x: 96.5, y: -24}
+        - {x: 81.557434, y: 2.724411}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1849120f6630dc4b98369287414cc56
-      internalID: -296347829
+      spriteID: 9f1a6e8c2ea14f04f97054748c7646ce
+      internalID: -1305909252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_6
+      name: Surf_14
       rect:
         serializedVersion: 2
-        x: 633
+        x: 445
         y: 0
-        width: 100
-        height: 91
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 92.5, y: -8}
+        - {x: -105.5, y: -8}
+        - {x: -113.5, y: -13}
+        - {x: -113.5, y: -30}
+        - {x: -91.5, y: -50}
+        - {x: 113.5, y: -50}
+        - {x: 113.5, y: -32}
+        - {x: 105.5, y: -18}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb28a7f234bba540a8d9d10f02846ac
-      internalID: -1519822148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fore Garchomp_7
-      rect:
-        serializedVersion: 2
-        x: 741
-        y: 0
-        width: 100
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5cfcc7d332c40f48bcf3634a0186e92
-      internalID: 1960484542
+      spriteID: 42e0dad285a1ae643aee966bc281f3b5
+      internalID: 1164816927
       vertices: []
       indices: 
       edges: []
@@ -280,7 +304,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f990eaae5e2a18c45b721ff9299c651f
+    spriteID: dda4232ea11bedc4cb07bd1202e3675d
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +312,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fore Garchomp_0: 953247030
-      Fore Garchomp_1: 443654466
-      Fore Garchomp_2: -191206670
-      Fore Garchomp_3: 1914349887
-      Fore Garchomp_4: 1056096572
-      Fore Garchomp_5: -296347829
-      Fore Garchomp_6: -1519822148
-      Fore Garchomp_7: 1960484542
+      Surf_0: -452047737
+      Surf_1: -1444464339
+      Surf_10: -2071386772
+      Surf_11: 949153853
+      Surf_12: -1305909252
+      Surf_13: -1940190715
+      Surf_14: 1164816927
+      Surf_2: -1172507295
+      Surf_3: -1061163596
+      Surf_4: -2144529989
+      Surf_5: 2118667397
+      Surf_6: 116595085
+      Surf_7: -1971822931
+      Surf_8: 171233062
+      Surf_9: 877329629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

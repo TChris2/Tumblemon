@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a48cd10553baeb94cb1c5ede5fcd1ac7
+guid: 3eef00f07179c644284e572a2e19ac90
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,169 +110,198 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fore Garchomp_0
+      name: Surf_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 91
+        x: 330
+        y: 453
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -111.5, y: 50}
+        - {x: -113.5, y: 26}
+        - {x: -113.5, y: -50}
+        - {x: -10.5, y: -50}
+        - {x: -5.5, y: -32}
+        - {x: -5.5, y: 50}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c544fd2d8ed8da49abf8aece97b0922
-      internalID: 953247030
+      spriteID: 298391db14abbc045b020009055f91aa
+      internalID: -174139646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_1
+      name: Surf_3
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 100
-        height: 91
+        x: 304
+        y: 352
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -105.5, y: 42}
+        - {x: -113.5, y: 4}
+        - {x: -113.5, y: -50}
+        - {x: 7.5, y: -50}
+        - {x: 18.5, y: -12}
+        - {x: 18.5, y: 32}
+        - {x: 16.5, y: 42}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f2ddc10f0de5d844b1d24b386ef6957
-      internalID: 443654466
+      spriteID: de74479fb4d84fc49a8e275035deb69c
+      internalID: -628115452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_2
+      name: Surf_5
       rect:
         serializedVersion: 2
-        x: 211
-        y: 0
-        width: 100
-        height: 91
+        x: 289
+        y: 259
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -102.5, y: 32}
+        - {x: -113.5, y: -2}
+        - {x: -113.5, y: -50}
+        - {x: 20.5, y: -50}
+        - {x: 33.5, y: -8}
+        - {x: 33.5, y: 32}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25a23de3919d53949a84e0b24536985f
-      internalID: -191206670
+      spriteID: 97df10fabf975d24eae495fb19c2df78
+      internalID: 2038647257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_3
+      name: Surf_7
       rect:
         serializedVersion: 2
-        x: 316
-        y: 0
-        width: 100
-        height: 91
+        x: 272
+        y: 182
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 39.5, y: 22}
+        - {x: -98.5, y: 22}
+        - {x: -113.5, y: -7}
+        - {x: -113.5, y: -50}
+        - {x: 33.5, y: -50}
+        - {x: 47.5, y: -12}
+        - {x: 47.5, y: 12}
+        - {x: 46.5, y: 17}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2609424debf77024a8520c209d41d8cb
-      internalID: 1914349887
+      spriteID: 02e4c0feada379446b2934e3560d5320
+      internalID: -1747357487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_4
+      name: Surf_9
       rect:
         serializedVersion: 2
-        x: 422
-        y: 0
-        width: 100
-        height: 91
+        x: 237
+        y: 113
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -94.5, y: 16}
+        - {x: -113.5, y: -14}
+        - {x: -113.5, y: -50}
+        - {x: 59.5, y: -50}
+        - {x: 76.5, y: -22}
+        - {x: 76.5, y: 8}
+        - {x: 72.5, y: 16}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e0ca92624e77eb44a2a002ae0809fb1
-      internalID: 1056096572
+      spriteID: 0223f9cc1e2f8f64a9a02c24ca7dd185
+      internalID: -842094009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_5
+      name: Surf_11
       rect:
         serializedVersion: 2
-        x: 529
-        y: 0
-        width: 100
-        height: 91
+        x: 218
+        y: 58
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -88.5, y: 2}
+        - {x: -95.5, y: -2}
+        - {x: -108.5, y: -17}
+        - {x: -113.5, y: -28}
+        - {x: -113.5, y: -50}
+        - {x: 85.5, y: -50}
+        - {x: 96.5, y: -21}
+        - {x: 96.5, y: 0}
+        - {x: 88.5, y: 2}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1849120f6630dc4b98369287414cc56
-      internalID: -296347829
+      spriteID: ead38c6fc9520c04da47ff58d4f3cfff
+      internalID: -322368914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fore Garchomp_6
+      name: Surf_13
       rect:
         serializedVersion: 2
-        x: 633
+        x: 202
         y: 0
-        width: 100
-        height: 91
+        width: 227
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -92.5, y: -8}
+        - {x: -113.5, y: -24}
+        - {x: -113.5, y: -50}
+        - {x: 96.5, y: -50}
+        - {x: 113.5, y: -26}
+        - {x: 113.5, y: -13}
+        - {x: 108.5, y: -8}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb28a7f234bba540a8d9d10f02846ac
-      internalID: -1519822148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fore Garchomp_7
-      rect:
-        serializedVersion: 2
-        x: 741
-        y: 0
-        width: 100
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5cfcc7d332c40f48bcf3634a0186e92
-      internalID: 1960484542
+      spriteID: 218f1a9af0d6e5941aa68f99fd3db472
+      internalID: -1164116385
       vertices: []
       indices: 
       edges: []
@@ -280,7 +309,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f990eaae5e2a18c45b721ff9299c651f
+    spriteID: fbc3bdb6cd6025144b8cfa2ca113815d
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +317,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fore Garchomp_0: 953247030
-      Fore Garchomp_1: 443654466
-      Fore Garchomp_2: -191206670
-      Fore Garchomp_3: 1914349887
-      Fore Garchomp_4: 1056096572
-      Fore Garchomp_5: -296347829
-      Fore Garchomp_6: -1519822148
-      Fore Garchomp_7: 1960484542
+      Surf_0: -294996399
+      Surf_1: -174139646
+      Surf_10: 623874932
+      Surf_11: -322368914
+      Surf_12: 1222683783
+      Surf_13: -1164116385
+      Surf_14: 43640263
+      Surf_2: -652109372
+      Surf_3: -628115452
+      Surf_4: -1028604472
+      Surf_5: 2038647257
+      Surf_6: -211012909
+      Surf_7: -1747357487
+      Surf_8: -1838426830
+      Surf_9: -842094009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

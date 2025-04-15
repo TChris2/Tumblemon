@@ -57,3 +57,159 @@ Status Odds: 0
 Recoil: .25
 Recoil Type: Total Health
 Animation Name: None
+
+Name: Surf
+Type: Water
+Attack Type: Special
+Power: 95
+Accuracy: 100
+PP: 15
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Rock Slide
+Type: Rock
+Attack Type: Physical
+Power: 75
+Accuracy: 90
+PP: 10
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Shadow Ball
+Type: Ghost
+Attack Type: Special
+Power: 80
+Accuracy: 100
+PP: 15
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Posion Jab
+Type: Posion
+Attack Type: Physical
+Power: 80
+Accuracy: 100
+PP: 20
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Flame Thrower
+Type: Fire
+Attack Type: Special
+Power: 95
+Accuracy: 100
+PP: 15
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Psychic
+Type: Psychic
+Attack Type: Special
+Power: 90
+Accuracy: 100
+PP: 10
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Thunderbolt
+Type: Electric
+Attack Type: Special
+Power: 95
+Accuracy: 100
+PP: 15
+Status: Paralysis
+Status Odds: 30
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Earthquake
+Type: Ground
+Attack Type: Physical
+Power: 100
+Accuracy: 100
+PP: 10
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Megahorn
+Type: Bug
+Attack Type: Physical
+Power: 120
+Accuracy: 85
+PP: 10
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Blizzard
+Type: Ice
+Attack Type: Special
+Power: 120
+Accuracy: 70
+PP: 5
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Cross Posion
+Type: Posion
+Attack Type: Physical
+Power: 70
+Accuracy: 100
+PP: 20
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Body Slam
+Type: Normal
+Attack Type: Physical
+Power: 85
+Accuracy: 100
+PP: 15
+Status: Paralysis
+Status Odds: 30
+Recoil: 0
+Recoil Type: None
+Animation Name: None
+
+Name: Nigth Slash
+Type: Dark
+Attack Type: Physical
+Power: 70
+Accuracy: 100
+PP: 15
+Status: None
+Status Odds: 0
+Recoil: 0
+Recoil Type: None
+Animation Name: None

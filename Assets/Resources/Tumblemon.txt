@@ -23,3 +23,68 @@ Special Defense: 60
 Speed: 60
 Moves: Razor Shell, Aerial Ace, Struggle
 Sprite Name: None
+
+Name: Empoleon
+Type1: Water
+Type2: Steel
+Level: 50
+Health: 84
+Attack: 86
+Special Attack: 111
+Defense: 88
+Special Defense: 101
+Speed: 60
+Moves: Surf, Rock Slide
+Sprite Name: None
+
+Name: Crobat
+Type1: Poison
+Type2: Flying
+Level: 50
+Health: 85
+Attack: 90
+Special Attack: 70
+Defense: 80
+Special Defense: 80
+Speed: 130
+Moves: Aerial Ace, Shadow Ball
+Sprite Name: None
+
+Name: Rapidash
+Type1: Fire
+Type2:
+Level: 50
+Health: 65
+Attack: 100
+Special Attack: 80
+Defense: 70
+Special Defense: 80
+Speed: 105
+Moves: Poision Jab, Flame Thrower
+Sprite Name: None
+
+Name: Gaedevoir
+Type1: Psychic
+Type2:
+Level: 50
+Health: 68
+Attack: 65
+Special Attack: 125
+Defense: 65
+Special Defense: 115
+Speed: 80
+Moves: Psychic, Thunderbolt
+Sprite Name: None
+
+Name: Luxray
+Type1: Electric
+Type2:
+Level: 50
+Health: 80
+Attack: 120
+Special Attack: 95
+Defense: 79
+Special Defense: 79
+Speed: 70
+Moves: Crunch, Thunderbolt
+Sprite Name: None
