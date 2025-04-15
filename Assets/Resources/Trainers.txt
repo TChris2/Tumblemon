@@ -1,13 +1,13 @@
 Name: Trainer 1
-Attack Priority: 2
-Heal Threshold: 40
-Heal Priority: 60
-Swap Priority: 20
+Attack Priority: 1
+Heal Threshold: 1
+Heal Priority: 1
+Swap Priority: 1
 Sprite Name: None
 
 Name: Trainer 2
-Attack Priority: 2
-Heal Threshold: 40
-Heal Priority: 40
-Swap Priority: 22
+Attack Priority: 1
+Heal Threshold: 1
+Heal Priority: 1
+Swap Priority: 1
 Sprite Name: None

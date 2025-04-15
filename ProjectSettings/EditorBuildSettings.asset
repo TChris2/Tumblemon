@@ -5,26 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/StartScreen.unity
-    guid: 983dc969da2415541b5470f59ebd38ff
-  - enabled: 0
-    path: Assets/Scenes/FlatMapTesting.unity
-    guid: ab434cc017e834d43b0d622dbdb6b0a5
-  - enabled: 0
-    path: Assets/Scenes/DestroyWalkways.unity
-    guid: aeeea0345bd83074fb41908e65029caf
-  - enabled: 0
-    path: Assets/Scenes/SurviveWalkways.unity
-    guid: afa53f1b5ef359e45a9e3f6adbbd0700
-  - enabled: 0
-    path: Assets/Scenes/DestroyFort.unity
-    guid: 864a9166147f0ae4681a2793ecdb6ee4
-  - enabled: 0
-    path: Assets/Scenes/SurviveFort.unity
-    guid: 0fcbce280fd3c014fa99a1c348964f8b
-  - enabled: 0
-    path: Assets/Scenes/EndScreen.unity
-    guid: 11f67571707c8244da0e616bf1f1c406
+  - enabled: 1
+    path: Assets/Scenes/Team Select.unity
+    guid: 2ed6ab5fb7640e14b8c05ed5594abbd2
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: b1792dabb75ff1c4190611c33334f7af
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ac2e9bec2e581d54eb5002277b387897, type: 2}

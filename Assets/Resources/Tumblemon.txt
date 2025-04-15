@@ -14,7 +14,7 @@ Sprite Name: None
 Name: Dewott
 Type1: Water
 Type2: 
-Level: 50
+Level: 500
 Health: 75
 Attack: 75
 Special Attack: 83

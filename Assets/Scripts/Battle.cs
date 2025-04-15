@@ -136,7 +136,7 @@ public class Battle : MonoBehaviour
                     yield return new WaitForSeconds(waitTime);
                 }
 
-                if (Trainer2Party.action == "Attack" && Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health >= 1) 
+                if (Trainer2Party.action == "Attack" && Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health > 0) 
                 {
                     (AtkParty, DefParty) = Attack(Trainer2Party, Trainer1Party, false);
                     Trainer2Party = AtkParty;
@@ -161,7 +161,7 @@ public class Battle : MonoBehaviour
                     yield return new WaitForSeconds(waitTime);
                 }
 
-                if (Trainer1Party.action == "Attack" && Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health >= 1) 
+                if (Trainer1Party.action == "Attack" && Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health > 0) 
                 {
                     (AtkParty, DefParty) = Attack(Trainer1Party, Trainer2Party, true);
                     Trainer1Party = AtkParty;
@@ -185,9 +185,11 @@ public class Battle : MonoBehaviour
 
             // If their current mon has fainted
             if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health <= 0)
-                Trainer1Party = FaintedMonSwap(Trainer1Party, Trainer2Party);
+                Trainer1Party.currentMon = FaintedMonSwap(Trainer1Party, Trainer2Party);
             if (Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health <= 0)
-                Trainer2Party = FaintedMonSwap(Trainer2Party, Trainer1Party);
+                Trainer2Party.currentMon = FaintedMonSwap(Trainer2Party, Trainer1Party);
+            
+            UpdateHealthBarText(Trainer1Party, Trainer2Party);
         }
         Debug.Log("-------------------------------------------------------------------------------------");
         yield return new WaitForSeconds(waitTime);
@@ -203,32 +205,21 @@ public class Battle : MonoBehaviour
     bool IsPartyDead(MonParty p) => p.MonTeam.TrueForAll(mon => mon.stats.health <= 0);
 
     // If a trainer's mon died in battle but has not run out of mons to swap to
-    MonParty FaintedMonSwap(MonParty ActingParty, MonParty OpParty)
+    int FaintedMonSwap(MonParty ActingParty, MonParty OpParty)
     {
         Debug.Log($"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} HAS FAINTED!");
         ActionText.text = $"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} HAS FAINTED!";
 
-            // Looks for new good mon to swap to
-            float bestScore = float.NegativeInfinity;
-            int newMon = 0;
-            // Evaluates score for swaping
-            for (int i = 0; i < ActingParty.MonTeam.Count; i++)
-            {
-                // Skips current & fainted mons
-                if (ActingParty.MonTeam[i].stats.health <= 0) 
-                    continue;
+        // Clones parties to simulate them
+        MonParty simMy = ActingParty.Clone();
+        MonParty simOpponent = OpParty.Clone();
 
-                float score = EvaluateSwap(ActingParty.MonTeam[i], OpParty.MonTeam[OpParty.currentMon]);
-                // If swapping is currently the best action
-                if (score > bestScore)
-                {
-                    bestScore = score;
-                    newMon = i;
-                }
-            }
-            ActingParty = Swap(ActingParty, newMon);
+        Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity, true,
+                out string action, out MoveInfo move, out int swapIndex);
 
-        return ActingParty;
+        ActionText.text = $"{ActingParty.Trainer.name} SWAPS {ActingParty.MonTeam[ActingParty.currentMon].name} TO {ActingParty.MonTeam[swapIndex].name}";
+        Debug.Log($"{ActingParty.Trainer.name} SWAPS {ActingParty.MonTeam[ActingParty.currentMon].name} TO {ActingParty.MonTeam[swapIndex].name}"); 
+        return swapIndex;
     }
 
     // Enacts Trainer Attack
@@ -303,18 +294,20 @@ public class Battle : MonoBehaviour
     // Decides Trainer action
     (string, MoveInfo, int) TrainerActionDecide(MonParty myParty, MonParty opponentParty)
     {
+        Debug.Log($"{myParty.Trainer.name} IS DECIDING ...");
         // Clones parties to simulate them
         MonParty simMy = myParty.Clone();
         MonParty simOpponent = opponentParty.Clone();
 
-        Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity,
+        Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity, false,
                 out string action, out MoveInfo move, out int swapIndex);
 
+        Debug.Log($"{myParty.Trainer.name} IS GOING TO {action}");
         return (action, move, swapIndex);
     }
 
     // Does the minimax
-    float Minimax(MonParty my, MonParty opp, int depth, bool isMax, float alpha, float beta,
+    float Minimax(MonParty my, MonParty opp, int depth, bool isMax, float alpha, float beta, bool isSwapping,
                   out string bestAction, out MoveInfo bestMove, out int bestSwap)
     {
         bestAction = "Attack"; bestMove = null; bestSwap = -1;
@@ -322,14 +315,48 @@ public class Battle : MonoBehaviour
             return EvaluateGameState(my, opp);
 
         float bestScore = isMax ? float.NegativeInfinity : float.PositiveInfinity;
-        var actions = GetAllActions(my, opp);
+        var actions = GetAllActions(my, opp, isSwapping);
 
         foreach (var (act, mv, idx) in actions)
         {
             var myClone = my.Clone();
             var oppClone = opp.Clone();
             ApplyAction(myClone, oppClone, act, mv, idx);
-            float score = Minimax(oppClone, myClone, depth - 1, !isMax, alpha, beta, out _, out _, out _);
+            float score = Minimax(oppClone, myClone, depth - 1, !isMax, alpha, beta, isSwapping, out _, out _, out _);
+
+            if (act == "Attack")
+            {
+                if (mv.name == "Struggle")
+                    score += 0.25f * my.Trainer.attack_priority;
+                else
+                {   
+                    int predictedDamage = DamageCal(my, opp);
+                    int targetHP = opp.MonTeam[opp.currentMon].stats.health;
+                    if (predictedDamage >= targetHP || my.MonTeam[my.currentMon].stats.health >= 1){
+                        Debug.Log($" Attack KO Score {score}");
+                        score += 2 * my.Trainer.attack_priority;}
+                    else
+                    {
+                        score += my.Trainer.attack_priority;
+                        Debug.Log($" Attack Normal Score {score}");}
+                }
+            }
+            else if (act == "Heal")
+            {
+                float healthRatio = my.MonTeam[my.currentMon].stats.health / (float)my.MonTeam[my.currentMon].stats.total_health;
+                if (healthRatio <= my.Trainer.heal_threshold / 100f){
+                    score += 2 * my.Trainer.heal_priority;
+                    Debug.Log($" Heal Critical Score {score}");
+                }
+                else {
+                    score += my.Trainer.heal_priority;
+                    Debug.Log($" Heal Normal Score {score}");}
+            }
+            else if (act == "Swap")
+            {
+                score += my.Trainer.swap_priority;
+                Debug.Log($" Swap Normal Score {score}");
+            }
 
             if (isMax && score > bestScore)
             {
@@ -347,25 +374,28 @@ public class Battle : MonoBehaviour
     }
 
     // Gets all possible actions the trainer can do that turn
-    List<(string, MoveInfo, int)> GetAllActions(MonParty party, MonParty opponent)
+    List<(string, MoveInfo, int)> GetAllActions(MonParty party, MonParty opponent, bool isSwapping)
     {
         var actions = new List<(string, MoveInfo, int)>();
         var mon = party.MonTeam[party.currentMon];
 
-        // Gets all moves that have power points
-        foreach (var move in mon.moves)
-            if (move.pp > 0) actions.Add(("Attack", move, -1));
-        
-        // If the current mon has 0 power points in any of their moves
-        if (actions.Count == 0) actions.Add(("Attack", struggle, -1));
+        if (!isSwapping)
+        {
+            // Gets all moves that have power points
+            foreach (var move in mon.moves)
+                if (move.pp > 0) actions.Add(("Attack", move, -1));
+            
+            // If the current mon has 0 power points in any of their moves
+            if (actions.Count == 0) actions.Add(("Attack", struggle, -1));
 
-        // Adds heal action if the mon is at a certian threshold for healing
-        if (party.potionCount > 0 && mon.stats.health / (float)mon.stats.total_health <= party.Trainer.heal_threshold / 100f)
-            actions.Add(("Heal", null, -1));
+            // Adds heal action if the mon is at a certian threshold for healing
+            if (party.potionCount > 0 && mon.stats.health / (float)mon.stats.total_health <= party.Trainer.heal_threshold / 100f)
+                actions.Add(("Heal", null, -1));
+        }
 
         // Gets all available mons which have not fainted yet
         for (int i = 0; i < party.MonTeam.Count; i++)
-            if (i != party.currentMon && party.MonTeam[i].stats.health >= 1)
+            if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
                 actions.Add(("Swap", null, i));
 
         return actions;
@@ -470,36 +500,6 @@ public class Battle : MonoBehaviour
             return 1f;
     }
 
-    private float EvaluateSwap(MonInfo candidate, MonInfo opponent)
-    {
-        float defensiveScore = 1f;
-
-        // Evaluate how well the candidate resists opponent’s moves
-        foreach (var move in opponent.moves)
-        {
-            defensiveScore *= TypeCheck(move.type, candidate.type1);
-            if (candidate.type2 != null)
-                defensiveScore *= TypeCheck(move.type, candidate.type2);
-        }
-
-        // Defensive score: lower is better (less damage taken)
-        defensiveScore = 1f / Mathf.Max(defensiveScore, 0.1f); // avoid division by zero
-
-        float offensiveScore = 0f;
-
-        // Now consider candidate’s attacking potential
-        foreach (var move in candidate.moves)
-        {
-            offensiveScore += TypeCheck(move.type, opponent.type1);
-            if (opponent.type2 != null)
-                offensiveScore += TypeCheck(move.type, opponent.type2);
-        }
-        offensiveScore = offensiveScore / Mathf.Max(candidate.moves.Count, 1);
-
-        // Final score = heavily weight defensive score, add offensive bonus
-        return (defensiveScore * 2f) + offensiveScore;
-    }
-
     float EvaluateGameState(MonParty myParty, MonParty opponentParty)
     {
         float myScore = 0;
@@ -512,22 +512,5 @@ public class Battle : MonoBehaviour
             opponentScore += mon.stats.health;
 
         return myScore - opponentScore;
-    }
-
-    private float EvaluateAttack(MonParty AtkParty, MonParty DefParty, int mon, MoveInfo move)
-    {   
-        AtkParty.moveSelected = move;
-        AtkParty.currentMon = mon;
-        float damage = DamageCal(AtkParty, DefParty);
-        float score = damage;
-
-        // Check if move could KO the opponent mon
-        if (damage >= DefParty.MonTeam[DefParty.currentMon].stats.health)
-        {
-            // Applies double priority if the move can KO
-            score += 2*AtkParty.Trainer.attack_priority;
-        }
-
-        return score;
     }
 }
