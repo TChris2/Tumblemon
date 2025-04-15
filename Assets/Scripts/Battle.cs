@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Battle : MonoBehaviour
     TMPro.TMP_Text ActionText;
     [SerializeField]
     private float waitTime = 1;
+    private ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect typewriter;
+    private bool isTextDone = false;
 
 
     // Start is called before the first frame update
@@ -31,43 +34,53 @@ public class Battle : MonoBehaviour
         
         // Gets Text Boxes
         ActionText = GameObject.Find("Action Text").GetComponent<TMPro.TMP_Text>();
+        typewriter = ActionText.GetComponent<ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect>();
+
         // Trainer 1
-        Trainer1Party.HealthBarText = GameObject.Find("Trainer 1 Health Bar Text").GetComponent<TMPro.TMP_Text>();
-        Trainer1Party.ThoughtText1 = GameObject.Find("Trainer 1 Thought Text 1").GetComponent<TMPro.TMP_Text>();
-        Trainer1Party.ThoughtText2 = GameObject.Find("Trainer 1 Thought Text 2").GetComponent<TMPro.TMP_Text>();
+        Trainer1Party.HealthBar = GameObject.Find("Back Health Bar").GetComponent<Image>();
+        Trainer1Party.NameText = GameObject.Find("Back Name Text").GetComponent<TMPro.TMP_Text>();
+        Trainer1Party.HealthText = GameObject.Find("Back Health Text").GetComponent<TMPro.TMP_Text>();
+        Trainer1Party.TotalHealthText = GameObject.Find("Back Total Health Text").GetComponent<TMPro.TMP_Text>();
         // Trainer 2
-        Trainer2Party.HealthBarText = GameObject.Find("Trainer 2 Health Bar Text").GetComponent<TMPro.TMP_Text>();
-        Trainer2Party.ThoughtText1 = GameObject.Find("Trainer 2 Thought Text 1").GetComponent<TMPro.TMP_Text>();
-        Trainer2Party.ThoughtText2 = GameObject.Find("Trainer 2 Thought Text 2").GetComponent<TMPro.TMP_Text>();
+        Trainer2Party.HealthBar = GameObject.Find("Fore Health Bar").GetComponent<Image>();
+        Trainer2Party.NameText = GameObject.Find("Fore Name Text").GetComponent<TMPro.TMP_Text>();
 
         StartCoroutine(TumblemonBattle());
     }
+    
 
-    void UpdateHealthBarText(MonParty Party1, MonParty Party2)
+    private void OnTypewriterDone()
     {
-        Party1.HealthBarText.text = $"{Party1.MonTeam[Party1.currentMon].name}: {Party1.MonTeam[Party1.currentMon].stats.health}";
-        Party2.HealthBarText.text = $"{Party2.MonTeam[Party2.currentMon].name}: {Party2.MonTeam[Party2.currentMon].stats.health}";
+        isTextDone = true;
     }
 
-    void UpdateThoughtText(MonParty ActingParty, string newText)
+    void OnEnable()
     {
-        string temp = ActingParty.HealthBarText.text;
-        ActingParty.ThoughtText1.text = newText;
-        ActingParty.ThoughtText2.text = temp;
+        ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect.CompleteTextRevealed += OnTypewriterDone;
+    }
+
+    void OnDisable()
+    {
+        ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect.CompleteTextRevealed -= OnTypewriterDone;
     }
     
     private IEnumerator TumblemonBattle()
     {
+        yield return null;
+        ActionText.text = $"aaaaaaaaaaaaaaa";
+        yield return new WaitUntil(() => isTextDone);
+        
+        ActionText.text = $"I went to the beach today yes yes";
+        yield return new WaitUntil(() => isTextDone);
+
         // Intializes vars
         var(AtkParty, DefParty) = (Trainer1Party, Trainer1Party);
 
-        yield return new WaitForSeconds(1);
         Trainer1Party = partySelect.Trainer1Party;
         Trainer2Party = partySelect.Trainer2Party;
         
-        ActionText.text = "BATTLE BEGINS NOW";
+        ActionText.text = $"{Trainer1Party.Trainer.name} is challenged by {Trainer2Party.Trainer.name}!";
         Debug.Log("BATTLE BEGINS NOW");
-        UpdateHealthBarText(Trainer1Party, Trainer2Party);
 
         // Loops until on of the trainers runs out of mons
         while (true)
@@ -189,7 +202,6 @@ public class Battle : MonoBehaviour
             if (Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health <= 0)
                 Trainer2Party.currentMon = FaintedMonSwap(Trainer2Party, Trainer1Party);
             
-            UpdateHealthBarText(Trainer1Party, Trainer2Party);
         }
         Debug.Log("-------------------------------------------------------------------------------------");
         yield return new WaitForSeconds(waitTime);
@@ -245,12 +257,10 @@ public class Battle : MonoBehaviour
         if (isTrainer1)
         {
             AtkParty.currentDmg = trainerDmg;
-            UpdateHealthBarText(AtkParty, DefParty);
         }
         else
         {
             DefParty.currentDmg = trainerDmg;
-            UpdateHealthBarText(DefParty, AtkParty);
         }
 
         if (AtkParty.moveSelected.recoilType != "None")
@@ -262,8 +272,6 @@ public class Battle : MonoBehaviour
             AtkParty.MonTeam[AtkParty.currentMon].stats.health -= (int)(
                 AtkParty.MonTeam[AtkParty.currentMon].stats.total_health * AtkParty.moveSelected.recoil);
         }
-
-        UpdateHealthBarText(AtkParty, DefParty);
 
         return (AtkParty, DefParty);
     }

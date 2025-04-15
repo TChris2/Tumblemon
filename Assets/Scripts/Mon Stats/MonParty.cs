@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
@@ -13,9 +14,11 @@ public class MonParty
     public string action;
     public int currentDmg;
 
-    public TMP_Text HealthBarText;
-    public TMP_Text ThoughtText1;
-    public TMP_Text ThoughtText2;
+    public Image HealthBar;
+    public TMPro.TMP_Text NameText;
+    public TMPro.TMP_Text LevelText;
+    public TMPro.TMP_Text HealthText;
+    public TMPro.TMP_Text TotalHealthText;
 
     public MonParty() 
     {

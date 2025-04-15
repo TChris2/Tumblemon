@@ -127,6 +127,7 @@ public class PartySelect : MonoBehaviour
 
     public void StartBattle()
     {
+        DontDestroyOnLoad(this.gameObject);
         SceneManager.LoadScene("Battle");
     }
 }
