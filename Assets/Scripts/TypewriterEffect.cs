@@ -10,7 +10,6 @@ namespace ChristinaCreatesGames.Typography.Typewriter
     [RequireComponent(typeof(TMPro.TMP_Text))]
     public class TypewriterEffect : MonoBehaviour
     {
-        [SerializeField]
         private TMPro.TMP_Text _textBox;
 
         // Basic Typewriter Functionality
