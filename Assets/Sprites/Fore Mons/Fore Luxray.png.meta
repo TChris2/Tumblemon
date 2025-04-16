@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9d48d4286c3a9348b79d1b4e1273f01
+guid: 304089ccae8fa2c4887ef5533c0caea4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,274 +110,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crunch_0
+      name: Fore Luxray_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
-        width: 104
-        height: 116
+        x: 19
+        y: 84
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa338d300db741940b799e33152f5ee8
-      internalID: 951466339
+      spriteID: 57108d3b342d9a846ad8c3c0e864e088
+      internalID: -1649061198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_1
+      name: Fore Luxray_1
       rect:
         serializedVersion: 2
-        x: 121
-        y: 214
-        width: 99
-        height: 131
+        x: 111
+        y: 84
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a9c2c728ecee9b45a3ee4cb32837ee2
-      internalID: 543658547
+      spriteID: 9d917484e9a74e44aa6e582535b501d2
+      internalID: 97651746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_2
+      name: Fore Luxray_2
       rect:
         serializedVersion: 2
-        x: 266
-        y: 203
-        width: 104
-        height: 148
+        x: 204
+        y: 84
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0530365e5194fb4283ee70e6ae3a73d
-      internalID: -380250599
+      spriteID: 495f3332b94d8d8489ce634adde5a543
+      internalID: -1756619950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_3
+      name: Fore Luxray_3
       rect:
         serializedVersion: 2
-        x: 390
-        y: 192
-        width: 104
-        height: 172
+        x: 295
+        y: 84
+        width: 75
+        height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e004ff0fb7d868d4ab31d2e09438a0c4
-      internalID: 615443966
+      spriteID: fe1714851b9539f44974af96f611a702
+      internalID: 1968445449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_4
+      name: Fore Luxray_4
       rect:
         serializedVersion: 2
-        x: 525
-        y: 197
-        width: 104
-        height: 158
+        x: 387
+        y: 84
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0736b21e04aaf4a8e0f1460df00e89
-      internalID: 678915871
+      spriteID: 93aba1358041e8d439ddc0da67c96ee9
+      internalID: 347137188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_5
+      name: Fore Luxray_5
       rect:
         serializedVersion: 2
-        x: 674
-        y: 206
-        width: 104
-        height: 137
+        x: 477
+        y: 84
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6ab923f46c72ca4fbca3a0d85133cf7
-      internalID: -1557782043
+      spriteID: a906e532beb977d4cba769b267ee47b9
+      internalID: 395635187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_6
+      name: Fore Luxray_6
       rect:
         serializedVersion: 2
-        x: 817
-        y: 216
-        width: 104
-        height: 111
+        x: 568
+        y: 84
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4d6affafc6d8f34b84efd5f3996dd79
-      internalID: -1573124731
+      spriteID: 2db0c1e603283724ebf18276b3cb47f8
+      internalID: 1072980551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_13
+      name: Fore Luxray_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 46
-        width: 104
-        height: 78
+        x: 17
+        y: 7
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdeea810c505143489d184089e069ecb
-      internalID: 710844826
+      spriteID: ed83f29799d80fb41bc419b700febd7d
+      internalID: -2119216390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_14
+      name: Fore Luxray_8
       rect:
         serializedVersion: 2
-        x: 126
-        y: 48
-        width: 104
-        height: 66
+        x: 110
+        y: 7
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 554c29d739c392c489a3d4a916d1c7bd
-      internalID: 1108406971
+      spriteID: 03b87dd4f4167c44bb1be78fcbea6882
+      internalID: -550839596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_15
+      name: Fore Luxray_9
       rect:
         serializedVersion: 2
-        x: 266
-        y: 40
-        width: 104
-        height: 83
+        x: 202
+        y: 7
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2bfe2b93f517d748829f0cb49929337
-      internalID: -1386832320
+      spriteID: 2d0fc3866dd2ff84cb4afd33916b4183
+      internalID: 360175145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_16
+      name: Fore Luxray_10
       rect:
         serializedVersion: 2
-        x: 395
-        y: 36
-        width: 104
-        height: 93
+        x: 295
+        y: 7
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4004311ce8e83242bb62ea317dee3b0
-      internalID: -1565174612
+      spriteID: 4a2ee7149766c6a4faee1e2714eeeb9c
+      internalID: -1345515153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_17
+      name: Fore Luxray_11
       rect:
         serializedVersion: 2
-        x: 531
-        y: 30
-        width: 104
-        height: 107
+        x: 387
+        y: 7
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e293b9d596d773b48bd23e3638895d73
-      internalID: 1093554316
+      spriteID: c1d9219f364cbfa4cb29d9784aa7fed4
+      internalID: 1415468759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crunch_18
+      name: Fore Luxray_12
       rect:
         serializedVersion: 2
-        x: 668
-        y: 18
-        width: 104
-        height: 127
+        x: 479
+        y: 7
+        width: 75
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 178ad35ecf1133344ad39ace82effeca
-      internalID: 2073740157
+      spriteID: 9e266591c57848b44b93e2b394dadcd5
+      internalID: -179850876
       vertices: []
       indices: 
       edges: []
@@ -385,7 +385,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 63d17e81535ea6942ad4da36bcfb0ad5
     internalID: 0
     vertices: []
     indices: 
@@ -393,31 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crunch_0: 951466339
-      Crunch_1: 543658547
-      Crunch_10: -1957356489
-      Crunch_11: -1874427657
-      Crunch_12: -1394870438
-      Crunch_13: 710844826
-      Crunch_14: 1108406971
-      Crunch_15: -1386832320
-      Crunch_16: -1565174612
-      Crunch_17: 1093554316
-      Crunch_18: 2073740157
-      Crunch_19: -1041731191
-      Crunch_2: -380250599
-      Crunch_20: 417065857
-      Crunch_21: -10478509
-      Crunch_22: -1182367707
-      Crunch_23: 1053968529
-      Crunch_24: 2120669169
-      Crunch_3: 615443966
-      Crunch_4: 678915871
-      Crunch_5: -1557782043
-      Crunch_6: -1573124731
-      Crunch_7: -1952988744
-      Crunch_8: 1994900355
-      Crunch_9: 1762738257
+      Fore Luxray_0: -1649061198
+      Fore Luxray_1: 97651746
+      Fore Luxray_10: -1345515153
+      Fore Luxray_11: 1415468759
+      Fore Luxray_12: -179850876
+      Fore Luxray_2: -1756619950
+      Fore Luxray_3: 1968445449
+      Fore Luxray_4: 347137188
+      Fore Luxray_5: 395635187
+      Fore Luxray_6: 1072980551
+      Fore Luxray_7: -2119216390
+      Fore Luxray_8: -550839596
+      Fore Luxray_9: 360175145
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
