@@ -17,18 +17,19 @@ public class MonDatabase : MonoBehaviour
 
         moveDatabase = FindObjectOfType<MoveDatabase>();
         typeDatabase = FindObjectOfType<TypeDatabase>();
-        LoadTumblemonData();
+        StartCoroutine(LoadTumblemonData());
     }
 
-    private void LoadTumblemonData()
+    private IEnumerator LoadTumblemonData()
     {
+        yield return null;
+
         // Load the text file from Resources
         TextAsset textAsset = Resources.Load<TextAsset>("Tumblemon");
 
         if (textAsset == null)
         {
             Debug.LogError("Tumblemon.txt not found in Resources folder.");
-            return;
         }
 
         string[] lines = textAsset.text.Split('\n');
