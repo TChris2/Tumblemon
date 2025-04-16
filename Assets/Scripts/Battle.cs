@@ -21,6 +21,7 @@ public class Battle : MonoBehaviour
     private float waitTime = 1;
     private ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect typewriter;
     private bool isTextDone = false;
+    private bool isAnimationDone = false;
 
 
     // Start is called before the first frame update
@@ -37,13 +38,27 @@ public class Battle : MonoBehaviour
         typewriter = ActionText.GetComponent<ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect>();
 
         // Trainer 1
+        // Text Stuff
         Trainer1Party.HealthBar = GameObject.Find("Back Health Bar").GetComponent<Image>();
         Trainer1Party.NameText = GameObject.Find("Back Name Text").GetComponent<TMPro.TMP_Text>();
         Trainer1Party.HealthText = GameObject.Find("Back Health Text").GetComponent<TMPro.TMP_Text>();
         Trainer1Party.TotalHealthText = GameObject.Find("Back Total Health Text").GetComponent<TMPro.TMP_Text>();
+        Trainer1Party.LevelText = GameObject.Find("Back Lvl Text").GetComponent<TMPro.TMP_Text>();
+        // Animators
+        Trainer1Party.EffectAnimator = GameObject.Find("Back").GetComponent<Animator>();
+        Trainer1Party.TextBoxCanvas = Trainer1Party.EffectAnimator.GetComponent<CanvasGroup>();
+        Trainer1Party.AttackAnimator = GameObject.Find("Back Attack").GetComponent<Animator>();
+        Trainer1Party.MonAnimator = GameObject.Find("Back Mon").GetComponent<Animator>();
         // Trainer 2
+        // Text Stuff
         Trainer2Party.HealthBar = GameObject.Find("Fore Health Bar").GetComponent<Image>();
         Trainer2Party.NameText = GameObject.Find("Fore Name Text").GetComponent<TMPro.TMP_Text>();
+        Trainer2Party.LevelText = GameObject.Find("Fore Lvl Text").GetComponent<TMPro.TMP_Text>();
+        // Animators
+        Trainer2Party.EffectAnimator = GameObject.Find("Fore").GetComponent<Animator>();
+        Trainer2Party.TextBoxCanvas = Trainer2Party.EffectAnimator.GetComponent<CanvasGroup>();
+        Trainer2Party.AttackAnimator = GameObject.Find("Fore Attack").GetComponent<Animator>();
+        Trainer2Party.MonAnimator = GameObject.Find("Fore Mon").GetComponent<Animator>();
 
         StartCoroutine(TumblemonBattle());
     }
@@ -52,6 +67,17 @@ public class Battle : MonoBehaviour
     private void OnTypewriterDone()
     {
         isTextDone = true;
+    }
+
+    private IEnumerator WaitForAnimation(Animator animator, string stateName)
+    {
+        // Wait for the animator to enter the state
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName(stateName))
+            yield return null;
+
+        // Wait until it finishes
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            yield return null;
     }
 
     void OnEnable()
@@ -63,15 +89,30 @@ public class Battle : MonoBehaviour
     {
         ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect.CompleteTextRevealed -= OnTypewriterDone;
     }
+
+    IEnumerator UpdateMonTextboxSwap(MonParty ActingParty, string text, bool isTrainer1)
+    {
+        ActionText.text = text;
+        ActingParty.NameText.text = ActingParty.MonTeam[ActingParty.currentMon].name;
+        ActingParty.LevelText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].level}";
+        if (isTrainer1) 
+        {
+            ActingParty.HealthText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].stats.health}";
+            ActingParty.TotalHealthText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].stats.total_health}";
+        }
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        ActingParty.MonAnimator.Play($"{ActingParty.MonTeam[ActingParty.currentMon].name}");
+        ActingParty.EffectAnimator.Play("Send");
+        ActingParty.EffectAnimator.Play("TextBox Move Onscreen");
+
+        yield return StartCoroutine(WaitForAnimation(Trainer2Party.EffectAnimator, "Send"));
+        isAnimationDone = true;
+    }
     
     private IEnumerator TumblemonBattle()
     {
         yield return null;
-        ActionText.text = $"aaaaaaaaaaaaaaa";
-        yield return new WaitUntil(() => isTextDone);
-        
-        ActionText.text = $"I went to the beach today yes yes";
-        yield return new WaitUntil(() => isTextDone);
+
 
         // Intializes vars
         var(AtkParty, DefParty) = (Trainer1Party, Trainer1Party);
@@ -80,7 +121,17 @@ public class Battle : MonoBehaviour
         Trainer2Party = partySelect.Trainer2Party;
         
         ActionText.text = $"{Trainer1Party.Trainer.name} is challenged by {Trainer2Party.Trainer.name}!";
-        Debug.Log("BATTLE BEGINS NOW");
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+
+        StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+        yield return new WaitUntil(() => isTextDone && isAnimationDone);
+        yield return new WaitForSeconds(waitTime);
+
+        StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"{Trainer1Party.Trainer.name} sent out {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
 
         // Loops until on of the trainers runs out of mons
         while (true)
@@ -246,8 +297,8 @@ public class Battle : MonoBehaviour
         AtkParty.moveSelected.pp--;
 
         // Gets damage info
-        trainerDmg = DamageCal(AtkParty, DefParty);
-        // Deals damage to defending mon
+        trainerDmg = DamageCal(AtkParty, DefParty, AtkParty.moveSelected);
+        // Deals damage to defending mon 
         DefParty.MonTeam[DefParty.currentMon].stats.health -= trainerDmg;
 
         if (DefParty.MonTeam[DefParty.currentMon].stats.health < 0)
@@ -338,7 +389,8 @@ public class Battle : MonoBehaviour
                     score += 0.25f * my.Trainer.attack_priority;
                 else
                 {   
-                    int predictedDamage = DamageCal(my, opp);
+                    Debug.Log(mv.name);
+                    int predictedDamage = DamageCal(my, opp, mv);
                     int targetHP = opp.MonTeam[opp.currentMon].stats.health;
                     if (predictedDamage >= targetHP || my.MonTeam[my.currentMon].stats.health >= 1){
                         Debug.Log($" Attack KO Score {score}");
@@ -431,39 +483,39 @@ public class Battle : MonoBehaviour
 
     void AttackSim(MonParty AtkParty, MonParty DefParty)
     {
-        int dmg = DamageCal(AtkParty, DefParty);
+        int dmg = DamageCal(AtkParty, DefParty, AtkParty.moveSelected);
         DefParty.MonTeam[DefParty.currentMon].stats.health -= dmg;
         if (DefParty.MonTeam[DefParty.currentMon].stats.health < 0)
             DefParty.MonTeam[DefParty.currentMon].stats.health = 0;
     }
 
     // Caculates damage dealt to defending party
-    int DamageCal(MonParty AtkParty, MonParty DefParty) 
+    int DamageCal(MonParty AtkParty, MonParty DefParty, MoveInfo move) 
     {
         float attack = 0;
         float defense = 0;
         float stab = 0;
         float crit = 1;
         
-        if (AtkParty.moveSelected.attackType == "Physical")
+        if (move.attackType == "Physical")
         {
             attack = AtkParty.MonTeam[AtkParty.currentMon].stats.attack;
             defense = DefParty.MonTeam[DefParty.currentMon].stats.defense;
         }
-        if (AtkParty.moveSelected.attackType == "Special")
+        if (move.attackType == "Special")
         {
             attack = AtkParty.MonTeam[AtkParty.currentMon].stats.special_attack;
             defense = DefParty.MonTeam[DefParty.currentMon].stats.special_defense;
         }
 
         // Checks for type effectiveness
-        float type_modifier = TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type1) *
-            TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type2);
+        float type_modifier = TypeCheck(move.type, DefParty.MonTeam[DefParty.currentMon].type1) *
+            TypeCheck(move.type, DefParty.MonTeam[DefParty.currentMon].type2);
         
         // Stab
-        if (AtkParty.moveSelected.type == AtkParty.MonTeam[AtkParty.currentMon].type1.name || 
+        if (move.type == AtkParty.MonTeam[AtkParty.currentMon].type1.name || 
             (AtkParty.MonTeam[AtkParty.currentMon].type2 != null &&
-            AtkParty.moveSelected.type == AtkParty.MonTeam[AtkParty.currentMon].type2.name))
+            move.type == AtkParty.MonTeam[AtkParty.currentMon].type2.name))
         {
             stab = 1.5f;
         }
@@ -480,7 +532,7 @@ public class Battle : MonoBehaviour
                 ((AtkParty.MonTeam[AtkParty.currentMon].level) + 5);
         }
 
-        float damage = ( ((((2*AtkParty.MonTeam[AtkParty.currentMon].level)/5)+2) * AtkParty.moveSelected.power
+        float damage = ( ((((2*AtkParty.MonTeam[AtkParty.currentMon].level)/5)+2) * move.power
             * (attack/defense)) / (50) + 2) * crit * random * stab * type_modifier;
 
         return (int)damage;
