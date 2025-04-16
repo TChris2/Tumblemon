@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832691661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1540,7 +1540,6 @@ GameObject:
   - component: {fileID: 859460032}
   - component: {fileID: 859460035}
   - component: {fileID: 859460034}
-  - component: {fileID: 859460036}
   m_Layer: 5
   m_Name: Back Mon
   m_TagString: Untagged
@@ -1574,7 +1573,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859460031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1605,27 +1604,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859460031}
   m_CullTransparentMesh: 1
---- !u!95 &859460036
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859460031}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6819e3db3317f06409e8b104104aac8c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &878070492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,8 +2509,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1228987075}
-  - component: {fileID: 1228987074}
   - component: {fileID: 1228987076}
+  - component: {fileID: 1228987074}
   m_Layer: 0
   m_Name: Battle
   m_TagString: Untagged
@@ -2552,6 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b3a09aa2d7f774fa502439d2f9d27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 2
   Trainer1Party:
     Trainer:
       name: 
@@ -2583,7 +2562,6 @@ MonoBehaviour:
     LevelText: {fileID: 0}
     HealthText: {fileID: 0}
     TotalHealthText: {fileID: 0}
-    EffectAnimator: {fileID: 0}
     AttackAnimator: {fileID: 0}
     MonAnimator: {fileID: 0}
     TextBoxCanvas: {fileID: 0}
@@ -2618,11 +2596,9 @@ MonoBehaviour:
     LevelText: {fileID: 0}
     HealthText: {fileID: 0}
     TotalHealthText: {fileID: 0}
-    EffectAnimator: {fileID: 0}
     AttackAnimator: {fileID: 0}
     MonAnimator: {fileID: 0}
     TextBoxCanvas: {fileID: 0}
-  waitTime: 1
 --- !u!224 &1228987075
 RectTransform:
   m_ObjectHideFlags: 0
