@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 096cb915b3619ad4c990369d6fa9a482
+guid: f1b0593d62b1f824faff1d75502b0c26
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,149 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aerial-Ace_0
+      name: Thunderbolt_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 26
-        width: 98
-        height: 94
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 49, y: 47}
-        - {x: 43, y: 47}
-        - {x: 40, y: 44}
-        - {x: 34, y: 39}
-        - {x: 20, y: 27}
-        - {x: -14, y: -4}
-        - {x: -46, y: -38}
-        - {x: -49, y: -42}
-        - {x: -49, y: -47}
-        - {x: -42, y: -47}
-        - {x: -25, y: -33}
-        - {x: 30, y: 18}
-        - {x: 49, y: 42}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c89debe459f4f94ea4e02323d26641b
-      internalID: -1550344054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aerial-Ace_1
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 28
-        width: 98
-        height: 94
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 49, y: 47}
-        - {x: 43, y: 47}
-        - {x: 40, y: 44}
-        - {x: 34, y: 39}
-        - {x: 20, y: 27}
-        - {x: -14, y: -4}
-        - {x: -46, y: -38}
-        - {x: -49, y: -42}
-        - {x: -49, y: -47}
-        - {x: -42, y: -47}
-        - {x: -25, y: -33}
-        - {x: 30, y: 18}
-        - {x: 49, y: 42}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a77135c98a1d71a47b1a70ea3cbac28b
-      internalID: -1177432734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aerial-Ace_2
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 19
-        width: 102
-        height: 100
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 46, y: 50}
-        - {x: -9, y: 1}
-        - {x: -33, y: -25}
-        - {x: -51, y: -46}
-        - {x: -51, y: -50}
-        - {x: -45, y: -50}
-        - {x: 25, y: 18}
-        - {x: 43, y: 36}
-        - {x: 51, y: 50}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c58a17f53e700a240be293d4aa54478a
-      internalID: -1816186435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aerial-Ace_3
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 0
-        width: 122
-        height: 121
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 53, y: 60.5}
-        - {x: 14, y: 29.5}
-        - {x: -61, y: -54.5}
-        - {x: -61, y: -60.5}
-        - {x: -54, y: -60.5}
-        - {x: 21, y: 4.5}
-        - {x: 61, y: 51.5}
-        - {x: 61, y: 60.5}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb84c8de26df6f4dbcdee774652b10d
-      internalID: 1982444149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aerial-Ace_4
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 22
-        width: 20
-        height: 20
-      alignment: 9
+        x: 5
+        y: 3
+        width: 32
+        height: 221
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f245e4c89d7d234aaa2c5067f5f9a31
-      internalID: 890657527
+      spriteID: 683c13596fe4bbd46811b706aee268de
+      internalID: 1867360812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunderbolt_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 3
+        width: 32
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4783d4bc3fbca48ae08cc065ea8b5e
+      internalID: 2101919557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunderbolt_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 7
+        width: 46
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2448f3e7beb889f46984b41ea0c2781d
+      internalID: -1314305179
       vertices: []
       indices: 
       edges: []
@@ -260,7 +175,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cf426248a4d89844a9b7059daac2ee40
+    spriteID: 02cbe05a64db77c428595a536ff544a7
     internalID: 0
     vertices: []
     indices: 
@@ -268,11 +183,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Aerial-Ace_0: -1550344054
-      Aerial-Ace_1: -1177432734
-      Aerial-Ace_2: -1816186435
-      Aerial-Ace_3: 1982444149
-      Aerial-Ace_4: 890657527
+      Thunderbolt_0: -758277405
+      Thunderbolt_1: -290730251
+      Thunderbolt_2: 1993888297
+      Thunderbolt_3: -1019285623
+      Thunderbolt_4: 1867360812
+      Thunderbolt_5: 2101919557
+      Thunderbolt_6: -1314305179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
