@@ -627,12 +627,14 @@ public class Battle : MonoBehaviour
     // Decides Trainer action
     (string, MoveInfo, int) TrainerActionDecide(MonParty myParty, MonParty opponentParty)
     {
+        Debug.Log($"{myParty.Trainer.name}'s currentMon: {myParty.currentMon} (HP: {myParty.MonTeam[myParty.currentMon].stats.health})");
         // Clones parties to simulate them
         MonParty simMy = myParty.Clone();
         MonParty simOpponent = opponentParty.Clone();
 
-        Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity, false,
+        Minimax(simMy, simOpponent, 5, true, float.NegativeInfinity, float.PositiveInfinity, false,
                 out string action, out MoveInfo move, out int swapIndex);
+        Debug.Log($"AI decided: action={action}, move={move?.name}, swapIndex={swapIndex}");
 
         return (action, move, swapIndex);
     }
@@ -713,7 +715,10 @@ public class Battle : MonoBehaviour
         var actions = new List<(string, MoveInfo, int)>();
         var mon = party.MonTeam[party.currentMon];
 
-        if (mon.stats.health <= 0)
+        Debug.Log($"[AI] {party.Trainer.name}'s simulated currentMon is: {party.currentMon}, HP: {party.MonTeam[party.currentMon].stats.health}");
+
+
+        if (mon.stats.health <= 0 || party.MonTeam[party.currentMon].stats.health <= 0)
         {
             // Only add swap options
             for (int i = 0; i < party.MonTeam.Count; i++)
