@@ -711,18 +711,7 @@ public class Battle : MonoBehaviour
         var actions = new List<(string, MoveInfo, int)>();
         var mon = party.MonTeam[party.currentMon];
 
-        if (mon.stats.health <= 0)
-        {
-            // Only add swap options
-            for (int i = 0; i < party.MonTeam.Count; i++)
-            {
-                if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
-                    actions.Add(("Swap", null, i));
-            }
-            return actions;
-        }
-
-        if (!isSwapping)
+        if (!isSwapping && mon.stats.health > 0)
         {
             // Gets all moves that have power points
             foreach (var move in mon.moves)
