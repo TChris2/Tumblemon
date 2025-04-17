@@ -166,6 +166,8 @@ public class Battle : MonoBehaviour
         // Loops until hp matches
         do
         {
+            if (DefParty.MonTeam[DefParty.currentMon].stats.health <= 0)
+                break;
             // Slight pause for the ticker
             yield return new WaitForSeconds(.025f);
 
@@ -710,6 +712,17 @@ public class Battle : MonoBehaviour
     {
         var actions = new List<(string, MoveInfo, int)>();
         var mon = party.MonTeam[party.currentMon];
+
+        if (mon.stats.health <= 0)
+        {
+            // Only add swap options
+            for (int i = 0; i < party.MonTeam.Count; i++)
+            {
+                if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
+                    actions.Add(("Swap", null, i));
+            }
+            return actions;
+        }
 
         if (!isSwapping && mon.stats.health > 0)
         {
