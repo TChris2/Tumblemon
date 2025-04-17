@@ -50,7 +50,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Back Luxray Idle
+  m_Name: Luxray
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -128,7 +128,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Back Empoleon Idle
+  m_Name: Empoleon
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -167,7 +167,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c0a02dcfd18101f418439132849eae98, type: 2}
+  m_Motion: {fileID: 7400000, guid: dca5770dc7632e24bb10202f1c157dd6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -180,7 +180,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Back Gardevoir Idle
+  m_Name: Gardevoir
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -232,7 +232,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Back Crobat Idle
+  m_Name: Crobat
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -271,7 +271,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f6285cfd67750e5449e719a01a079477, type: 2}
+  m_Motion: {fileID: 7400000, guid: 02de9d99501817a43badd8af02d13903, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -337,13 +337,13 @@ AnimatorStateMachine:
     m_Position: {x: 372.80002, y: 102.40001, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8833622127110673230}
-    m_Position: {x: 520, y: 50, z: 0}
+    m_Position: {x: 420, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3113626226412094727}
     m_Position: {x: 629.6, y: 139.2, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6299129444285053774}
-    m_Position: {x: 674.8855, y: -2.5057373, z: 0}
+    m_Position: {x: 680, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -663636884410124128}
     m_Position: {x: 709.8855, y: 62.494263, z: 0}
@@ -415,7 +415,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Back Rapidash Idle
+  m_Name: Rapidash
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -506,7 +506,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 98dbe1b1bd2ed9c49a5fea9b0a709d9e, type: 2}
+  m_Motion: {fileID: 7400000, guid: aa128fe997e49c44b8c9324301cbed01, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

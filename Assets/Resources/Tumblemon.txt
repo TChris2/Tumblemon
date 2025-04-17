@@ -60,7 +60,7 @@ Special Attack: 80
 Defense: 70
 Special Defense: 80
 Speed: 105
-Moves: Posion Jab, Flame Thrower
+Moves: Posion Jab, Flamethrower
 Sprite Name: None
 
 Name: Gaedevoir

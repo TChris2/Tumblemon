@@ -9,21 +9,20 @@ public class Battle : MonoBehaviour
     [SerializeField]
     private float waitTime = 1;
     private MoveDatabase moveDatabase;
+    private TypeDatabase typeDatabase;
     private PartySelect partySelect;
     // Used if a mon has run out power points on all of their moves
     private MoveInfo struggle;
     public MonParty Trainer1Party;
     public MonParty Trainer2Party;
-    string winningTrainer = null;
-    bool trainer1Loss = false;
-    bool trainer2Loss = false;
+    TrainerInfo winningTrainer = null;
+    TrainerInfo lossingTrainer = null;
     // Displays Action Text
     TMPro.TMP_Text ActionText;
     private ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect typewriter;
     private bool isTextDone = false;
     private bool isAnimationDone = false;
     private bool isCountingDone = false;
-    private bool isSwappingDone = false;
     private bool isAttackingDone = true;
 
     // HP health colors
@@ -40,6 +39,7 @@ public class Battle : MonoBehaviour
     {
         // Gets struggle from the move datebase
         moveDatabase = FindObjectOfType<MoveDatabase>();
+        typeDatabase = FindObjectOfType<TypeDatabase>();
         struggle = moveDatabase.GetMoveByName("Struggle");
         partySelect = moveDatabase.GetComponent<PartySelect>();
         Trainer1Party = partySelect.Trainer1Party;
@@ -161,7 +161,7 @@ public class Battle : MonoBehaviour
                 currentHealth = 0;
         }
 
-        Debug.Log($"Health tick {currentHealth}");
+        //Debug.Log($"Health tick {currentHealth}");
 
         // Loops until hp matches
         do
@@ -369,18 +369,6 @@ public class Battle : MonoBehaviour
                     yield return new WaitForSeconds(waitTime);
                 }
             }
-
-            // Checks to see if the trainer has run out of mons after they both do their actions
-            trainer1Loss = IsPartyDead(Trainer1Party);
-            trainer2Loss = IsPartyDead(Trainer2Party);
-            if (trainer1Loss || trainer2Loss)
-            {
-                if (trainer1Loss)
-                    winningTrainer = Trainer2Party.Trainer.name;
-                else    
-                    winningTrainer = Trainer1Party.Trainer.name;
-                break;
-            }
             
             // If their current mon has fainted
             if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health <= 0)
@@ -389,9 +377,20 @@ public class Battle : MonoBehaviour
                 yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
 
-                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
-                yield return new WaitUntil(() => isTextDone && isAnimationDone);
-                yield return new WaitForSeconds(waitTime);
+                // Checks to see if the trainer has run out of mons after they both do their actions
+                if (IsPartyDead(Trainer1Party))
+                {
+                    winningTrainer = Trainer2Party.Trainer;
+                    lossingTrainer = Trainer1Party.Trainer;
+                    break;
+                }
+                // Allows them to swap to another mon
+                else
+                {
+                    yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+                    yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                    yield return new WaitForSeconds(waitTime);
+                }
             }
             if (Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health <= 0)
             {
@@ -399,9 +398,20 @@ public class Battle : MonoBehaviour
                 yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
 
-                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
-                yield return new WaitUntil(() => isTextDone && isAnimationDone);
-                yield return new WaitForSeconds(waitTime);
+                // Checks to see if the trainer has run out of mons after they both do their actions
+                if (IsPartyDead(Trainer2Party))
+                {
+                    winningTrainer = Trainer1Party.Trainer;
+                    lossingTrainer = Trainer2Party.Trainer;
+                    break;
+                }
+                // Allows them to swap to another mon
+                else 
+                {
+                    yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+                    yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                    yield return new WaitForSeconds(waitTime);
+                }
                 
             }
 
@@ -419,8 +429,8 @@ public class Battle : MonoBehaviour
         Debug.Log("-------------------------------------------------------------------------------------");
         yield return new WaitForSeconds(waitTime);
         isTextDone = false;
-        Debug.Log($"{winningTrainer} WON!");
-        ActionText.text = $"{winningTrainer} WON!";
+        Debug.Log($"{winningTrainer.name} defeated {lossingTrainer.name}!");
+        ActionText.text = $"{winningTrainer.name} defeated {lossingTrainer.name}!";
         typewriter.SendMessage("PrepareForNewText", ActionText);
         yield return new WaitUntil(() => isTextDone);
         yield return new WaitForSeconds(waitTime);
@@ -439,7 +449,7 @@ public class Battle : MonoBehaviour
         MonParty simMy = ActingParty.Clone();
         MonParty simOpponent = OpParty.Clone();
 
-        Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity, true,
+        Minimax(simMy, simOpponent, 5, true, float.NegativeInfinity, float.PositiveInfinity, true,
                 out string action, out MoveInfo move, out int swapIndex);
 
         Debug.Log($"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} fainted!");
@@ -513,7 +523,9 @@ public class Battle : MonoBehaviour
 
         AtkParty.TextBoxCanvas.alpha = 1;
         DefParty.TextBoxCanvas.alpha = 1;
-        yield return StartCoroutine(HealthBarTicker(DefParty, trainerDmg, !isTrainer1, false));
+        
+        if (trainerDmg > 0)
+            yield return StartCoroutine(HealthBarTicker(DefParty, trainerDmg, !isTrainer1, false));
 
         if (AtkParty.moveSelected.recoilType != "None")
         {
@@ -532,8 +544,16 @@ public class Battle : MonoBehaviour
             yield return StartCoroutine(HealthBarTicker(AtkParty, trainerDmg, isTrainer1, false));
         }
 
-        float type_modifier = TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type1) *
-            TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type2);
+        float type_modifier1 = TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type1);
+        float type_modifier2;
+
+        if (!string.IsNullOrEmpty(DefParty.MonTeam[DefParty.currentMon].type2))
+            type_modifier2 = TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type2);
+        else 
+            type_modifier2 = 1;
+
+        // Checks for type effectiveness
+        float type_modifier = type_modifier1 * type_modifier2;
 
         if (type_modifier >= 2)
         {
@@ -554,7 +574,7 @@ public class Battle : MonoBehaviour
         if (type_modifier == 0)
         {
             isTextDone = false;
-            ActionText.text = $"It doesn't effect ${DefParty.MonTeam[DefParty.currentMon].name}";
+            ActionText.text = $"It doesn't effect {DefParty.MonTeam[DefParty.currentMon].name}";
             typewriter.SendMessage("PrepareForNewText", ActionText);
             yield return new WaitUntil(() => isTextDone);
             yield return new WaitForSeconds(waitTime);
@@ -649,9 +669,10 @@ public class Battle : MonoBehaviour
 
         float bestScore = isMax ? float.NegativeInfinity : float.PositiveInfinity;
         var actions = GetAllActions(my, opp, isSwapping);
-
+        
         foreach (var (act, mv, idx) in actions)
         {
+            float bonus = 0;
             var myClone = my.Clone();
             var oppClone = opp.Clone();
             ApplyAction(myClone, oppClone, act, mv, idx);
@@ -660,19 +681,20 @@ public class Battle : MonoBehaviour
             if (act == "Attack")
             {
                 if (mv.name == "Struggle")
-                    score += 0.25f * my.Trainer.attack_priority;
+                {
+                    bonus = 0.25f * my.Trainer.attack_priority;
+                }
                 else
                 {   
-                    //Debug.Log(mv.name);
                     int predictedDamage = DamageCal(my, opp, mv);
                     int targetHP = opp.MonTeam[opp.currentMon].stats.health;
-                    if (predictedDamage >= targetHP || my.MonTeam[my.currentMon].stats.health >= 1){
-                        //Debug.Log($" Attack KO Score {score}");
-                        score += 2 * my.Trainer.attack_priority;}
+                    if (predictedDamage >= targetHP || my.MonTeam[my.currentMon].stats.health >= 1)
+                    {
+                        bonus = 2 * my.Trainer.attack_priority;
+                    }
                     else
                     {
-                        score += my.Trainer.attack_priority;
-                        //Debug.Log($" Attack Normal Score {score}");
+                        bonus = my.Trainer.attack_priority;
                     }
                 }
             }
@@ -680,19 +702,18 @@ public class Battle : MonoBehaviour
             {
                 float healthRatio = my.MonTeam[my.currentMon].stats.health / (float)my.MonTeam[my.currentMon].stats.total_health;
                 if (healthRatio <= my.Trainer.heal_threshold / 100f){
-                    score += 2 * my.Trainer.heal_priority;
-                    Debug.Log($" Heal Critical Score {score}");
+                    bonus = 2 * my.Trainer.heal_priority;
                 }
                 else {
-                    score += my.Trainer.heal_priority;
-                    //Debug.Log($" Heal Normal Score {score}");
+                    bonus = my.Trainer.heal_priority;
                 }
             }
             else if (act == "Swap")
             {
-                score += my.Trainer.swap_priority;
-                //Debug.Log($" Swap Normal Score {score}");
+                bonus = my.Trainer.swap_priority;
             }
+
+            score = isMax ? score + bonus : score - bonus;
 
             if (isMax && score > bestScore)
             {
@@ -745,11 +766,13 @@ public class Battle : MonoBehaviour
 
         // Gets all available mons which have not fainted yet
         for (int i = 0; i < party.MonTeam.Count; i++)
+        {
             if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
             {
                 Debug.Log($"{party.Trainer.name}'s {party.MonTeam[i].name}");
                 actions.Add(("Swap", null, i));
             }
+        }
 
         return actions;
     }
@@ -801,14 +824,21 @@ public class Battle : MonoBehaviour
             defense = DefParty.MonTeam[DefParty.currentMon].stats.special_defense;
         }
 
+        float type_modifier1 = TypeCheck(move.type, DefParty.MonTeam[DefParty.currentMon].type1);
+        float type_modifier2;
+
+        if (!string.IsNullOrEmpty(DefParty.MonTeam[DefParty.currentMon].type2))
+            type_modifier2 = TypeCheck(move.type, DefParty.MonTeam[DefParty.currentMon].type2);
+        else 
+            type_modifier2 = 1;
+
         // Checks for type effectiveness
-        float type_modifier = TypeCheck(move.type, DefParty.MonTeam[DefParty.currentMon].type1) *
-            TypeCheck(move.type, DefParty.MonTeam[DefParty.currentMon].type2);
+        float type_modifier = type_modifier1 * type_modifier2;
         
         // Stab
-        if (move.type == AtkParty.MonTeam[AtkParty.currentMon].type1.name || 
+        if (move.type == AtkParty.MonTeam[AtkParty.currentMon].type1 || 
             (AtkParty.MonTeam[AtkParty.currentMon].type2 != null &&
-            move.type == AtkParty.MonTeam[AtkParty.currentMon].type2.name))
+            move.type == AtkParty.MonTeam[AtkParty.currentMon].type2))
         {
             stab = 1.5f;
         }
@@ -832,21 +862,23 @@ public class Battle : MonoBehaviour
     }
 
     // Checks type effectiveness for type modifier
-    float TypeCheck(string moveType, TypeInfo targetType)
+    float TypeCheck(string moveType, string defType)
     {
+        TypeInfo targetType = typeDatabase.GetTypeByName(moveType);
+
         if (moveType == "Typeless")
             return 1f;
         // No 2nd type
-        if (targetType == null)
+        if (defType == null)
             return 1f;
         // Super Effective
-        if (targetType.effective.Contains(moveType))
+        if (targetType.effective.Contains(defType))
             return 2f;
         // Not Very Effective
-        if (targetType.weak.Contains(moveType))
+        if (targetType.weak.Contains(defType))
             return 0.5f;
         // No Effect
-        if (targetType.no_effect.Contains(moveType))
+        if (targetType.no_effect.Contains(defType))
             return 0f;
         // Normal
         else

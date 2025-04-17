@@ -58,13 +58,13 @@ public class MonDatabase : MonoBehaviour
                 case "Type1":
                     if (currentMon != null)
                     {
-                        currentMon.type1 = typeDatabase.GetTypeByName(value);
+                        currentMon.type1 = value;
                     } 
                     break;
                 case "Type2":
                     if (currentMon != null)
                     {
-                        currentMon.type2 = typeDatabase.GetTypeByName(value);
+                        currentMon.type2 = value;
                     }  
                     break;
                 case "Level":

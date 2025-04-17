@@ -6,8 +6,8 @@ using UnityEngine;
 public class MonInfo
 {
     public string name;
-    public TypeInfo type1;
-    public TypeInfo type2;
+    public string type1;
+    public string type2;
     public int level;
     public Stats stats;
     // List of all moves

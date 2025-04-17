@@ -106,7 +106,7 @@ Recoil: 0
 Recoil Type: None
 Animation Name: None
 
-Name: Flame Thrower
+Name: Flamethrower
 Type: Fire
 Attack Type: Special
 Power: 95
