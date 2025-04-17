@@ -1,12 +1,12 @@
 Name: Trainer 1
-Attack Priority: 1
+Attack Priority: 2
 Heal Threshold: 1
 Heal Priority: 1
 Swap Priority: 1
 Sprite Name: None
 
 Name: Trainer 2
-Attack Priority: 1
+Attack Priority: 2
 Heal Threshold: 1
 Heal Priority: 1
 Swap Priority: 1

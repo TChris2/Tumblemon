@@ -2530,7 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b3a09aa2d7f774fa502439d2f9d27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 2
+  waitTime: 1.5
   Trainer1Party:
     Trainer:
       name: 
@@ -2599,6 +2599,9 @@ MonoBehaviour:
     AttackAnimator: {fileID: 0}
     MonAnimator: {fileID: 0}
     TextBoxCanvas: {fileID: 0}
+  green: {r: 0.39215687, g: 0.627451, b: 0.40784314, a: 1}
+  yellow: {r: 0.8, g: 0.6117647, b: 0.40784314, a: 1}
+  red: {r: 0.78431374, g: 0.36078432, b: 0.32941177, a: 1}
 --- !u!224 &1228987075
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2688,7 +2691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: aaaaaaaaaa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 012ae98d509eec24eb48c05f2e4f9c48, type: 2}
   m_sharedMaterial: {fileID: -358214081420336072, guid: 012ae98d509eec24eb48c05f2e4f9c48, type: 2}

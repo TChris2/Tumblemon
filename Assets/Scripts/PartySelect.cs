@@ -45,7 +45,6 @@ public class PartySelect : MonoBehaviour
         Trainer1Party.potionCount = 3;
         AddTrainer(Trainer1Party, "Trainer 1");
         SelectMon(Trainer1Party, "Dewott");
-        Trainer1Party.MonTeam[0].level = 100;
         AddMove(Trainer1Party, 0, "Razor Shell");
         SelectMon(Trainer1Party, "Garchomp");
         AddMove(Trainer1Party, 1, "Dragon Breath");
