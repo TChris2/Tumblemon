@@ -113,10 +113,10 @@ TextureImporter:
       name: Back Crobat_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 98
+        y: 235
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cff6f78e4c147f943abdd9aded655292
-      internalID: -2042746095
+      spriteID: 510a560dea5943e4abba9f9878177969
+      internalID: 186622834
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: Back Crobat_1
       rect:
         serializedVersion: 2
-        x: 115
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 216
+        y: 234
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc950884d41f4f48840f8f66c9c51b4
-      internalID: 879978077
+      spriteID: 64a643ed24a90b34cb8cf55df1df649c
+      internalID: 1889795711
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: Back Crobat_2
       rect:
         serializedVersion: 2
-        x: 230
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 334
+        y: 236
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d65ca390e4e104146ae2d0ee8964c6f3
-      internalID: -2134214783
+      spriteID: cb9b0256466fe154dae42cabf49e63fe
+      internalID: 1766501102
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: Back Crobat_3
       rect:
         serializedVersion: 2
-        x: 345
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 452
+        y: 238
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51bf87a942510174b9868c80ce6b49b5
-      internalID: -2125660722
+      spriteID: cebe47d633796184bbfb673f9a8d876e
+      internalID: -1853826831
       vertices: []
       indices: 
       edges: []
@@ -197,10 +197,10 @@ TextureImporter:
       name: Back Crobat_4
       rect:
         serializedVersion: 2
-        x: 460
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 569
+        y: 240
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 548546bc87464ea46b8baf0b1b437869
-      internalID: 1834665926
+      spriteID: eb0b3efbf0650564ab6782e997978f51
+      internalID: 1177552410
       vertices: []
       indices: 
       edges: []
@@ -218,10 +218,10 @@ TextureImporter:
       name: Back Crobat_5
       rect:
         serializedVersion: 2
-        x: 575
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 685
+        y: 240
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27a4da60501e4d04cb106c7ef3a91a1a
-      internalID: 1114183436
+      spriteID: 563aa541798441447abe5303f807621b
+      internalID: 783420234
       vertices: []
       indices: 
       edges: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: Back Crobat_6
       rect:
         serializedVersion: 2
-        x: 690
-        y: 168
-        width: 115.14286
-        height: 84
+        x: 800
+        y: 236
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 872ca8041e137a7499b77c2cd1a62df7
-      internalID: 195965329
+      spriteID: f624105f131891d4a8a692f86d7c2201
+      internalID: -22952138
       vertices: []
       indices: 
       edges: []
@@ -260,10 +260,10 @@ TextureImporter:
       name: Back Crobat_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 98
+        y: 139
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebb409c4ceb70b741839390b67d26385
-      internalID: 1158695825
+      spriteID: bcfa9fdbdade1aa43bce3c6d01672c24
+      internalID: 570742309
       vertices: []
       indices: 
       edges: []
@@ -281,10 +281,10 @@ TextureImporter:
       name: Back Crobat_8
       rect:
         serializedVersion: 2
-        x: 115
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 213
+        y: 141
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4f43ad528eb8d45b2fcce86d5fe8d8
-      internalID: 653375724
+      spriteID: ce7428828a461954f9533d11c22aaacb
+      internalID: -842268493
       vertices: []
       indices: 
       edges: []
@@ -302,10 +302,10 @@ TextureImporter:
       name: Back Crobat_9
       rect:
         serializedVersion: 2
-        x: 230
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 329
+        y: 144
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be12e0c4c7822a048909f1e4692902cf
-      internalID: 986801717
+      spriteID: b17cf20592e584c4fac49893e2d54060
+      internalID: -834423245
       vertices: []
       indices: 
       edges: []
@@ -323,10 +323,10 @@ TextureImporter:
       name: Back Crobat_10
       rect:
         serializedVersion: 2
-        x: 345
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 445
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,8 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 288bc751c1a3a334a92999a344aa67bb
-      internalID: -1085135872
+      spriteID: a3e23eeb3573f4449aed73d09aa2fb49
+      internalID: -2112027747
       vertices: []
       indices: 
       edges: []
@@ -344,10 +344,10 @@ TextureImporter:
       name: Back Crobat_11
       rect:
         serializedVersion: 2
-        x: 460
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 563
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5cbd941acd93f4887b5a3123aaa847
-      internalID: 1843536922
+      spriteID: 4e86c482f56ef7f428b4d95f4657ee0d
+      internalID: -1168080883
       vertices: []
       indices: 
       edges: []
@@ -365,10 +365,10 @@ TextureImporter:
       name: Back Crobat_12
       rect:
         serializedVersion: 2
-        x: 575
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 681
+        y: 144
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,8 +376,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 939b4083bec418f4fa67f01ddf6c2b46
-      internalID: -70461768
+      spriteID: 6d2f078b9a13ab841b9aed087c3037f4
+      internalID: -2051524299
       vertices: []
       indices: 
       edges: []
@@ -386,10 +386,10 @@ TextureImporter:
       name: Back Crobat_13
       rect:
         serializedVersion: 2
-        x: 690
-        y: 84
-        width: 115.14286
-        height: 84
+        x: 799
+        y: 142
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,8 +397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 259304d2c53232e409e1caa11164149f
-      internalID: 1047686023
+      spriteID: f98c25cbfdaa64444a13df4cd5939627
+      internalID: -1472103611
       vertices: []
       indices: 
       edges: []
@@ -407,10 +407,10 @@ TextureImporter:
       name: Back Crobat_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 115.14286
-        height: 84
+        x: 98
+        y: 46
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,8 +418,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c1dec4b96f87b4c9c3416969f3ebaa
-      internalID: -334639032
+      spriteID: 687d046ff39bc0b419e4d70c2f635ead
+      internalID: -457058098
       vertices: []
       indices: 
       edges: []
@@ -427,7 +427,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: edaabffbfc746934899a40d8f082c8a8
+    spriteID: 1298232712cc2084ab2c4e2b4ea626c2
     internalID: 0
     vertices: []
     indices: 
@@ -435,21 +435,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back Crobat_0: -2042746095
-      Back Crobat_1: 879978077
-      Back Crobat_10: -1085135872
-      Back Crobat_11: 1843536922
-      Back Crobat_12: -70461768
-      Back Crobat_13: 1047686023
-      Back Crobat_14: -334639032
-      Back Crobat_2: -2134214783
-      Back Crobat_3: -2125660722
-      Back Crobat_4: 1834665926
-      Back Crobat_5: 1114183436
-      Back Crobat_6: 195965329
-      Back Crobat_7: 1158695825
-      Back Crobat_8: 653375724
-      Back Crobat_9: 986801717
+      Back Crobat_0: 186622834
+      Back Crobat_1: 1889795711
+      Back Crobat_10: -2112027747
+      Back Crobat_11: -1168080883
+      Back Crobat_12: -2051524299
+      Back Crobat_13: -1472103611
+      Back Crobat_14: -457058098
+      Back Crobat_2: 1766501102
+      Back Crobat_3: -1853826831
+      Back Crobat_4: 1177552410
+      Back Crobat_5: 783420234
+      Back Crobat_6: -22952138
+      Back Crobat_7: 570742309
+      Back Crobat_8: -842268493
+      Back Crobat_9: -834423245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

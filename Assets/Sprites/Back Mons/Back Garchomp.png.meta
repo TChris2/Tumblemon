@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GarchompBack_0
+      name: Back Garchomp_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 7
-        width: 76
-        height: 73
+        x: 80
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1686d5f35ef92f4a8cc90085a156a72
-      internalID: 504682944
+      spriteID: d428648ac9fea644fb77371d540578c5
+      internalID: -875051341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_1
+      name: Back Garchomp_1
       rect:
         serializedVersion: 2
-        x: 111
-        y: 6
-        width: 76
-        height: 73
+        x: 185
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f09f8d4b8b9b4d448044f22433f70e6
-      internalID: 1270190465
+      spriteID: 11e3e5a20a7251a42a739333a05d0eb8
+      internalID: -1658667979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_2
+      name: Back Garchomp_2
       rect:
         serializedVersion: 2
-        x: 217
-        y: 5
-        width: 75
-        height: 73
+        x: 291
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7910d433e590adb458babc28b691536d
-      internalID: 589394703
+      spriteID: 98a1d5ae729759546967e6847384cd85
+      internalID: 1475559355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_3
+      name: Back Garchomp_3
       rect:
         serializedVersion: 2
-        x: 323
-        y: 2
-        width: 73
-        height: 75
+        x: 397
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d868b59430acb4141b5d4e3990add0df
-      internalID: -1339016322
+      spriteID: 0a1679b128a5812459cdb5ba0e5cb62d
+      internalID: -637592445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_4
+      name: Back Garchomp_4
       rect:
         serializedVersion: 2
-        x: 429
-        y: 1
-        width: 74
-        height: 76
+        x: 503
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483e41270e090374d93fcf3b3dbeae04
-      internalID: -706033322
+      spriteID: 7c93c56a99907ed42911d2df5ee6a318
+      internalID: 1064387085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_5
+      name: Back Garchomp_5
       rect:
         serializedVersion: 2
-        x: 535
-        y: 3
-        width: 76
-        height: 75
+        x: 609
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d2bdf764387d4e4685cee36eb22e5e8
-      internalID: -580593719
+      spriteID: f384217b9c378d347966a45eac3676c4
+      internalID: 547952427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_6
+      name: Back Garchomp_6
       rect:
         serializedVersion: 2
-        x: 641
-        y: 5
-        width: 76
-        height: 74
+        x: 715
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 506e6da5c57266b4d94b9d26ddc687f6
-      internalID: -1653024183
+      spriteID: aae08b0a03f4f7340a9504727cb154b3
+      internalID: 1854058885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GarchompBack_7
+      name: Back Garchomp_7
       rect:
         serializedVersion: 2
-        x: 747
-        y: 7
-        width: 76
-        height: 73
+        x: 822
+        y: 53
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19b4ea797a567d7408453868e2ef9e16
-      internalID: -91865820
+      spriteID: 5c53dbf32dc570a489d3b0b3780df642
+      internalID: 1024161636
       vertices: []
       indices: 
       edges: []
@@ -280,7 +280,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ce826b1149881a843a45bdd0acb34240
+    spriteID: ca0e88bbffeada94abaec6ef516cc351
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GarchompBack_0: 504682944
-      GarchompBack_1: 1270190465
-      GarchompBack_2: 589394703
-      GarchompBack_3: -1339016322
-      GarchompBack_4: -706033322
-      GarchompBack_5: -580593719
-      GarchompBack_6: -1653024183
-      GarchompBack_7: -91865820
+      Back Garchomp_0: -875051341
+      Back Garchomp_1: -1658667979
+      Back Garchomp_2: 1475559355
+      Back Garchomp_3: -637592445
+      Back Garchomp_4: 1064387085
+      Back Garchomp_5: 547952427
+      Back Garchomp_6: 1854058885
+      Back Garchomp_7: 1024161636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

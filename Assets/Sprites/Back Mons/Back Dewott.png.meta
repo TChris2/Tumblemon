@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90332b077273f63458e28ee28df7b6d3
+guid: c869fd71339716c47b629e80cc21295e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,169 +110,246 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DewottBack_0
+      name: Back Dewott_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 66
-        width: 34
-        height: 56
+        x: 46
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -8, y: 38}
+        - {x: -20, y: 12}
+        - {x: -20, y: -22}
+        - {x: 14, y: -22}
+        - {x: 18, y: -8}
+        - {x: 18, y: 21}
+        - {x: 3, y: 38}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d7ea9907a332a84a947c4be671ee628
-      internalID: -144963103
+      spriteID: e50898548f12e0b40a818b3d49d7db36
+      internalID: 1510967898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_1
+      name: Back Dewott_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 66
-        width: 34
-        height: 55
+        x: 114
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 14, y: 4}
+        - {x: 17, y: 8}
+        - {x: 18, y: 11}
+        - {x: 18, y: 22}
+        - {x: 6, y: 37}
+        - {x: -8, y: 37}
+        - {x: -20, y: 28}
+        - {x: -20, y: -21}
+        - {x: -19, y: -22}
+        - {x: 11, y: -22}
+        - {x: 18, y: -11}
+        - {x: 18, y: -1}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04557cb2e85bd384e91d0f0fc2a52cd2
-      internalID: 1837742820
+      spriteID: cec866d90432147499cd3f4be5448504
+      internalID: 1019519439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_2
+      name: Back Dewott_2
       rect:
         serializedVersion: 2
-        x: 150
-        y: 66
-        width: 33
-        height: 54
+        x: 182
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -18, y: 36}
+        - {x: -19, y: 30}
+        - {x: -19, y: -22}
+        - {x: 17, y: -22}
+        - {x: 18, y: -20}
+        - {x: 18, y: 25}
+        - {x: 12, y: 36}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60670aab9d120764abd838d88b68310b
-      internalID: -1826211995
+      spriteID: dfa36e21376573e4396292070fb4620b
+      internalID: 1364425357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_3
+      name: Back Dewott_3
       rect:
         serializedVersion: 2
-        x: 218
-        y: 66
-        width: 33
-        height: 54
+        x: 251
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 7, y: 6}
+        - {x: 11, y: 6}
+        - {x: 14, y: 7}
+        - {x: 17, y: 10}
+        - {x: 17, y: 36}
+        - {x: -20, y: 36}
+        - {x: -20, y: -22}
+        - {x: 5, y: -22}
+        - {x: 15, y: -19}
+        - {x: 17, y: -11}
+        - {x: 17, y: 2}
+        - {x: 16, y: 6}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1eff93de632ed04f94db0cb7640d812
-      internalID: -2027607485
+      spriteID: ad3258450097132478c1e93dff8b0c27
+      internalID: -1047077642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_4
+      name: Back Dewott_4
       rect:
         serializedVersion: 2
-        x: 286
-        y: 66
-        width: 33
-        height: 53
+        x: 319
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -3, y: 35}
+        - {x: -9, y: 35}
+        - {x: -13, y: 33}
+        - {x: -20, y: 11}
+        - {x: -20, y: -22}
+        - {x: 12, y: -22}
+        - {x: 17, y: -17}
+        - {x: 17, y: 23}
+        - {x: 14, y: 25}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 054b41d7b0f38cc4fb00bb4929152610
-      internalID: -207589006
+      spriteID: 316c629b5a9844c44b110f61b81c53ab
+      internalID: 595985677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_5
+      name: Back Dewott_5
       rect:
         serializedVersion: 2
-        x: 354
-        y: 66
-        width: 33
-        height: 54
+        x: 387
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 17, y: 0}
+        - {x: 12, y: 5}
+        - {x: 17, y: 9}
+        - {x: 17, y: 21}
+        - {x: 2, y: 36}
+        - {x: -19, y: 36}
+        - {x: -20, y: 29}
+        - {x: -20, y: -22}
+        - {x: 11, y: -22}
+        - {x: 14, y: -18}
+        - {x: 17, y: -4}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5004cdf17acad444c94c7911f5d29179
-      internalID: -1781406635
+      spriteID: 9a6dfb86de9962d4baaf11b82a8977d0
+      internalID: 1207275189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_6
+      name: Back Dewott_6
       rect:
         serializedVersion: 2
-        x: 421
-        y: 66
-        width: 34
-        height: 55
+        x: 455
+        y: 124
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 13, y: 4}
+        - {x: 16, y: 8}
+        - {x: 17, y: 11}
+        - {x: 17, y: 22}
+        - {x: 5, y: 37}
+        - {x: -9, y: 37}
+        - {x: -21, y: 28}
+        - {x: -21, y: -21}
+        - {x: -20, y: -22}
+        - {x: 10, y: -22}
+        - {x: 17, y: -11}
+        - {x: 17, y: -1}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acd53a7b27c1c2f46ae296ceb2725176
-      internalID: 158263029
+      spriteID: 177cb2c887bc39c42953bd8237095608
+      internalID: -1962550140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DewottBack_7
+      name: Back Dewott_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 4
-        width: 34
-        height: 56
+        x: 46
+        y: 62
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -8, y: 38}
+        - {x: -20, y: 12}
+        - {x: -20, y: -22}
+        - {x: 14, y: -22}
+        - {x: 18, y: -8}
+        - {x: 18, y: 21}
+        - {x: 3, y: 38}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 485a592f7440aad408eea3429cce0256
-      internalID: -2105089758
+      spriteID: 8a023866be3ab5546995574562ffe22f
+      internalID: -377807749
       vertices: []
       indices: 
       edges: []
@@ -280,7 +357,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d7dee8766b0a9504aaee064776ded70b
+    spriteID: ad18331711df2eb4b92c315f12532acd
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +365,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DewottBack_0: -144963103
-      DewottBack_1: 1837742820
-      DewottBack_2: -1826211995
-      DewottBack_3: -2027607485
-      DewottBack_4: -207589006
-      DewottBack_5: -1781406635
-      DewottBack_6: 158263029
-      DewottBack_7: -2105089758
+      Back Dewott_0: 1510967898
+      Back Dewott_1: 1019519439
+      Back Dewott_2: 1364425357
+      Back Dewott_3: -1047077642
+      Back Dewott_4: 595985677
+      Back Dewott_5: 1207275189
+      Back Dewott_6: -1962550140
+      Back Dewott_7: -377807749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

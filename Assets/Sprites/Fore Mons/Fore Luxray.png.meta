@@ -113,19 +113,52 @@ TextureImporter:
       name: Fore Luxray_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 84
-        width: 75
-        height: 61
+        x: 73
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -9, y: -33}
+        - {x: -6, y: -36}
+        - {x: -2, y: -39}
+        - {x: 28, y: -39}
+        - {x: 35, y: -31}
+        - {x: 35, y: -9}
+        - {x: 19, y: 22}
+        - {x: 10, y: 25}
+        - {x: -35, y: 25}
+        - {x: -35, y: -22}
+        - {x: -30, y: -39}
+        - {x: -20, y: -39}
+        - {x: -12, y: -37}
+        - {x: -10, y: -34}
+        - {x: -7, y: -27}
+        - {x: -9, y: -31}
+      physicsShape:
+      - - {x: -8, y: -28}
+        - {x: -8, y: -30}
+        - {x: -5, y: -33}
+        - {x: 1, y: -33}
+        - {x: 4, y: -36}
+        - {x: 24, y: -36}
+        - {x: 36, y: -33}
+        - {x: 36, y: 9}
+        - {x: 23, y: 28}
+        - {x: -32, y: 28}
+        - {x: -34, y: 26}
+        - {x: -34, y: -34}
+        - {x: -28, y: -36}
+        - {x: -19, y: -36}
+        - {x: -12, y: -33}
+        - {x: -9, y: -31}
+        - {x: -6, y: -24}
       tessellationDetail: 0
       bones: []
-      spriteID: 57108d3b342d9a846ad8c3c0e864e088
-      internalID: -1649061198
+      spriteID: 678b1457603ce444285f54d000b3d0fd
+      internalID: 345911122
       vertices: []
       indices: 
       edges: []
@@ -134,19 +167,59 @@ TextureImporter:
       name: Fore Luxray_1
       rect:
         serializedVersion: 2
-        x: 111
-        y: 84
-        width: 75
-        height: 61
+        x: 164
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -8, y: -31}
+        - {x: -8, y: -33}
+        - {x: -5, y: -36}
+        - {x: 1, y: -36}
+        - {x: 6, y: -39}
+        - {x: 15, y: -39}
+        - {x: 35, y: -32}
+        - {x: 35, y: 10}
+        - {x: 30, y: 18}
+        - {x: 4, y: 25}
+        - {x: -34, y: 25}
+        - {x: -34, y: -19}
+        - {x: -28, y: -39}
+        - {x: -19, y: -39}
+        - {x: -12, y: -36}
+        - {x: -9, y: -34}
+        - {x: -6, y: -27}
+      physicsShape:
+      - - {x: -8, y: -30}
+        - {x: -5, y: -33}
+        - {x: 1, y: -33}
+        - {x: 4, y: -30}
+        - {x: 10, y: -35}
+        - {x: 17, y: -35}
+        - {x: 21, y: -31}
+        - {x: 21, y: -27}
+        - {x: 19, y: -21}
+        - {x: 21, y: -23}
+        - {x: 27, y: -26}
+        - {x: 35, y: -28}
+        - {x: 35, y: 8}
+        - {x: 5, y: 28}
+        - {x: -29, y: 28}
+        - {x: -34, y: 13}
+        - {x: -34, y: -24}
+        - {x: -33, y: -36}
+        - {x: -18, y: -36}
+        - {x: -12, y: -33}
+        - {x: -9, y: -31}
+        - {x: -6, y: -24}
+        - {x: -8, y: -28}
       tessellationDetail: 0
       bones: []
-      spriteID: 9d917484e9a74e44aa6e582535b501d2
-      internalID: 97651746
+      spriteID: 4b1a367feb6613544a728404b01f0f69
+      internalID: 1838876917
       vertices: []
       indices: 
       edges: []
@@ -155,19 +228,58 @@ TextureImporter:
       name: Fore Luxray_2
       rect:
         serializedVersion: 2
-        x: 204
-        y: 84
-        width: 75
-        height: 61
+        x: 256
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -8, y: -33}
+        - {x: -5, y: -36}
+        - {x: 0, y: -39}
+        - {x: 27, y: -39}
+        - {x: 32, y: -27}
+        - {x: 32, y: 5}
+        - {x: 10, y: 24}
+        - {x: -33, y: 24}
+        - {x: -33, y: -39}
+        - {x: -17, y: -39}
+        - {x: -11, y: -37}
+        - {x: -9, y: -34}
+        - {x: -6, y: -27}
+        - {x: -8, y: -31}
+      - - {x: 20, y: -24}
+        - {x: 17, y: -20}
+        - {x: 18, y: -21}
+        - {x: 19, y: -26}
+        - {x: 20, y: -25}
+      physicsShape:
+      - - {x: -8, y: -30}
+        - {x: -5, y: -33}
+        - {x: 1, y: -33}
+        - {x: 4, y: -30}
+        - {x: 10, y: -35}
+        - {x: 18, y: -36}
+        - {x: 32, y: -22}
+        - {x: 32, y: 8}
+        - {x: 10, y: 27}
+        - {x: -33, y: 27}
+        - {x: -33, y: -36}
+        - {x: -9, y: -36}
+        - {x: -9, y: -31}
+        - {x: -6, y: -24}
+        - {x: -8, y: -28}
+      - - {x: 20, y: -21}
+        - {x: 17, y: -17}
+        - {x: 18, y: -18}
+        - {x: 19, y: -23}
+        - {x: 20, y: -22}
       tessellationDetail: 0
       bones: []
-      spriteID: 495f3332b94d8d8489ce634adde5a543
-      internalID: -1756619950
+      spriteID: 503101693ec5ce740bb61b4ac36c169d
+      internalID: -652241218
       vertices: []
       indices: 
       edges: []
@@ -176,19 +288,55 @@ TextureImporter:
       name: Fore Luxray_3
       rect:
         serializedVersion: 2
-        x: 295
-        y: 84
-        width: 75
-        height: 65
+        x: 347
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -7, y: -31}
+        - {x: -8, y: -39}
+        - {x: 36, y: -39}
+        - {x: 39, y: -24}
+        - {x: 39, y: -16}
+        - {x: 28, y: 14}
+        - {x: 7, y: 24}
+        - {x: -33, y: 24}
+        - {x: -33, y: -39}
+        - {x: -14, y: -39}
+        - {x: -8, y: -33}
+        - {x: -6, y: -28}
+      - - {x: 21, y: -4}
+        - {x: 23, y: -4}
+        - {x: 23, y: -5}
+        - {x: 22, y: -4}
+        - {x: 19, y: -4}
+        - {x: 18, y: -5}
+        - {x: 19, y: -6}
+      physicsShape:
+      - - {x: 39, y: 8}
+        - {x: 25, y: 27}
+        - {x: -29, y: 27}
+        - {x: -33, y: 17}
+        - {x: -33, y: -21}
+        - {x: -29, y: -36}
+        - {x: 16, y: -36}
+        - {x: 25, y: -33}
+        - {x: 22, y: -27}
+        - {x: 39, y: -27}
+      - - {x: 21, y: -1}
+        - {x: 23, y: -1}
+        - {x: 23, y: -2}
+        - {x: 22, y: -1}
+        - {x: 19, y: -1}
+        - {x: 18, y: -2}
+        - {x: 19, y: -3}
       tessellationDetail: 0
       bones: []
-      spriteID: fe1714851b9539f44974af96f611a702
-      internalID: 1968445449
+      spriteID: 096ae57503d34f345a40f69b4cb47af0
+      internalID: 856940741
       vertices: []
       indices: 
       edges: []
@@ -197,19 +345,70 @@ TextureImporter:
       name: Fore Luxray_4
       rect:
         serializedVersion: 2
-        x: 387
-        y: 84
-        width: 75
-        height: 61
+        x: 439
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 41, y: -30}
+        - {x: 42, y: -27}
+        - {x: 42, y: -10}
+        - {x: 29, y: 7}
+        - {x: 18, y: 7}
+        - {x: 7, y: 1}
+        - {x: -1, y: -4}
+        - {x: -3, y: -4}
+        - {x: -1, y: -4}
+        - {x: 4, y: 0}
+        - {x: 5, y: 11}
+        - {x: 1, y: 25}
+        - {x: -17, y: 25}
+        - {x: -33, y: 19}
+        - {x: -33, y: -21}
+        - {x: -28, y: -39}
+        - {x: -7, y: -39}
+        - {x: 2, y: -36}
+        - {x: 5, y: -34}
+        - {x: 12, y: -39}
+        - {x: 32, y: -39}
+      - - {x: 20, y: -2}
+        - {x: 23, y: -2}
+        - {x: 23, y: -4}
+        - {x: 22, y: -3}
+        - {x: 19, y: -3}
+        - {x: 17, y: -5}
+        - {x: 18, y: -5}
+      physicsShape:
+      - - {x: 18, y: 10}
+        - {x: 7, y: 4}
+        - {x: -1, y: -1}
+        - {x: -3, y: -1}
+        - {x: -1, y: -1}
+        - {x: 4, y: 3}
+        - {x: 5, y: 14}
+        - {x: 1, y: 28}
+        - {x: -19, y: 28}
+        - {x: -33, y: 23}
+        - {x: -33, y: -13}
+        - {x: -30, y: -36}
+        - {x: 26, y: -36}
+        - {x: 42, y: -14}
+        - {x: 42, y: -7}
+        - {x: 29, y: 10}
+      - - {x: 20, y: 1}
+        - {x: 23, y: 1}
+        - {x: 23, y: -1}
+        - {x: 22, y: 0}
+        - {x: 19, y: 0}
+        - {x: 17, y: -2}
+        - {x: 18, y: -2}
       tessellationDetail: 0
       bones: []
-      spriteID: 93aba1358041e8d439ddc0da67c96ee9
-      internalID: 347137188
+      spriteID: 11d9918d271906d47be24029ac371c28
+      internalID: -282579570
       vertices: []
       indices: 
       edges: []
@@ -218,19 +417,63 @@ TextureImporter:
       name: Fore Luxray_5
       rect:
         serializedVersion: 2
-        x: 477
-        y: 84
-        width: 75
-        height: 61
+        x: 528
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -1, y: -36}
+        - {x: 12, y: -39}
+        - {x: 24, y: -39}
+        - {x: 26, y: -29}
+        - {x: 26, y: -13}
+        - {x: 24, y: -2}
+        - {x: 26, y: -6}
+        - {x: 30, y: -17}
+        - {x: 46, y: -22}
+        - {x: 46, y: 13}
+        - {x: 26, y: 24}
+        - {x: -27, y: 24}
+        - {x: -32, y: 21}
+        - {x: -32, y: -10}
+        - {x: -26, y: -36}
+        - {x: -25, y: -39}
+        - {x: -6, y: -39}
+        - {x: -4, y: -31}
+        - {x: -4, y: -27}
+        - {x: -4, y: -33}
+      physicsShape:
+      - - {x: -1, y: -33}
+        - {x: 5, y: -33}
+        - {x: 9, y: -30}
+        - {x: 14, y: -35}
+        - {x: 21, y: -35}
+        - {x: 25, y: -31}
+        - {x: 25, y: -3}
+        - {x: 24, y: 0}
+        - {x: 27, y: -6}
+        - {x: 33, y: -11}
+        - {x: 38, y: -16}
+        - {x: 44, y: -14}
+        - {x: 46, y: -11}
+        - {x: 46, y: 13}
+        - {x: 22, y: 27}
+        - {x: -21, y: 27}
+        - {x: -32, y: 19}
+        - {x: -32, y: -8}
+        - {x: -31, y: -20}
+        - {x: -25, y: -36}
+        - {x: -12, y: -36}
+        - {x: -4, y: -31}
+        - {x: -4, y: -24}
+        - {x: -4, y: -30}
       tessellationDetail: 0
       bones: []
-      spriteID: a906e532beb977d4cba769b267ee47b9
-      internalID: 395635187
+      spriteID: 95292803c48755f43a341309076f1bc8
+      internalID: 1294117102
       vertices: []
       indices: 
       edges: []
@@ -239,19 +482,54 @@ TextureImporter:
       name: Fore Luxray_6
       rect:
         serializedVersion: 2
-        x: 568
-        y: 84
-        width: 75
-        height: 61
+        x: 620
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -4, y: -33}
+        - {x: -1, y: -36}
+        - {x: 6, y: -39}
+        - {x: 26, y: -39}
+        - {x: 31, y: -11}
+        - {x: 42, y: -12}
+        - {x: 46, y: -10}
+        - {x: 46, y: 20}
+        - {x: 40, y: 24}
+        - {x: -33, y: 24}
+        - {x: -33, y: -21}
+        - {x: -29, y: -36}
+        - {x: -22, y: -39}
+        - {x: -11, y: -39}
+        - {x: -5, y: -34}
+        - {x: -4, y: -31}
+        - {x: -4, y: -27}
+      physicsShape:
+      - - {x: -4, y: -30}
+        - {x: -1, y: -33}
+        - {x: 5, y: -33}
+        - {x: 9, y: -30}
+        - {x: 12, y: -36}
+        - {x: 18, y: -36}
+        - {x: 29, y: -33}
+        - {x: 24, y: -2}
+        - {x: 23, y: 1}
+        - {x: 31, y: -5}
+        - {x: 42, y: -9}
+        - {x: 46, y: -2}
+        - {x: 46, y: 27}
+        - {x: -33, y: 27}
+        - {x: -33, y: -36}
+        - {x: -11, y: -36}
+        - {x: -4, y: -31}
+        - {x: -4, y: -24}
       tessellationDetail: 0
       bones: []
-      spriteID: 2db0c1e603283724ebf18276b3cb47f8
-      internalID: 1072980551
+      spriteID: cd2551c4c4faa3e4096e2a5f0f781190
+      internalID: 1764491328
       vertices: []
       indices: 
       edges: []
@@ -260,19 +538,61 @@ TextureImporter:
       name: Fore Luxray_7
       rect:
         serializedVersion: 2
-        x: 17
-        y: 7
-        width: 75
-        height: 61
+        x: 72
+        y: 70
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -8, y: -31}
+        - {x: -5, y: -34}
+        - {x: 1, y: -34}
+        - {x: 5, y: -31}
+        - {x: 8, y: -37}
+        - {x: 13, y: -37}
+        - {x: 25, y: -34}
+        - {x: 22, y: -4}
+        - {x: 19, y: 0}
+        - {x: 20, y: -2}
+        - {x: 34, y: -13}
+        - {x: 42, y: -13}
+        - {x: 42, y: 21}
+        - {x: 29, y: 27}
+        - {x: -32, y: 27}
+        - {x: -36, y: 23}
+        - {x: -36, y: -17}
+        - {x: -30, y: -34}
+        - {x: -24, y: -37}
+        - {x: -17, y: -37}
+        - {x: -8, y: -32}
+        - {x: -8, y: -25}
+      physicsShape:
+      - - {x: -8, y: -35}
+        - {x: -5, y: -38}
+        - {x: 9, y: -41}
+        - {x: 20, y: -41}
+        - {x: 23, y: -37}
+        - {x: 22, y: -8}
+        - {x: 19, y: -4}
+        - {x: 20, y: -6}
+        - {x: 34, y: -17}
+        - {x: 42, y: -17}
+        - {x: 42, y: 17}
+        - {x: 25, y: 23}
+        - {x: -31, y: 23}
+        - {x: -36, y: 18}
+        - {x: -36, y: -14}
+        - {x: -30, y: -38}
+        - {x: -24, y: -41}
+        - {x: -17, y: -41}
+        - {x: -8, y: -36}
+        - {x: -8, y: -29}
       tessellationDetail: 0
       bones: []
-      spriteID: ed83f29799d80fb41bc419b700febd7d
-      internalID: -2119216390
+      spriteID: e7bfc5e84f4f338468adf246cbbfd0ea
+      internalID: -537385920
       vertices: []
       indices: 
       edges: []
@@ -281,19 +601,55 @@ TextureImporter:
       name: Fore Luxray_8
       rect:
         serializedVersion: 2
-        x: 110
-        y: 7
-        width: 75
-        height: 61
+        x: 164
+        y: 70
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 19, y: -37}
+        - {x: 24, y: -27}
+        - {x: 23, y: -10}
+        - {x: 22, y: 1}
+        - {x: 23, y: -3}
+        - {x: 24, y: -6}
+        - {x: 30, y: -11}
+        - {x: 35, y: -16}
+        - {x: 43, y: -14}
+        - {x: 43, y: 6}
+        - {x: 17, y: 27}
+        - {x: -31, y: 27}
+        - {x: -35, y: 24}
+        - {x: -35, y: -14}
+        - {x: -29, y: -37}
+        - {x: -7, y: -37}
+        - {x: 1, y: -34}
+        - {x: 4, y: -32}
+        - {x: 10, y: -36}
+        - {x: 14, y: -37}
+      physicsShape:
+      - - {x: 23, y: -7}
+        - {x: 24, y: -10}
+        - {x: 30, y: -15}
+        - {x: 35, y: -20}
+        - {x: 41, y: -18}
+        - {x: 43, y: -17}
+        - {x: 43, y: -5}
+        - {x: 26, y: 13}
+        - {x: -6, y: 23}
+        - {x: -30, y: 23}
+        - {x: -35, y: 22}
+        - {x: -35, y: -41}
+        - {x: 22, y: -41}
+        - {x: 24, y: -31}
+        - {x: 24, y: -14}
+        - {x: 22, y: -3}
       tessellationDetail: 0
       bones: []
-      spriteID: 03b87dd4f4167c44bb1be78fcbea6882
-      internalID: -550839596
+      spriteID: b040bcf0a53071441a56fc82f3d77fd7
+      internalID: 946597007
       vertices: []
       indices: 
       edges: []
@@ -302,19 +658,43 @@ TextureImporter:
       name: Fore Luxray_9
       rect:
         serializedVersion: 2
-        x: 202
-        y: 7
-        width: 75
-        height: 61
+        x: 256
+        y: 70
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 4, y: 27}
+        - {x: -23, y: 27}
+        - {x: -35, y: 20}
+        - {x: -35, y: -37}
+        - {x: 22, y: -37}
+        - {x: 41, y: -17}
+        - {x: 41, y: -5}
+        - {x: 28, y: 10}
+      - - {x: 18, y: 0}
+        - {x: 21, y: 1}
+        - {x: 21, y: -1}
+        - {x: 19, y: 0}
+        - {x: 16, y: -2}
+      physicsShape:
+      - - {x: -26, y: 23}
+        - {x: -35, y: 17}
+        - {x: -35, y: -41}
+        - {x: 40, y: -41}
+        - {x: 41, y: -31}
+        - {x: 41, y: 23}
+      - - {x: 18, y: -4}
+        - {x: 21, y: -3}
+        - {x: 21, y: -5}
+        - {x: 19, y: -4}
+        - {x: 16, y: -6}
       tessellationDetail: 0
       bones: []
-      spriteID: 2d0fc3866dd2ff84cb4afd33916b4183
-      internalID: 360175145
+      spriteID: 1c2ab7a296edda848ba3a25640f12753
+      internalID: -402170760
       vertices: []
       indices: 
       edges: []
@@ -323,19 +703,74 @@ TextureImporter:
       name: Fore Luxray_10
       rect:
         serializedVersion: 2
-        x: 295
-        y: 7
-        width: 75
-        height: 61
+        x: 347
+        y: 70
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -7, y: -31}
+        - {x: -4, y: -34}
+        - {x: 2, y: -34}
+        - {x: 5, y: -31}
+        - {x: 11, y: -36}
+        - {x: 18, y: -36}
+        - {x: 22, y: -32}
+        - {x: 22, y: -28}
+        - {x: 20, y: -22}
+        - {x: 34, y: -23}
+        - {x: 41, y: -17}
+        - {x: 41, y: -3}
+        - {x: 33, y: 9}
+        - {x: 18, y: 9}
+        - {x: 7, y: 4}
+        - {x: -1, y: -1}
+        - {x: -3, y: -1}
+        - {x: -1, y: -1}
+        - {x: 4, y: 3}
+        - {x: 5, y: 14}
+        - {x: 1, y: 28}
+        - {x: -30, y: 28}
+        - {x: -33, y: 22}
+        - {x: -33, y: -28}
+        - {x: -29, y: -37}
+        - {x: -12, y: -37}
+        - {x: -10, y: -35}
+        - {x: -8, y: -32}
+        - {x: -5, y: -25}
+        - {x: -7, y: -29}
+      - - {x: 20, y: 0}
+        - {x: 22, y: 0}
+        - {x: 19, y: 0}
+        - {x: 18, y: -1}
+        - {x: 19, y: -2}
+      physicsShape:
+      - - {x: -7, y: -35}
+        - {x: -6, y: -40}
+        - {x: -2, y: -41}
+        - {x: 41, y: -41}
+        - {x: 41, y: 24}
+        - {x: -30, y: 24}
+        - {x: -33, y: 14}
+        - {x: -33, y: -26}
+        - {x: -30, y: -38}
+        - {x: -26, y: -41}
+        - {x: -16, y: -41}
+        - {x: -10, y: -39}
+        - {x: -8, y: -36}
+        - {x: -5, y: -29}
+        - {x: -7, y: -33}
+      - - {x: 20, y: -4}
+        - {x: 22, y: -4}
+        - {x: 19, y: -4}
+        - {x: 18, y: -5}
+        - {x: 19, y: -6}
       tessellationDetail: 0
       bones: []
-      spriteID: 4a2ee7149766c6a4faee1e2714eeeb9c
-      internalID: -1345515153
+      spriteID: c7ed9597b7419404f8caa56b23a1ecff
+      internalID: 1787837638
       vertices: []
       indices: 
       edges: []
@@ -344,19 +779,65 @@ TextureImporter:
       name: Fore Luxray_11
       rect:
         serializedVersion: 2
-        x: 387
-        y: 7
-        width: 75
-        height: 61
+        x: 439
+        y: 70
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -7, y: -31}
+        - {x: -4, y: -34}
+        - {x: 2, y: -34}
+        - {x: 5, y: -31}
+        - {x: 11, y: -36}
+        - {x: 18, y: -36}
+        - {x: 22, y: -32}
+        - {x: 22, y: -28}
+        - {x: 20, y: -22}
+        - {x: 29, y: -24}
+        - {x: 40, y: -22}
+        - {x: 40, y: 11}
+        - {x: 27, y: 27}
+        - {x: -29, y: 27}
+        - {x: -33, y: 18}
+        - {x: -33, y: -25}
+        - {x: -31, y: -37}
+        - {x: -18, y: -37}
+        - {x: -11, y: -34}
+        - {x: -8, y: -32}
+        - {x: -5, y: -25}
+        - {x: -7, y: -29}
+      - - {x: 23, y: -1}
+        - {x: 19, y: -1}
+        - {x: 18, y: -2}
+        - {x: 19, y: -2}
+      physicsShape:
+      - - {x: -7, y: -33}
+        - {x: -7, y: -35}
+        - {x: -4, y: -38}
+        - {x: 0, y: -41}
+        - {x: 32, y: -41}
+        - {x: 40, y: -36}
+        - {x: 40, y: 9}
+        - {x: 28, y: 23}
+        - {x: -32, y: 23}
+        - {x: -33, y: 20}
+        - {x: -33, y: -28}
+        - {x: -31, y: -41}
+        - {x: -16, y: -41}
+        - {x: -11, y: -38}
+        - {x: -8, y: -36}
+        - {x: -5, y: -29}
+      - - {x: 23, y: -5}
+        - {x: 19, y: -5}
+        - {x: 18, y: -6}
+        - {x: 19, y: -6}
       tessellationDetail: 0
       bones: []
-      spriteID: c1d9219f364cbfa4cb29d9784aa7fed4
-      internalID: 1415468759
+      spriteID: 1dc6fcbf0a2e8804799776d1c56aa429
+      internalID: 195816554
       vertices: []
       indices: 
       edges: []
@@ -365,19 +846,50 @@ TextureImporter:
       name: Fore Luxray_12
       rect:
         serializedVersion: 2
-        x: 479
-        y: 7
-        width: 75
-        height: 61
+        x: 528
+        y: 70
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -4, y: -29}
+        - {x: -4, y: -31}
+        - {x: -1, y: -34}
+        - {x: 5, y: -34}
+        - {x: 8, y: -37}
+        - {x: 29, y: -37}
+        - {x: 40, y: -35}
+        - {x: 40, y: 8}
+        - {x: 26, y: 27}
+        - {x: -26, y: 27}
+        - {x: -30, y: 17}
+        - {x: -30, y: -19}
+        - {x: -24, y: -37}
+        - {x: -15, y: -37}
+        - {x: -8, y: -34}
+        - {x: -5, y: -32}
+        - {x: -2, y: -25}
+      physicsShape:
+      - - {x: -4, y: -35}
+        - {x: -1, y: -38}
+        - {x: 3, y: -41}
+        - {x: 33, y: -41}
+        - {x: 40, y: -30}
+        - {x: 40, y: -15}
+        - {x: 24, y: 23}
+        - {x: -30, y: 23}
+        - {x: -30, y: -41}
+        - {x: -10, y: -41}
+        - {x: -7, y: -39}
+        - {x: -5, y: -36}
+        - {x: -2, y: -29}
+        - {x: -4, y: -33}
       tessellationDetail: 0
       bones: []
-      spriteID: 9e266591c57848b44b93e2b394dadcd5
-      internalID: -179850876
+      spriteID: 13971ac60e4b4b143b2ab7d6b46ef89c
+      internalID: -1818858871
       vertices: []
       indices: 
       edges: []
@@ -385,7 +897,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 63d17e81535ea6942ad4da36bcfb0ad5
+    spriteID: 3bbfee4d7b88a904d9db414e9b5da6a5
     internalID: 0
     vertices: []
     indices: 
@@ -393,19 +905,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fore Luxray_0: -1649061198
-      Fore Luxray_1: 97651746
-      Fore Luxray_10: -1345515153
-      Fore Luxray_11: 1415468759
-      Fore Luxray_12: -179850876
-      Fore Luxray_2: -1756619950
-      Fore Luxray_3: 1968445449
-      Fore Luxray_4: 347137188
-      Fore Luxray_5: 395635187
-      Fore Luxray_6: 1072980551
-      Fore Luxray_7: -2119216390
-      Fore Luxray_8: -550839596
-      Fore Luxray_9: 360175145
+      Fore Luxray_0: 345911122
+      Fore Luxray_1: 1838876917
+      Fore Luxray_10: 1787837638
+      Fore Luxray_11: 195816554
+      Fore Luxray_12: -1818858871
+      Fore Luxray_2: -652241218
+      Fore Luxray_3: 856940741
+      Fore Luxray_4: -282579570
+      Fore Luxray_5: 1294117102
+      Fore Luxray_6: 1764491328
+      Fore Luxray_7: -537385920
+      Fore Luxray_8: 946597007
+      Fore Luxray_9: -402170760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -113,19 +113,19 @@ TextureImporter:
       name: Back Gardevoir_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 298
-        width: 71
-        height: 77
+        x: 76
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 790c2e2dfaa38234790c0ab7ce9a6c22
-      internalID: -758658133
+      spriteID: 526d4e71c043829439d12d635254555d
+      internalID: 333001463
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: Back Gardevoir_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 298
-        width: 71
-        height: 77
+        x: 184
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6dc5dc20d77c7043b0064d98433c8dc
-      internalID: 1728357366
+      spriteID: 4293de7c848c5774ab96678eb52c587a
+      internalID: 222950149
       vertices: []
       indices: 
       edges: []
@@ -155,19 +155,19 @@ TextureImporter:
       name: Back Gardevoir_2
       rect:
         serializedVersion: 2
-        x: 236
-        y: 298
-        width: 71
-        height: 77
+        x: 291
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 028343d28f7f539409c3e5842552e1a0
-      internalID: 1566094490
+      spriteID: 499d1467205bda64e8d7da5c680ef3a7
+      internalID: 1530517190
       vertices: []
       indices: 
       edges: []
@@ -176,19 +176,19 @@ TextureImporter:
       name: Back Gardevoir_3
       rect:
         serializedVersion: 2
-        x: 343
-        y: 298
-        width: 71
-        height: 77
+        x: 399
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a47ff6e6cec28344ad74c9ffa5982e4
-      internalID: -1310611402
+      spriteID: 62227f86412051d40befcc83ff9be435
+      internalID: -1512386587
       vertices: []
       indices: 
       edges: []
@@ -197,19 +197,19 @@ TextureImporter:
       name: Back Gardevoir_4
       rect:
         serializedVersion: 2
-        x: 451
-        y: 298
-        width: 71
-        height: 77
+        x: 507
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f277a922a3909a34a813cb3af2b9f45e
-      internalID: 1210144108
+      spriteID: 7d2536d102bb5a743bceda9a52adc85e
+      internalID: -848213783
       vertices: []
       indices: 
       edges: []
@@ -218,19 +218,19 @@ TextureImporter:
       name: Back Gardevoir_5
       rect:
         serializedVersion: 2
-        x: 559
-        y: 298
-        width: 71
-        height: 77
+        x: 615
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3358f2dc0b878a44b9c4f976bc9834b1
-      internalID: -90576085
+      spriteID: 45c0491bf8145fb4ea34a0220fc80e8e
+      internalID: -132874083
       vertices: []
       indices: 
       edges: []
@@ -239,19 +239,19 @@ TextureImporter:
       name: Back Gardevoir_6
       rect:
         serializedVersion: 2
-        x: 667
-        y: 298
-        width: 71
-        height: 77
+        x: 724
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdd8393ed4aa9fa4a9fba86e28191a1c
-      internalID: -2126728823
+      spriteID: 4e5b9188bb2ae184898f9b1fd9e09e97
+      internalID: -594776030
       vertices: []
       indices: 
       edges: []
@@ -260,19 +260,19 @@ TextureImporter:
       name: Back Gardevoir_7
       rect:
         serializedVersion: 2
-        x: 775
-        y: 298
-        width: 71
-        height: 77
+        x: 832
+        y: 354
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d363a4942be36db4fb367a6438c21954
-      internalID: 977045331
+      spriteID: 2ef146172c264fa46912144266fc2deb
+      internalID: 1979268880
       vertices: []
       indices: 
       edges: []
@@ -281,19 +281,19 @@ TextureImporter:
       name: Back Gardevoir_8
       rect:
         serializedVersion: 2
-        x: 19
-        y: 202
-        width: 72
-        height: 77
+        x: 76
+        y: 258
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ac2b8601a8e9974bb224524512a0e7c
-      internalID: 237554243
+      spriteID: b4a49138237209048b6986d0d74f228a
+      internalID: -1367307760
       vertices: []
       indices: 
       edges: []
@@ -302,19 +302,28 @@ TextureImporter:
       name: Back Gardevoir_9
       rect:
         serializedVersion: 2
-        x: 127
-        y: 202
-        width: 71
-        height: 77
+        x: 184
+        y: 258
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -12, y: 31}
+        - {x: -36, y: 0}
+        - {x: -41, y: -11}
+        - {x: -41, y: -44}
+        - {x: -33, y: -48}
+        - {x: 22, y: -48}
+        - {x: 34, y: -41}
+        - {x: 34, y: 6}
+        - {x: 22, y: 31}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72425337dd5641d469affae71abe3c3c
-      internalID: -105413831
+      spriteID: 952b75cc5fe0c714f83ab5e640312f51
+      internalID: -1431152073
       vertices: []
       indices: 
       edges: []
@@ -323,19 +332,31 @@ TextureImporter:
       name: Back Gardevoir_10
       rect:
         serializedVersion: 2
-        x: 235
-        y: 202
-        width: 71
-        height: 77
+        x: 291
+        y: 258
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 34, y: -14}
+        - {x: 34, y: 14}
+        - {x: 27, y: 31}
+        - {x: -9, y: 31}
+        - {x: -20, y: -4}
+        - {x: -40, y: -34}
+        - {x: -40, y: -42}
+        - {x: -32, y: -48}
+        - {x: 8, y: -48}
+        - {x: 22, y: -41}
+        - {x: 15, y: -14}
+        - {x: 14, y: -11}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9419e1a2ba8104f83a3a5b80f32be2
-      internalID: -2017708245
+      spriteID: f61281eae5464354b89034826339dfc0
+      internalID: 1245390108
       vertices: []
       indices: 
       edges: []
@@ -344,19 +365,28 @@ TextureImporter:
       name: Back Gardevoir_11
       rect:
         serializedVersion: 2
-        x: 343
-        y: 202
-        width: 71
-        height: 77
+        x: 399
+        y: 258
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -11, y: 31}
+        - {x: -14, y: 29}
+        - {x: -40, y: -13}
+        - {x: -40, y: -48}
+        - {x: -2, y: -48}
+        - {x: 24, y: -43}
+        - {x: 33, y: -25}
+        - {x: 33, y: 17}
+        - {x: 20, y: 31}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d57dcfeba270c1b4fabdaff6b5761194
-      internalID: -277430365
+      spriteID: 06adcdc57311a924ea445a67716c1813
+      internalID: -770565226
       vertices: []
       indices: 
       edges: []
@@ -365,19 +395,26 @@ TextureImporter:
       name: Back Gardevoir_12
       rect:
         serializedVersion: 2
-        x: 451
-        y: 202
-        width: 71
-        height: 77
+        x: 507
+        y: 258
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -12, y: 31}
+        - {x: -40, y: -10}
+        - {x: -40, y: -48}
+        - {x: 29, y: -48}
+        - {x: 32, y: -28}
+        - {x: 32, y: 21}
+        - {x: 27, y: 31}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1494c5844facd14ea3c4788246b1236
-      internalID: 162885443
+      spriteID: e1ce9c884406fba44a88ee8a31f50719
+      internalID: -647254411
       vertices: []
       indices: 
       edges: []
@@ -386,19 +423,29 @@ TextureImporter:
       name: Back Gardevoir_13
       rect:
         serializedVersion: 2
-        x: 559
-        y: 202
-        width: 71
-        height: 77
+        x: 615
+        y: 259
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 16, y: 29}
+        - {x: -11, y: 29}
+        - {x: -22, y: -5}
+        - {x: -40, y: -35}
+        - {x: -40, y: -47}
+        - {x: -39, y: -48}
+        - {x: -33, y: -49}
+        - {x: 18, y: -49}
+        - {x: 31, y: -11}
+        - {x: 31, y: -6}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ca5682b1bb4ba442b2780ce162064cc
-      internalID: -434559400
+      spriteID: f388947f140017944af3c205685e6946
+      internalID: -1460499056
       vertices: []
       indices: 
       edges: []
@@ -407,19 +454,27 @@ TextureImporter:
       name: Back Gardevoir_14
       rect:
         serializedVersion: 2
-        x: 667
-        y: 202
-        width: 71
-        height: 77
+        x: 724
+        y: 259
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -33, y: 28}
+        - {x: -41, y: 7}
+        - {x: -41, y: -48}
+        - {x: -36, y: -49}
+        - {x: 23, y: -49}
+        - {x: 29, y: -32}
+        - {x: 29, y: 4}
+        - {x: 16, y: 28}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4dd6594be6dee4da9d0e59039688ec
-      internalID: 1651851413
+      spriteID: 95465f7e4196e634a9fa97928ccbdc6f
+      internalID: 1603963475
       vertices: []
       indices: 
       edges: []
@@ -428,19 +483,27 @@ TextureImporter:
       name: Back Gardevoir_15
       rect:
         serializedVersion: 2
-        x: 775
-        y: 202
-        width: 71
-        height: 77
+        x: 832
+        y: 259
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 14, y: 28}
+        - {x: -22, y: 28}
+        - {x: -41, y: -10}
+        - {x: -41, y: -49}
+        - {x: 10, y: -49}
+        - {x: 23, y: -41}
+        - {x: 28, y: -24}
+        - {x: 28, y: 3}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc46da61b0c13fb43bc7f97f805dd0fd
-      internalID: -164373648
+      spriteID: e2c3b031187e7d94d82ec8a1bd3eefda
+      internalID: -21317515
       vertices: []
       indices: 
       edges: []
@@ -449,19 +512,28 @@ TextureImporter:
       name: Back Gardevoir_16
       rect:
         serializedVersion: 2
-        x: 19
-        y: 105
-        width: 71
-        height: 77
+        x: 76
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -11, y: 31}
+        - {x: -41, y: -31}
+        - {x: -41, y: -44}
+        - {x: -35, y: -47}
+        - {x: 1, y: -47}
+        - {x: 17, y: -45}
+        - {x: 26, y: -25}
+        - {x: 26, y: 14}
+        - {x: 15, y: 31}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 412aeb3c45542794386312e54f8940a8
-      internalID: 2135208195
+      spriteID: eeb3f057699b7a74bb91371eafaae963
+      internalID: 1825472389
       vertices: []
       indices: 
       edges: []
@@ -470,19 +542,19 @@ TextureImporter:
       name: Back Gardevoir_17
       rect:
         serializedVersion: 2
-        x: 127
-        y: 105
-        width: 71
-        height: 77
+        x: 184
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a99988861af265c4bb487081422a47d5
-      internalID: 1114349016
+      spriteID: 0ae84d29a0a950d46b85e6aea943b718
+      internalID: -899986914
       vertices: []
       indices: 
       edges: []
@@ -491,19 +563,19 @@ TextureImporter:
       name: Back Gardevoir_18
       rect:
         serializedVersion: 2
-        x: 235
-        y: 106
-        width: 71
-        height: 77
+        x: 291
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c10d8958b98aca4dbd2d00b470407b4
-      internalID: 1343474685
+      spriteID: 12367d2d827d4de4eacf9f322fecc5a3
+      internalID: 1601332945
       vertices: []
       indices: 
       edges: []
@@ -512,19 +584,19 @@ TextureImporter:
       name: Back Gardevoir_19
       rect:
         serializedVersion: 2
-        x: 343
-        y: 106
-        width: 71
-        height: 77
+        x: 399
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9114d76700044634ca21ff555f6a430f
-      internalID: 1842540860
+      spriteID: 6c1d670322103be44aa7df67f8387284
+      internalID: 153536823
       vertices: []
       indices: 
       edges: []
@@ -533,19 +605,19 @@ TextureImporter:
       name: Back Gardevoir_20
       rect:
         serializedVersion: 2
-        x: 451
-        y: 106
-        width: 71
-        height: 77
+        x: 507
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72544072d9fbf2a43b8dbfdc966ff7d6
-      internalID: 1131932816
+      spriteID: 45759d3d7c556774d9024a03e0b261dd
+      internalID: -1417450372
       vertices: []
       indices: 
       edges: []
@@ -554,19 +626,19 @@ TextureImporter:
       name: Back Gardevoir_21
       rect:
         serializedVersion: 2
-        x: 559
-        y: 107
-        width: 71
-        height: 77
+        x: 615
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69c21a43e6bf51e46a510a0cf752a911
-      internalID: 195311585
+      spriteID: 9f188b6e15e67fd479d4c7c23d4486b0
+      internalID: 1726185348
       vertices: []
       indices: 
       edges: []
@@ -575,19 +647,19 @@ TextureImporter:
       name: Back Gardevoir_22
       rect:
         serializedVersion: 2
-        x: 667
-        y: 109
-        width: 71
-        height: 77
+        x: 724
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9584418f085ef0b458d63ae164e88dc2
-      internalID: 1417805234
+      spriteID: 12a233f027bc674449e6b210196f2905
+      internalID: 1106430218
       vertices: []
       indices: 
       edges: []
@@ -596,19 +668,19 @@ TextureImporter:
       name: Back Gardevoir_23
       rect:
         serializedVersion: 2
-        x: 775
-        y: 110
-        width: 71
-        height: 77
+        x: 832
+        y: 160
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0322eaa46aef87499cbbe97d6064a19
-      internalID: -114824681
+      spriteID: 775b0c03b01aa60418fcbe9ce36d133d
+      internalID: -82773837
       vertices: []
       indices: 
       edges: []
@@ -617,19 +689,19 @@ TextureImporter:
       name: Back Gardevoir_24
       rect:
         serializedVersion: 2
-        x: 19
-        y: 13
-        width: 71
-        height: 77
+        x: 76
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ddc354602868354b9cea26027bd0ada
-      internalID: 1406930434
+      spriteID: a731da81d5abf6d40b9272f578843db2
+      internalID: -133039504
       vertices: []
       indices: 
       edges: []
@@ -638,19 +710,19 @@ TextureImporter:
       name: Back Gardevoir_25
       rect:
         serializedVersion: 2
-        x: 127
-        y: 12
-        width: 71
-        height: 77
+        x: 184
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db8665562d92fa745b083d6301a88548
-      internalID: 932616482
+      spriteID: 6bcedbc0c85b2dc4f8ef0a67b55057d7
+      internalID: 275261978
       vertices: []
       indices: 
       edges: []
@@ -659,19 +731,19 @@ TextureImporter:
       name: Back Gardevoir_26
       rect:
         serializedVersion: 2
-        x: 235
-        y: 10
-        width: 71
-        height: 77
+        x: 291
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f28c3943510bcd448b381edd7e50823
-      internalID: 1517494095
+      spriteID: 97593351b6407f845baa2da7919beb27
+      internalID: 1721478782
       vertices: []
       indices: 
       edges: []
@@ -680,19 +752,19 @@ TextureImporter:
       name: Back Gardevoir_27
       rect:
         serializedVersion: 2
-        x: 342
-        y: 9
-        width: 71
-        height: 77
+        x: 399
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af409771609395b45a79a36990d4e4bf
-      internalID: 1241028356
+      spriteID: c4e866d793607594b93234f4782535dd
+      internalID: -1999851019
       vertices: []
       indices: 
       edges: []
@@ -701,19 +773,19 @@ TextureImporter:
       name: Back Gardevoir_28
       rect:
         serializedVersion: 2
-        x: 450
-        y: 10
-        width: 71
-        height: 77
+        x: 507
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73b8e232adeacc44d978512c41d4cbe0
-      internalID: -988378796
+      spriteID: a7a4daaf7d60b0c41a5276c8bdd85f49
+      internalID: -1071906213
       vertices: []
       indices: 
       edges: []
@@ -722,19 +794,19 @@ TextureImporter:
       name: Back Gardevoir_29
       rect:
         serializedVersion: 2
-        x: 558
-        y: 10
-        width: 71
-        height: 77
+        x: 615
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 143595f78cf65dd4d81ac59daa4f9b56
-      internalID: 965264246
+      spriteID: 332fe0c7a650cf3468ebbf493c80c06b
+      internalID: 26083984
       vertices: []
       indices: 
       edges: []
@@ -743,19 +815,19 @@ TextureImporter:
       name: Back Gardevoir_30
       rect:
         serializedVersion: 2
-        x: 666
-        y: 10
-        width: 71
-        height: 77
+        x: 724
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b727c95d32450b418b83977d1674a27
-      internalID: -1929153431
+      spriteID: 1e895a9aa1117c04f969264bb62a5bb3
+      internalID: 1854759407
       vertices: []
       indices: 
       edges: []
@@ -764,19 +836,19 @@ TextureImporter:
       name: Back Gardevoir_31
       rect:
         serializedVersion: 2
-        x: 775
-        y: 10
-        width: 71
-        height: 77
+        x: 832
+        y: 65
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa0686e4ad85f545a9752d1753295f6
-      internalID: 1681624310
+      spriteID: 5c0c67b062d108242a20ce1ff4b0839b
+      internalID: 1306615114
       vertices: []
       indices: 
       edges: []
@@ -784,7 +856,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ffa0b6b66b0d3d64b842a5f7f6a57542
+    spriteID: 321d8f8eed6ef6a4c8ae52382091425a
     internalID: 0
     vertices: []
     indices: 
@@ -792,38 +864,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back Gardevoir_0: -758658133
-      Back Gardevoir_1: 1728357366
-      Back Gardevoir_10: -2017708245
-      Back Gardevoir_11: -277430365
-      Back Gardevoir_12: 162885443
-      Back Gardevoir_13: -434559400
-      Back Gardevoir_14: 1651851413
-      Back Gardevoir_15: -164373648
-      Back Gardevoir_16: 2135208195
-      Back Gardevoir_17: 1114349016
-      Back Gardevoir_18: 1343474685
-      Back Gardevoir_19: 1842540860
-      Back Gardevoir_2: 1566094490
-      Back Gardevoir_20: 1131932816
-      Back Gardevoir_21: 195311585
-      Back Gardevoir_22: 1417805234
-      Back Gardevoir_23: -114824681
-      Back Gardevoir_24: 1406930434
-      Back Gardevoir_25: 932616482
-      Back Gardevoir_26: 1517494095
-      Back Gardevoir_27: 1241028356
-      Back Gardevoir_28: -988378796
-      Back Gardevoir_29: 965264246
-      Back Gardevoir_3: -1310611402
-      Back Gardevoir_30: -1929153431
-      Back Gardevoir_31: 1681624310
-      Back Gardevoir_4: 1210144108
-      Back Gardevoir_5: -90576085
-      Back Gardevoir_6: -2126728823
-      Back Gardevoir_7: 977045331
-      Back Gardevoir_8: 237554243
-      Back Gardevoir_9: -105413831
+      Back Gardevoir_0: 333001463
+      Back Gardevoir_1: 222950149
+      Back Gardevoir_10: 1245390108
+      Back Gardevoir_11: -770565226
+      Back Gardevoir_12: -647254411
+      Back Gardevoir_13: -1460499056
+      Back Gardevoir_14: 1603963475
+      Back Gardevoir_15: -21317515
+      Back Gardevoir_16: 1825472389
+      Back Gardevoir_17: -899986914
+      Back Gardevoir_18: 1601332945
+      Back Gardevoir_19: 153536823
+      Back Gardevoir_2: 1530517190
+      Back Gardevoir_20: -1417450372
+      Back Gardevoir_21: 1726185348
+      Back Gardevoir_22: 1106430218
+      Back Gardevoir_23: -82773837
+      Back Gardevoir_24: -133039504
+      Back Gardevoir_25: 275261978
+      Back Gardevoir_26: 1721478782
+      Back Gardevoir_27: -1999851019
+      Back Gardevoir_28: -1071906213
+      Back Gardevoir_29: 26083984
+      Back Gardevoir_3: -1512386587
+      Back Gardevoir_30: 1854759407
+      Back Gardevoir_31: 1306615114
+      Back Gardevoir_4: -848213783
+      Back Gardevoir_5: -132874083
+      Back Gardevoir_6: -594776030
+      Back Gardevoir_7: 1979268880
+      Back Gardevoir_8: -1367307760
+      Back Gardevoir_9: -1431152073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

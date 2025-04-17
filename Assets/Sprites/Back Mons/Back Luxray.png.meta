@@ -113,19 +113,38 @@ TextureImporter:
       name: Back Luxray_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 87
-        width: 72
-        height: 64
+        x: 81
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 11, y: 27}
+        - {x: 2, y: 27}
+        - {x: -13, y: 19}
+        - {x: -38, y: 8}
+        - {x: -47, y: -12}
+        - {x: -47, y: -20}
+        - {x: -39, y: -25}
+        - {x: -37, y: -24}
+        - {x: -34, y: -21}
+        - {x: -31, y: -15}
+        - {x: -31, y: -7}
+        - {x: -31, y: -12}
+        - {x: -30, y: -22}
+        - {x: -32, y: -36}
+        - {x: -20, y: -41}
+        - {x: 4, y: -41}
+        - {x: 24, y: -38}
+        - {x: 24, y: 11}
+        - {x: 16, y: 26}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bd06cf3152636642903f462a2283db2
-      internalID: 415358314
+      spriteID: 7eb343218c4af1547b16fc907b02b5e8
+      internalID: 590170199
       vertices: []
       indices: 
       edges: []
@@ -134,19 +153,34 @@ TextureImporter:
       name: Back Luxray_1
       rect:
         serializedVersion: 2
-        x: 105
-        y: 87
-        width: 72
-        height: 64
+        x: 172
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -10, y: 27}
+        - {x: -48, y: 1}
+        - {x: -48, y: -23}
+        - {x: -38, y: -28}
+        - {x: -30, y: -40}
+        - {x: -28, y: -41}
+        - {x: 18, y: -41}
+        - {x: 22, y: -27}
+        - {x: 22, y: 19}
+        - {x: 19, y: 27}
+      - - {x: -34, y: -5}
+        - {x: -32, y: -4}
+        - {x: -33, y: -7}
+        - {x: -31, y: -9}
+        - {x: -32, y: -10}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25d484e9cac29264f8b252e5fa1a2aff
-      internalID: -241857182
+      spriteID: 39ff521984097d44cafdb3cb1b92d0a8
+      internalID: -1905368542
       vertices: []
       indices: 
       edges: []
@@ -155,19 +189,42 @@ TextureImporter:
       name: Back Luxray_2
       rect:
         serializedVersion: 2
-        x: 196
-        y: 87
-        width: 72
-        height: 64
+        x: 262
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -13, y: 27}
+        - {x: -41, y: 6}
+        - {x: -47, y: -5}
+        - {x: -47, y: -26}
+        - {x: -46, y: -27}
+        - {x: -36, y: -29}
+        - {x: -33, y: -26}
+        - {x: -31, y: -20}
+        - {x: -34, y: -27}
+        - {x: -34, y: -36}
+        - {x: -30, y: -38}
+        - {x: -23, y: -41}
+        - {x: 2, y: -41}
+        - {x: 21, y: -38}
+        - {x: 21, y: 17}
+        - {x: 9, y: 27}
+      - - {x: -35, y: -6}
+        - {x: -33, y: -4}
+        - {x: -34, y: -5}
+        - {x: -34, y: -7}
+        - {x: -32, y: -9}
+        - {x: -33, y: -10}
+        - {x: -34, y: -10}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70b04f82dee6be947b6a3637418e6247
-      internalID: 1448463841
+      spriteID: 48a74c6e9b6fc4141a3b001c8ba81a03
+      internalID: -1622974640
       vertices: []
       indices: 
       edges: []
@@ -176,19 +233,37 @@ TextureImporter:
       name: Back Luxray_3
       rect:
         serializedVersion: 2
-        x: 281
-        y: 87
-        width: 72
-        height: 64
+        x: 348
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 11, y: 26}
+        - {x: 0, y: 26}
+        - {x: -13, y: 18}
+        - {x: -12, y: 13}
+        - {x: -47, y: 5}
+        - {x: -48, y: -2}
+        - {x: -48, y: -26}
+        - {x: -37, y: -25}
+        - {x: -32, y: -15}
+        - {x: -31, y: -7}
+        - {x: -31, y: -14}
+        - {x: -32, y: -31}
+        - {x: -32, y: -36}
+        - {x: -21, y: -41}
+        - {x: 15, y: -41}
+        - {x: 24, y: -40}
+        - {x: 24, y: 15}
+        - {x: 23, y: 21}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c860f2a1720b643968739a5aeb75db
-      internalID: 1925632303
+      spriteID: 1c3391256ba134c4ea4ab90a99862107
+      internalID: 1992592708
       vertices: []
       indices: 
       edges: []
@@ -197,19 +272,40 @@ TextureImporter:
       name: Back Luxray_4
       rect:
         serializedVersion: 2
-        x: 370
-        y: 87
-        width: 72
-        height: 64
+        x: 440
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 19, y: -37}
+        - {x: 22, y: -12}
+        - {x: 22, y: 19}
+        - {x: 19, y: 26}
+        - {x: -40, y: 26}
+        - {x: -49, y: 23}
+        - {x: -50, y: 13}
+        - {x: -50, y: -15}
+        - {x: -45, y: -22}
+        - {x: -43, y: -20}
+        - {x: -35, y: -13}
+        - {x: -33, y: -6}
+        - {x: -33, y: -1}
+        - {x: -31, y: 1}
+        - {x: -34, y: -10}
+        - {x: -44, y: -32}
+        - {x: -30, y: -41}
+        - {x: -8, y: -41}
+        - {x: -6, y: -39}
+        - {x: -8, y: -34}
+        - {x: 4, y: -40}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a44679526e655742b66adc10de26a5d
-      internalID: -1560844627
+      spriteID: ef2b69ae089b0fa499142a9195776f4e
+      internalID: -1237491822
       vertices: []
       indices: 
       edges: []
@@ -218,19 +314,31 @@ TextureImporter:
       name: Back Luxray_5
       rect:
         serializedVersion: 2
-        x: 458
-        y: 87
-        width: 72
-        height: 64
+        x: 529
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 17, y: 25}
+        - {x: 2, y: 25}
+        - {x: -8, y: 21}
+        - {x: -11, y: 18}
+        - {x: -10, y: 4}
+        - {x: -25, y: 18}
+        - {x: -50, y: 5}
+        - {x: -50, y: -33}
+        - {x: -46, y: -41}
+        - {x: 14, y: -41}
+        - {x: 24, y: -14}
+        - {x: 24, y: 19}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f5b0a115cf14864bb64373adecb35a6
-      internalID: -158274300
+      spriteID: 37defc56289197e44b6c8c77e36106d5
+      internalID: -859952353
       vertices: []
       indices: 
       edges: []
@@ -239,19 +347,19 @@ TextureImporter:
       name: Back Luxray_6
       rect:
         serializedVersion: 2
-        x: 550
-        y: 87
-        width: 72
-        height: 64
+        x: 621
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7420528b355812d428c22e37f1d1d847
-      internalID: 1622112317
+      spriteID: 639504315cee68744bd836d492ffe713
+      internalID: 280932646
       vertices: []
       indices: 
       edges: []
@@ -260,19 +368,41 @@ TextureImporter:
       name: Back Luxray_7
       rect:
         serializedVersion: 2
-        x: 17
-        y: 6
-        width: 72
-        height: 64
+        x: 84
+        y: 67
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 4, y: -41}
+        - {x: 8, y: -42}
+        - {x: 24, y: -42}
+        - {x: 24, y: 24}
+        - {x: -1, y: 24}
+        - {x: -7, y: 23}
+        - {x: -45, y: 7}
+        - {x: -49, y: -3}
+        - {x: -49, y: -8}
+        - {x: -47, y: -12}
+        - {x: -41, y: -14}
+        - {x: -35, y: -10}
+        - {x: -29, y: -3}
+        - {x: -30, y: -4}
+        - {x: -33, y: -12}
+        - {x: -35, y: -37}
+        - {x: -23, y: -42}
+        - {x: -10, y: -42}
+        - {x: -6, y: -40}
+        - {x: -8, y: -36}
+        - {x: -10, y: -33}
+        - {x: -4, y: -37}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6201a24281a6c498f5ce96033233d5
-      internalID: -701709960
+      spriteID: 222fa687ba1d7c74eae20232072e91a3
+      internalID: -919941721
       vertices: []
       indices: 
       edges: []
@@ -281,19 +411,37 @@ TextureImporter:
       name: Back Luxray_8
       rect:
         serializedVersion: 2
-        x: 104
-        y: 7
-        width: 72
-        height: 64
+        x: 173
+        y: 67
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -42, y: 25}
+        - {x: -50, y: 3}
+        - {x: -50, y: -9}
+        - {x: -45, y: -16}
+        - {x: -41, y: -15}
+        - {x: -34, y: -11}
+        - {x: -31, y: -4}
+        - {x: -30, y: 1}
+        - {x: -31, y: -4}
+        - {x: -31, y: -7}
+        - {x: -34, y: -13}
+        - {x: -37, y: -31}
+        - {x: -32, y: -41}
+        - {x: -29, y: -42}
+        - {x: 7, y: -42}
+        - {x: 22, y: -40}
+        - {x: 23, y: -34}
+        - {x: 23, y: 25}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 983354fecb98aa64688cab6c474bc3f4
-      internalID: 369344611
+      spriteID: 0c1635de1f4695a41ad1fdfe0dcfe3f8
+      internalID: 68323964
       vertices: []
       indices: 
       edges: []
@@ -302,19 +450,41 @@ TextureImporter:
       name: Back Luxray_9
       rect:
         serializedVersion: 2
-        x: 192
-        y: 7
-        width: 72
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 259
+        y: 67
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.52171415, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 18, y: -42}
+        - {x: 26, y: -27}
+        - {x: 26, y: 18}
+        - {x: 23, y: 25}
+        - {x: -34, y: 25}
+        - {x: -43, y: 21}
+        - {x: -48, y: -1}
+        - {x: -48, y: -14}
+        - {x: -41, y: -20}
+        - {x: -37, y: -18}
+        - {x: -31, y: -13}
+        - {x: -29, y: -7}
+        - {x: -29, y: -1}
+        - {x: -28, y: -5}
+        - {x: -31, y: -14}
+        - {x: -41, y: -33}
+        - {x: -27, y: -42}
+        - {x: -5, y: -42}
+        - {x: -3, y: -40}
+        - {x: -5, y: -35}
+        - {x: -1, y: -37}
+        - {x: 13, y: -42}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca7653c4a61f8d40b89a49cc575cdec
-      internalID: -515262706
+      spriteID: 0fdb4618100b47d40a2d02751e2bb035
+      internalID: 355728600
       vertices: []
       indices: 
       edges: []
@@ -323,19 +493,38 @@ TextureImporter:
       name: Back Luxray_10
       rect:
         serializedVersion: 2
-        x: 281
-        y: 7
-        width: 72
-        height: 64
+        x: 348
+        y: 67
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 16, y: 26}
+        - {x: -5, y: 26}
+        - {x: -16, y: 23}
+        - {x: -48, y: -3}
+        - {x: -48, y: -17}
+        - {x: -36, y: -24}
+        - {x: -30, y: -13}
+        - {x: -31, y: -11}
+        - {x: -30, y: -8}
+        - {x: -30, y: -1}
+        - {x: -29, y: -3}
+        - {x: -30, y: -13}
+        - {x: -27, y: -20}
+        - {x: -40, y: -31}
+        - {x: -28, y: -42}
+        - {x: 14, y: -42}
+        - {x: 23, y: -38}
+        - {x: 25, y: -13}
+        - {x: 25, y: 15}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e590772a83ee0634380acbbc10f111a4
-      internalID: 696239776
+      spriteID: 870eee2141af4c5409a33fcc6cb05083
+      internalID: -657149606
       vertices: []
       indices: 
       edges: []
@@ -344,19 +533,41 @@ TextureImporter:
       name: Back Luxray_11
       rect:
         serializedVersion: 2
-        x: 370
-        y: 7
-        width: 72
-        height: 64
+        x: 437
+        y: 67
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 22, y: 20}
+        - {x: 13, y: 26}
+        - {x: 6, y: 26}
+        - {x: -10, y: 21}
+        - {x: -13, y: 13}
+        - {x: -9, y: 3}
+        - {x: -18, y: 6}
+        - {x: -33, y: 12}
+        - {x: -48, y: -9}
+        - {x: -48, y: -20}
+        - {x: -46, y: -21}
+        - {x: -39, y: -24}
+        - {x: -35, y: -21}
+        - {x: -32, y: -15}
+        - {x: -31, y: -7}
+        - {x: -32, y: -14}
+        - {x: -32, y: -37}
+        - {x: -25, y: -42}
+        - {x: 14, y: -42}
+        - {x: 23, y: -38}
+        - {x: 25, y: -18}
+        - {x: 25, y: 8}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ce56504fc6015640bde8fa3afa47bd2
-      internalID: -1398018856
+      spriteID: 47bac2b26a94e93409c3c8282d8c97ca
+      internalID: 497190544
       vertices: []
       indices: 
       edges: []
@@ -365,19 +576,38 @@ TextureImporter:
       name: Back Luxray_12
       rect:
         serializedVersion: 2
-        x: 460
-        y: 7
-        width: 72
-        height: 64
+        x: 526
+        y: 67
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 11, y: 26}
+        - {x: 2, y: 26}
+        - {x: -13, y: 18}
+        - {x: -38, y: 7}
+        - {x: -47, y: -13}
+        - {x: -47, y: -21}
+        - {x: -39, y: -26}
+        - {x: -37, y: -25}
+        - {x: -34, y: -22}
+        - {x: -31, y: -16}
+        - {x: -31, y: -8}
+        - {x: -31, y: -13}
+        - {x: -30, y: -23}
+        - {x: -32, y: -37}
+        - {x: -20, y: -42}
+        - {x: 4, y: -42}
+        - {x: 24, y: -39}
+        - {x: 24, y: 10}
+        - {x: 16, y: 25}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba376cfa083ba5248b922b7359d56589
-      internalID: 594029322
+      spriteID: 4f7e0c642fe491140abb71ede3063c72
+      internalID: -1171117032
       vertices: []
       indices: 
       edges: []
@@ -385,7 +615,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8019f3f589589e34ba9d9b1c91cd3471
+    spriteID: a5b22022ec4c6024db38442f859dd801
     internalID: 0
     vertices: []
     indices: 
@@ -393,19 +623,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back Luxray_0: 415358314
-      Back Luxray_1: -241857182
-      Back Luxray_10: 696239776
-      Back Luxray_11: -1398018856
-      Back Luxray_12: 594029322
-      Back Luxray_2: 1448463841
-      Back Luxray_3: 1925632303
-      Back Luxray_4: -1560844627
-      Back Luxray_5: -158274300
-      Back Luxray_6: 1622112317
-      Back Luxray_7: -701709960
-      Back Luxray_8: 369344611
-      Back Luxray_9: -515262706
+      Back Luxray_0: 590170199
+      Back Luxray_1: -1905368542
+      Back Luxray_10: -657149606
+      Back Luxray_11: 497190544
+      Back Luxray_12: -1171117032
+      Back Luxray_2: -1622974640
+      Back Luxray_3: 1992592708
+      Back Luxray_4: -1237491822
+      Back Luxray_5: -859952353
+      Back Luxray_6: 280932646
+      Back Luxray_7: -919941721
+      Back Luxray_8: 68323964
+      Back Luxray_9: 355728600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

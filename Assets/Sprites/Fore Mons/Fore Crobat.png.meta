@@ -113,19 +113,19 @@ TextureImporter:
       name: Fore Crobat_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 96
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 261a51f418405934f9c7ff37a774ac94
-      internalID: 1026395354
+      spriteID: 83ff16e765d31b84d9b7ec1c8460908e
+      internalID: -708080025
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: Fore Crobat_1
       rect:
         serializedVersion: 2
-        x: 115
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 214
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d7a465a7b44934419602414b0f07f89
-      internalID: 398575828
+      spriteID: 7255c027b567a9e4c9ac043e1dedd337
+      internalID: -1640525347
       vertices: []
       indices: 
       edges: []
@@ -155,19 +155,19 @@ TextureImporter:
       name: Fore Crobat_2
       rect:
         serializedVersion: 2
-        x: 230
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 329
+        y: 147
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b5f56f97efa21045888d88a00defd25
-      internalID: -1282803407
+      spriteID: a348c87f8fbc6f14d9590392bba13c0a
+      internalID: -1777204568
       vertices: []
       indices: 
       edges: []
@@ -176,19 +176,19 @@ TextureImporter:
       name: Fore Crobat_3
       rect:
         serializedVersion: 2
-        x: 345
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 445
+        y: 149
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a1a38cfa80e8b140ae38d4b74f50132
-      internalID: -1841783203
+      spriteID: a0dcdd1828ee9e84580db3ef842f55e3
+      internalID: -1096567287
       vertices: []
       indices: 
       edges: []
@@ -197,19 +197,19 @@ TextureImporter:
       name: Fore Crobat_4
       rect:
         serializedVersion: 2
-        x: 460
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 561
+        y: 151
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc6f49b63da90f4ca6fa6e46b18d8fb
-      internalID: -184506099
+      spriteID: 1d46323c7e14aa14cad2cac2ea145030
+      internalID: -262369752
       vertices: []
       indices: 
       edges: []
@@ -218,19 +218,19 @@ TextureImporter:
       name: Fore Crobat_5
       rect:
         serializedVersion: 2
-        x: 575
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 677
+        y: 153
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a129ac5f97f2b5342a210848dbcf7064
-      internalID: -1473333868
+      spriteID: d57a9b13e0c5feb44909cc39da3af2e6
+      internalID: 406768254
       vertices: []
       indices: 
       edges: []
@@ -239,19 +239,19 @@ TextureImporter:
       name: Fore Crobat_6
       rect:
         serializedVersion: 2
-        x: 690
-        y: 96.5
-        width: 115.71429
-        height: 96.5
+        x: 795
+        y: 153
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df10fa031cda4aa418d92993b827f604
-      internalID: 550890734
+      spriteID: 8786d6f5407923a4ebb3a13d43c74d9a
+      internalID: 1864260766
       vertices: []
       indices: 
       edges: []
@@ -260,19 +260,19 @@ TextureImporter:
       name: Fore Crobat_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0.5
-        width: 115.71429
-        height: 96.5
+        x: 94
+        y: 48
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4eb22ba0b17ae44a84028d36552e98
-      internalID: 757643969
+      spriteID: d838cf8449014eb4393416ba56ab219d
+      internalID: 642325991
       vertices: []
       indices: 
       edges: []
@@ -281,19 +281,19 @@ TextureImporter:
       name: Fore Crobat_8
       rect:
         serializedVersion: 2
-        x: 115
-        y: 0.5
-        width: 115.71429
-        height: 96.5
+        x: 212
+        y: 46
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d45f4d78456bc014cae655c73f169efe
-      internalID: -850397758
+      spriteID: b7843fed075f3674fb11b04add06b485
+      internalID: -1610491823
       vertices: []
       indices: 
       edges: []
@@ -302,19 +302,19 @@ TextureImporter:
       name: Fore Crobat_9
       rect:
         serializedVersion: 2
-        x: 230
-        y: 0.5
-        width: 115.71429
-        height: 96.5
+        x: 330
+        y: 44
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54b4040a409d6ff4a91f5f864a222491
-      internalID: -1252941125
+      spriteID: 9377df9992836384bae81304d346e551
+      internalID: -863244618
       vertices: []
       indices: 
       edges: []
@@ -322,7 +322,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bcc39959030ef5a4cbfbe09dd5c195de
+    spriteID: 9b27ff2b8e182ac4d9bf7d983b6f80a8
     internalID: 0
     vertices: []
     indices: 
@@ -330,16 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fore Crobat_0: 1026395354
-      Fore Crobat_1: 398575828
-      Fore Crobat_2: -1282803407
-      Fore Crobat_3: -1841783203
-      Fore Crobat_4: -184506099
-      Fore Crobat_5: -1473333868
-      Fore Crobat_6: 550890734
-      Fore Crobat_7: 757643969
-      Fore Crobat_8: -850397758
-      Fore Crobat_9: -1252941125
+      Fore Crobat_0: -708080025
+      Fore Crobat_1: -1640525347
+      Fore Crobat_2: -1777204568
+      Fore Crobat_3: -1096567287
+      Fore Crobat_4: -262369752
+      Fore Crobat_5: 406768254
+      Fore Crobat_6: 1864260766
+      Fore Crobat_7: 642325991
+      Fore Crobat_8: -1610491823
+      Fore Crobat_9: -863244618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

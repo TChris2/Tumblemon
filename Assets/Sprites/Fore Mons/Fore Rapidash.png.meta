@@ -113,19 +113,19 @@ TextureImporter:
       name: Fore Rapidash_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 471
-        width: 74
-        height: 74
+        x: 93
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3fd00bf767ecb947be147e60ed55fe6
-      internalID: 26093266
+      spriteID: 1fe3ac435b3b4f94abfc0f4b27b5a968
+      internalID: 37994456
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: Fore Rapidash_1
       rect:
         serializedVersion: 2
-        x: 114
-        y: 471
-        width: 74
-        height: 74
+        x: 193
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 585091df98a17dc4490dee0f58e6aa59
-      internalID: -1408950263
+      spriteID: aa2238289b108ba49aa44c6e2d0242d3
+      internalID: -1098490580
       vertices: []
       indices: 
       edges: []
@@ -155,19 +155,19 @@ TextureImporter:
       name: Fore Rapidash_2
       rect:
         serializedVersion: 2
-        x: 214
-        y: 471
-        width: 74
-        height: 74
+        x: 293
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7edd2ac48dc5f1b48982039c77da5e0f
-      internalID: -461196060
+      spriteID: 4871eea80524a354fac49a6c9bfd3d25
+      internalID: -807829818
       vertices: []
       indices: 
       edges: []
@@ -176,19 +176,19 @@ TextureImporter:
       name: Fore Rapidash_3
       rect:
         serializedVersion: 2
-        x: 314
-        y: 471
-        width: 74
-        height: 74
+        x: 393
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 848d344c37874384da9abe5304f04ed5
-      internalID: -75145270
+      spriteID: bb0415bfd0853ab48a2a4f98ebdcc898
+      internalID: 1509099972
       vertices: []
       indices: 
       edges: []
@@ -197,19 +197,19 @@ TextureImporter:
       name: Fore Rapidash_4
       rect:
         serializedVersion: 2
-        x: 413
-        y: 471
-        width: 74
-        height: 74
+        x: 493
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc01c1d8824d71488ef255ba8b7eaca
-      internalID: -403257222
+      spriteID: 43c85830c31af7143b1136466433c1d0
+      internalID: 1302438217
       vertices: []
       indices: 
       edges: []
@@ -218,19 +218,19 @@ TextureImporter:
       name: Fore Rapidash_5
       rect:
         serializedVersion: 2
-        x: 513
-        y: 471
-        width: 74
-        height: 74
+        x: 593
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14fe0be3b2444f94a99133db6e7c24fc
-      internalID: 439926082
+      spriteID: e1a9109821023b747bda38908a7d6ae3
+      internalID: 1289388223
       vertices: []
       indices: 
       edges: []
@@ -239,19 +239,19 @@ TextureImporter:
       name: Fore Rapidash_6
       rect:
         serializedVersion: 2
-        x: 614
-        y: 471
-        width: 74
-        height: 74
+        x: 693
+        y: 583
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc7de1f939051a54bb710c17450986ac
-      internalID: -409354719
+      spriteID: 41741c2ab0cba8c478f543c2b0ff8f67
+      internalID: 474046207
       vertices: []
       indices: 
       edges: []
@@ -260,19 +260,19 @@ TextureImporter:
       name: Fore Rapidash_7
       rect:
         serializedVersion: 2
-        x: 14
-        y: 379
-        width: 74
-        height: 74
+        x: 93
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d0722b7f537ad242af92bf4ab6104f2
-      internalID: -1881364802
+      spriteID: c16c4c578494cfb40a2f9e82567940a1
+      internalID: 386323329
       vertices: []
       indices: 
       edges: []
@@ -281,19 +281,19 @@ TextureImporter:
       name: Fore Rapidash_8
       rect:
         serializedVersion: 2
-        x: 115
-        y: 379
-        width: 74
-        height: 74
+        x: 193
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65a5a5f7f1f47604ab52c8fe7527ba82
-      internalID: 1401204700
+      spriteID: cd7cf9d617cac394ea6ee717ae459982
+      internalID: 157460673
       vertices: []
       indices: 
       edges: []
@@ -302,19 +302,19 @@ TextureImporter:
       name: Fore Rapidash_9
       rect:
         serializedVersion: 2
-        x: 216
-        y: 379
-        width: 74
-        height: 74
+        x: 293
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fa9e857c0a87f94d9c66b7702b6351b
-      internalID: -990274246
+      spriteID: f631154dbf58d034b967d282826d6a5a
+      internalID: 115609007
       vertices: []
       indices: 
       edges: []
@@ -323,19 +323,19 @@ TextureImporter:
       name: Fore Rapidash_10
       rect:
         serializedVersion: 2
-        x: 315
-        y: 379
-        width: 74
-        height: 74
+        x: 393
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12e7ca85659873f4f98839b30252f750
-      internalID: -1437836672
+      spriteID: 2aa25bf70770a264ca1a873450d4fa4a
+      internalID: 1480656531
       vertices: []
       indices: 
       edges: []
@@ -344,19 +344,19 @@ TextureImporter:
       name: Fore Rapidash_11
       rect:
         serializedVersion: 2
-        x: 415
-        y: 379
-        width: 74
-        height: 74
+        x: 493
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5836d64850ef05a4c80eb73480537f11
-      internalID: -1108497008
+      spriteID: 5ddcee66493c57646879c72fc7e29cac
+      internalID: -778328409
       vertices: []
       indices: 
       edges: []
@@ -365,19 +365,19 @@ TextureImporter:
       name: Fore Rapidash_12
       rect:
         serializedVersion: 2
-        x: 513
-        y: 379
-        width: 74
-        height: 74
+        x: 593
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe50ed4eb4d80f64fa24ae9f1f7949a7
-      internalID: -429083318
+      spriteID: 58f274c1df21c63419450ada9381d8ed
+      internalID: 2066401984
       vertices: []
       indices: 
       edges: []
@@ -386,19 +386,19 @@ TextureImporter:
       name: Fore Rapidash_13
       rect:
         serializedVersion: 2
-        x: 613
-        y: 379
-        width: 74
-        height: 74
+        x: 693
+        y: 491
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39fb930befdc6824186dc1146a49bc66
-      internalID: 1517515074
+      spriteID: c26768a91686b2949bccd4e4d9a2bb39
+      internalID: 820839965
       vertices: []
       indices: 
       edges: []
@@ -407,19 +407,19 @@ TextureImporter:
       name: Fore Rapidash_14
       rect:
         serializedVersion: 2
-        x: 14
-        y: 287
-        width: 74
-        height: 74
+        x: 93
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16919f9624341ed4093285e6cf718025
-      internalID: -1766625621
+      spriteID: ba7d0ce74763fe24bb241daedb525ed3
+      internalID: 226491113
       vertices: []
       indices: 
       edges: []
@@ -428,19 +428,19 @@ TextureImporter:
       name: Fore Rapidash_15
       rect:
         serializedVersion: 2
-        x: 114
-        y: 287
-        width: 74
-        height: 74
+        x: 193
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c537910dde39db4baca758a67209082
-      internalID: 374300826
+      spriteID: ad29791ab6248a94d8426580de8747df
+      internalID: 1154484197
       vertices: []
       indices: 
       edges: []
@@ -449,19 +449,19 @@ TextureImporter:
       name: Fore Rapidash_16
       rect:
         serializedVersion: 2
-        x: 214
-        y: 287
-        width: 74
-        height: 74
+        x: 293
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec99ae9be875c5341bf7c39b9294dcd0
-      internalID: 1550003900
+      spriteID: 4b179678170a22345b39abee53ef7cfe
+      internalID: -143621855
       vertices: []
       indices: 
       edges: []
@@ -470,19 +470,19 @@ TextureImporter:
       name: Fore Rapidash_17
       rect:
         serializedVersion: 2
-        x: 314
-        y: 287
-        width: 74
-        height: 74
+        x: 393
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896b7cef5179f9140965846d9e40f577
-      internalID: -661004180
+      spriteID: 4ac8902834c1b0c4ab49ceae18ac603a
+      internalID: 331805148
       vertices: []
       indices: 
       edges: []
@@ -491,19 +491,19 @@ TextureImporter:
       name: Fore Rapidash_18
       rect:
         serializedVersion: 2
-        x: 414
-        y: 287
-        width: 74
-        height: 74
+        x: 493
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e3d532d88ea60479563ddec33ede81
-      internalID: 1072676416
+      spriteID: c4ec23a7cab7d464bbcf17da6d6de8be
+      internalID: -1208661799
       vertices: []
       indices: 
       edges: []
@@ -512,19 +512,19 @@ TextureImporter:
       name: Fore Rapidash_19
       rect:
         serializedVersion: 2
-        x: 514
-        y: 287
-        width: 74
-        height: 74
+        x: 593
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cb764a6e55add46a90d23b978cf246
-      internalID: 1842549773
+      spriteID: 7cff7d61812d35c4c94882777afa8de9
+      internalID: 1660999256
       vertices: []
       indices: 
       edges: []
@@ -533,19 +533,19 @@ TextureImporter:
       name: Fore Rapidash_20
       rect:
         serializedVersion: 2
-        x: 613
-        y: 287
-        width: 74
-        height: 74
+        x: 693
+        y: 398
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c4415878fddc294c8768eb4dd02e4fc
-      internalID: -618906926
+      spriteID: d112f1910f45a0b44987696dee8c37e0
+      internalID: -1982577533
       vertices: []
       indices: 
       edges: []
@@ -554,19 +554,19 @@ TextureImporter:
       name: Fore Rapidash_21
       rect:
         serializedVersion: 2
-        x: 13
-        y: 195
-        width: 74
-        height: 74
+        x: 93
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ea349221711074789b86066aa13011
-      internalID: 424424729
+      spriteID: 7a94493fd3999724689f60d1a55e67cc
+      internalID: 55568306
       vertices: []
       indices: 
       edges: []
@@ -575,19 +575,19 @@ TextureImporter:
       name: Fore Rapidash_22
       rect:
         serializedVersion: 2
-        x: 114
-        y: 195
-        width: 74
-        height: 74
+        x: 193
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4b6f937ddcdf0f41ae13592f96916f4
-      internalID: 1298624478
+      spriteID: 67205bd8ddaeb894182d2a3fd7ab5d4b
+      internalID: 1093820275
       vertices: []
       indices: 
       edges: []
@@ -596,19 +596,19 @@ TextureImporter:
       name: Fore Rapidash_23
       rect:
         serializedVersion: 2
-        x: 214
-        y: 195
-        width: 74
-        height: 74
+        x: 293
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5a38a92940ae6d4ab0b11b5d56ee3c1
-      internalID: 1857264863
+      spriteID: b0eea5edf5befad4c809b2f89b1835d4
+      internalID: 15997013
       vertices: []
       indices: 
       edges: []
@@ -617,19 +617,19 @@ TextureImporter:
       name: Fore Rapidash_24
       rect:
         serializedVersion: 2
-        x: 314
-        y: 195
-        width: 74
-        height: 74
+        x: 393
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6a6c81022d34024097728501d20efb3
-      internalID: 1300798709
+      spriteID: dcc8643e59171434cb8ec96cb775431e
+      internalID: -1216199861
       vertices: []
       indices: 
       edges: []
@@ -638,19 +638,19 @@ TextureImporter:
       name: Fore Rapidash_25
       rect:
         serializedVersion: 2
-        x: 415
-        y: 196
-        width: 74
-        height: 74
+        x: 493
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c0777310ebc3848a618f8240c24e05
-      internalID: -2084275854
+      spriteID: bbffc1c674f7a8349b9845d1edb824f9
+      internalID: 986879539
       vertices: []
       indices: 
       edges: []
@@ -659,19 +659,19 @@ TextureImporter:
       name: Fore Rapidash_26
       rect:
         serializedVersion: 2
-        x: 515
-        y: 195
-        width: 74
-        height: 74
+        x: 593
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e255826e990e5cc429d8cd334769764f
-      internalID: -1518161239
+      spriteID: 1319085a77b7d734fa86b7016fc3af44
+      internalID: -1460137537
       vertices: []
       indices: 
       edges: []
@@ -680,19 +680,19 @@ TextureImporter:
       name: Fore Rapidash_27
       rect:
         serializedVersion: 2
-        x: 615
-        y: 195
-        width: 74
-        height: 74
+        x: 693
+        y: 306
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 653b86bd68ef542499a2cbcf6910c251
-      internalID: 903156219
+      spriteID: 0f5ead7c1f057db4f95d8522243135d8
+      internalID: 2051340776
       vertices: []
       indices: 
       edges: []
@@ -701,19 +701,19 @@ TextureImporter:
       name: Fore Rapidash_28
       rect:
         serializedVersion: 2
-        x: 13
-        y: 103
-        width: 74
-        height: 74
+        x: 93
+        y: 214
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39cd519d827df114ba6b32ecee8883e1
-      internalID: 403537398
+      spriteID: 7289d292ea5051e4ba40a1e6800e1aec
+      internalID: -1802646854
       vertices: []
       indices: 
       edges: []
@@ -722,19 +722,19 @@ TextureImporter:
       name: Fore Rapidash_29
       rect:
         serializedVersion: 2
-        x: 113
-        y: 103
-        width: 74
-        height: 74
+        x: 193
+        y: 214
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46e6912b755d23945bbfece6261caffa
-      internalID: -1114915256
+      spriteID: 35c459f52b214d640a110f223e16adf5
+      internalID: -1583615090
       vertices: []
       indices: 
       edges: []
@@ -743,19 +743,19 @@ TextureImporter:
       name: Fore Rapidash_30
       rect:
         serializedVersion: 2
-        x: 213
-        y: 103
-        width: 74
-        height: 74
+        x: 293
+        y: 214
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04d15a0bebc03bd41b8b2a2ffdae343d
-      internalID: 2140428596
+      spriteID: 4bf8232c61870784f9bd5ef45aa94f2f
+      internalID: 1939363380
       vertices: []
       indices: 
       edges: []
@@ -764,19 +764,19 @@ TextureImporter:
       name: Fore Rapidash_31
       rect:
         serializedVersion: 2
-        x: 314
-        y: 103
-        width: 74
-        height: 74
+        x: 393
+        y: 214
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a856e6f289358742b3a2df158cb0a0c
-      internalID: 1535380071
+      spriteID: 70e6fa2619e35114ba5878c4e883fcdd
+      internalID: -1276787877
       vertices: []
       indices: 
       edges: []
@@ -785,103 +785,19 @@ TextureImporter:
       name: Fore Rapidash_32
       rect:
         serializedVersion: 2
-        x: 414
-        y: 103
-        width: 74
-        height: 74
+        x: 493
+        y: 214
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f976acfc2d5eeb044876dd6b24821897
-      internalID: -90612617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fore Rapidash_34
-      rect:
-        serializedVersion: 2
-        x: 615
-        y: 103
-        width: 74
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d06f23eb604f5049993fa7c488c439c
-      internalID: 1364442687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fore Rapidash_36
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 11
-        width: 74
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b23be7fe19d0ad4b9d404645dcd6dac
-      internalID: 1087374487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fore Rapidash_37
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 11
-        width: 74
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e24691072c0bf7c49bb8059710a23def
-      internalID: 1715018648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fore Rapidash_38
-      rect:
-        serializedVersion: 2
-        x: 314
-        y: 11
-        width: 74
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa253e89c0698ba4b8e1d5f8a209e39b
-      internalID: -1422246381
+      spriteID: c124e1c3b33c9284c8ef02d128f165ac
+      internalID: 616013369
       vertices: []
       indices: 
       edges: []
@@ -890,19 +806,40 @@ TextureImporter:
       name: Fore Rapidash_33
       rect:
         serializedVersion: 2
-        x: 514
-        y: 103
-        width: 74
-        height: 74
+        x: 593
+        y: 214
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e45a3bf28834b5c489227350f4067000
-      internalID: -597183319
+      spriteID: 91a73cca1cade3d4c8354754226568da
+      internalID: -98917766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fore Rapidash_34
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 214
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1915aa5f1b15a4998637186fa62a6b
+      internalID: -450257561
       vertices: []
       indices: 
       edges: []
@@ -911,19 +848,170 @@ TextureImporter:
       name: Fore Rapidash_35
       rect:
         serializedVersion: 2
-        x: 14
-        y: 11
-        width: 74
-        height: 74
+        x: 93
+        y: 123
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 44, y: -6}
+        - {x: 44, y: 12}
+        - {x: 42, y: 16}
+        - {x: 35, y: 13}
+        - {x: 21, y: 13}
+        - {x: 31, y: 13}
+        - {x: 36, y: 16}
+        - {x: 32, y: 25}
+        - {x: 14, y: 33}
+        - {x: 1, y: 35}
+        - {x: -27, y: 35}
+        - {x: -31, y: 30}
+        - {x: -31, y: -2}
+        - {x: -25, y: -33}
+        - {x: -16, y: -35}
+        - {x: -13, y: -30}
+        - {x: -16, y: -40}
+        - {x: -13, y: -41}
+        - {x: 25, y: -41}
+        - {x: 36, y: -29}
+        - {x: 37, y: -22}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dfa30ae7e2c73645b66307b1761fa6a
-      internalID: 139256062
+      spriteID: ec44e00b753a5a145a8957121058cbe7
+      internalID: 258520297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fore Rapidash_36
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 123
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: 9}
+        - {x: 35, y: 18}
+        - {x: 32, y: 27}
+        - {x: -2, y: 33}
+        - {x: -22, y: 33}
+        - {x: -29, y: 31}
+        - {x: -31, y: 25}
+        - {x: -31, y: 3}
+        - {x: -25, y: -34}
+        - {x: -16, y: -35}
+        - {x: -13, y: -30}
+        - {x: -16, y: -40}
+        - {x: -15, y: -41}
+        - {x: 28, y: -41}
+        - {x: 39, y: -37}
+        - {x: 39, y: 10}
+        - {x: 37, y: 10}
+      - - {x: 18, y: 9}
+        - {x: 16, y: 8}
+        - {x: 14, y: 8}
+        - {x: 12, y: 6}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705c5021c45ec5043bdc25fc049df5b9
+      internalID: 703630840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fore Rapidash_37
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 123
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -9}
+        - {x: 39, y: 1}
+        - {x: 39, y: 10}
+        - {x: 37, y: 10}
+        - {x: 34, y: 9}
+        - {x: 35, y: 18}
+        - {x: 32, y: 27}
+        - {x: 2, y: 33}
+        - {x: -27, y: 33}
+        - {x: -31, y: 24}
+        - {x: -31, y: -4}
+        - {x: -29, y: -22}
+        - {x: -23, y: -30}
+        - {x: -16, y: -33}
+        - {x: -19, y: -41}
+        - {x: 25, y: -41}
+        - {x: 32, y: -29}
+        - {x: 35, y: -21}
+        - {x: 33, y: -17}
+      - - {x: 18, y: 9}
+        - {x: 16, y: 8}
+        - {x: 14, y: 8}
+        - {x: 12, y: 6}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baad2f8a8f09fd43aabc78e6dc6c067
+      internalID: -976937305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fore Rapidash_38
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 123
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: 13}
+        - {x: 21, y: 14}
+        - {x: 31, y: 14}
+        - {x: 36, y: 17}
+        - {x: 35, y: 29}
+        - {x: 8, y: 36}
+        - {x: -24, y: 36}
+        - {x: -31, y: 23}
+        - {x: -31, y: 12}
+        - {x: -29, y: -22}
+        - {x: -23, y: -30}
+        - {x: -16, y: -33}
+        - {x: -13, y: -28}
+        - {x: -13, y: -25}
+        - {x: -12, y: -21}
+        - {x: -11, y: -30}
+        - {x: -14, y: -35}
+        - {x: -16, y: -40}
+        - {x: -13, y: -41}
+        - {x: 33, y: -41}
+        - {x: 44, y: -22}
+        - {x: 44, y: 17}
+        - {x: 42, y: 19}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79195ae13f1abf4b892273f83d188bf
+      internalID: 171750879
       vertices: []
       indices: 
       edges: []
@@ -931,7 +1019,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c68825b1c457d6f4b8eb4187d6cf5427
+    spriteID: e03049b65c8195e44ba2f9d284e59ca8
     internalID: 0
     vertices: []
     indices: 
@@ -939,46 +1027,45 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fore Rapidash_0: 26093266
-      Fore Rapidash_1: -1408950263
-      Fore Rapidash_10: -1437836672
-      Fore Rapidash_11: -1108497008
-      Fore Rapidash_12: -429083318
-      Fore Rapidash_13: 1517515074
-      Fore Rapidash_14: -1766625621
-      Fore Rapidash_15: 374300826
-      Fore Rapidash_16: 1550003900
-      Fore Rapidash_17: -661004180
-      Fore Rapidash_18: 1072676416
-      Fore Rapidash_19: 1842549773
-      Fore Rapidash_2: -461196060
-      Fore Rapidash_20: -618906926
-      Fore Rapidash_21: 424424729
-      Fore Rapidash_22: 1298624478
-      Fore Rapidash_23: 1857264863
-      Fore Rapidash_24: 1300798709
-      Fore Rapidash_25: -2084275854
-      Fore Rapidash_26: -1518161239
-      Fore Rapidash_27: 903156219
-      Fore Rapidash_28: 403537398
-      Fore Rapidash_29: -1114915256
-      Fore Rapidash_3: -75145270
-      Fore Rapidash_30: 2140428596
-      Fore Rapidash_31: 1535380071
-      Fore Rapidash_32: -90612617
-      Fore Rapidash_33: -597183319
-      Fore Rapidash_34: 1364442687
-      Fore Rapidash_35: 139256062
-      Fore Rapidash_36: 1087374487
-      Fore Rapidash_37: 1715018648
-      Fore Rapidash_38: -1422246381
-      Fore Rapidash_39: 2002928080
-      Fore Rapidash_4: -403257222
-      Fore Rapidash_5: 439926082
-      Fore Rapidash_6: -409354719
-      Fore Rapidash_7: -1881364802
-      Fore Rapidash_8: 1401204700
-      Fore Rapidash_9: -990274246
+      Fore Rapidash_0: 37994456
+      Fore Rapidash_1: -1098490580
+      Fore Rapidash_10: 1480656531
+      Fore Rapidash_11: -778328409
+      Fore Rapidash_12: 2066401984
+      Fore Rapidash_13: 820839965
+      Fore Rapidash_14: 226491113
+      Fore Rapidash_15: 1154484197
+      Fore Rapidash_16: -143621855
+      Fore Rapidash_17: 331805148
+      Fore Rapidash_18: -1208661799
+      Fore Rapidash_19: 1660999256
+      Fore Rapidash_2: -807829818
+      Fore Rapidash_20: -1982577533
+      Fore Rapidash_21: 55568306
+      Fore Rapidash_22: 1093820275
+      Fore Rapidash_23: 15997013
+      Fore Rapidash_24: -1216199861
+      Fore Rapidash_25: 986879539
+      Fore Rapidash_26: -1460137537
+      Fore Rapidash_27: 2051340776
+      Fore Rapidash_28: -1802646854
+      Fore Rapidash_29: -1583615090
+      Fore Rapidash_3: 1509099972
+      Fore Rapidash_30: 1939363380
+      Fore Rapidash_31: -1276787877
+      Fore Rapidash_32: 616013369
+      Fore Rapidash_33: -98917766
+      Fore Rapidash_34: -450257561
+      Fore Rapidash_35: 258520297
+      Fore Rapidash_36: 703630840
+      Fore Rapidash_37: -976937305
+      Fore Rapidash_38: 171750879
+      Fore Rapidash_4: 1302438217
+      Fore Rapidash_5: 1289388223
+      Fore Rapidash_6: 474046207
+      Fore Rapidash_7: 386323329
+      Fore Rapidash_8: 157460673
+      Fore Rapidash_9: 115609007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

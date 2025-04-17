@@ -113,19 +113,19 @@ TextureImporter:
       name: Back Emploeon_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 102
-        width: 83
-        height: 75
+        x: 59
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885af09a0f7436b459711ac4135101cd
-      internalID: 937756536
+      spriteID: 338245f55182da144908f4b70b77da61
+      internalID: -1328370298
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: Back Emploeon_1
       rect:
         serializedVersion: 2
-        x: 125
-        y: 101
-        width: 83
-        height: 75
+        x: 157
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df0e68603d475b143ada2c986be9b87a
-      internalID: -1253866981
+      spriteID: e4c0e6700ce8d954785d15fd311e7afb
+      internalID: 468281718
       vertices: []
       indices: 
       edges: []
@@ -155,19 +155,19 @@ TextureImporter:
       name: Back Emploeon_2
       rect:
         serializedVersion: 2
-        x: 221
-        y: 101
-        width: 83
-        height: 75
+        x: 256
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 837c7750613ef254e85c82bf5bc4f20f
-      internalID: -1319161811
+      spriteID: 5f0fbdcb1cd85094dbf3fdcff4854b49
+      internalID: -1600962394
       vertices: []
       indices: 
       edges: []
@@ -176,19 +176,19 @@ TextureImporter:
       name: Back Emploeon_3
       rect:
         serializedVersion: 2
-        x: 319
-        y: 101
-        width: 83
-        height: 75
+        x: 354
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddc8d139ee87d3740af4ce5e7cf9ee06
-      internalID: 1381896328
+      spriteID: 15fdfe19a18a3fe4ea3571ab2b05bb95
+      internalID: -180339389
       vertices: []
       indices: 
       edges: []
@@ -197,19 +197,19 @@ TextureImporter:
       name: Back Emploeon_4
       rect:
         serializedVersion: 2
-        x: 415
-        y: 101
-        width: 83
-        height: 75
+        x: 452
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5377de3fbf9d88848bcf8255c080b4e9
-      internalID: 1462593726
+      spriteID: 29b306f1a0859194883a9dab38a5484f
+      internalID: 1978165707
       vertices: []
       indices: 
       edges: []
@@ -218,19 +218,19 @@ TextureImporter:
       name: Back Emploeon_5
       rect:
         serializedVersion: 2
-        x: 513
-        y: 101
-        width: 83
-        height: 75
+        x: 550
+        y: 146
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73f0eef218bb20c498a49b68c679149f
-      internalID: 541125539
+      spriteID: 4160f6153fceb5d46bba6f41756b8531
+      internalID: 858723918
       vertices: []
       indices: 
       edges: []
@@ -239,19 +239,19 @@ TextureImporter:
       name: Back Emploeon_6
       rect:
         serializedVersion: 2
-        x: 609
-        y: 101
-        width: 83
-        height: 75
+        x: 648
+        y: 145
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddb17afae03213e498e0f09a484de6c2
-      internalID: -372480546
+      spriteID: e1d4413195e67a941a0a2bdad915c5d3
+      internalID: -552753321
       vertices: []
       indices: 
       edges: []
@@ -260,19 +260,19 @@ TextureImporter:
       name: Back Emploeon_7
       rect:
         serializedVersion: 2
-        x: 709
-        y: 101
-        width: 83
-        height: 75
+        x: 746
+        y: 145
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea261ba3a5d8987468b6443ac89b7d37
-      internalID: -485660834
+      spriteID: a366460d65bd83f479b5062e54be4f5f
+      internalID: 717684770
       vertices: []
       indices: 
       edges: []
@@ -281,19 +281,19 @@ TextureImporter:
       name: Back Emploeon_8
       rect:
         serializedVersion: 2
-        x: 807
-        y: 101
-        width: 83
-        height: 75
+        x: 844
+        y: 145
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53dfcb004abd3474fafa903ecd98b895
-      internalID: -2144569478
+      spriteID: 24c7b65d04515a541a0bbe2c5ff0fdd7
+      internalID: -559652830
       vertices: []
       indices: 
       edges: []
@@ -302,19 +302,19 @@ TextureImporter:
       name: Back Emploeon_9
       rect:
         serializedVersion: 2
-        x: 907
-        y: 101
-        width: 83
-        height: 75
+        x: 942
+        y: 145
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7319fba795447344aefae70b97935eb
-      internalID: -602311247
+      spriteID: 377fb66502f638848afd7a37f21135eb
+      internalID: -96575896
       vertices: []
       indices: 
       edges: []
@@ -323,19 +323,19 @@ TextureImporter:
       name: Back Emploeon_10
       rect:
         serializedVersion: 2
-        x: 25
-        y: 11
-        width: 83
-        height: 75
+        x: 59
+        y: 55
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db21cefb65727d4f988a3eb70d99c45
-      internalID: 213683826
+      spriteID: f04ce0f3a4dfc8845a69c682c22157b5
+      internalID: -1129224388
       vertices: []
       indices: 
       edges: []
@@ -344,19 +344,19 @@ TextureImporter:
       name: Back Emploeon_11
       rect:
         serializedVersion: 2
-        x: 125
-        y: 11
-        width: 83
-        height: 75
+        x: 157
+        y: 55
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ea782b41ffd9944f88699b4f7f09211
-      internalID: 1058112895
+      spriteID: b3639bfac7427af478a05efb56360813
+      internalID: 74923973
       vertices: []
       indices: 
       edges: []
@@ -365,19 +365,19 @@ TextureImporter:
       name: Back Emploeon_12
       rect:
         serializedVersion: 2
-        x: 224
-        y: 11
-        width: 83
-        height: 75
+        x: 256
+        y: 55
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0815800bd2891624db24acb27be982c5
-      internalID: -1516834349
+      spriteID: 4c93f31a02569144593eb0f76adcd00c
+      internalID: 2080499259
       vertices: []
       indices: 
       edges: []
@@ -385,7 +385,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0dc0520bddc115c4cae0b8f9b7ec2f72
+    spriteID: 37c9b4bbdd348164497d8d605e3bdc6b
     internalID: 0
     vertices: []
     indices: 
@@ -393,19 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back Emploeon_0: 937756536
-      Back Emploeon_1: -1253866981
-      Back Emploeon_10: 213683826
-      Back Emploeon_11: 1058112895
-      Back Emploeon_12: -1516834349
-      Back Emploeon_2: -1319161811
-      Back Emploeon_3: 1381896328
-      Back Emploeon_4: 1462593726
-      Back Emploeon_5: 541125539
-      Back Emploeon_6: -372480546
-      Back Emploeon_7: -485660834
-      Back Emploeon_8: -2144569478
-      Back Emploeon_9: -602311247
+      Back Emploeon_0: -1328370298
+      Back Emploeon_1: 468281718
+      Back Emploeon_10: -1129224388
+      Back Emploeon_11: 74923973
+      Back Emploeon_12: 2080499259
+      Back Emploeon_2: -1600962394
+      Back Emploeon_3: -180339389
+      Back Emploeon_4: 1978165707
+      Back Emploeon_5: 858723918
+      Back Emploeon_6: -552753321
+      Back Emploeon_7: 717684770
+      Back Emploeon_8: -559652830
+      Back Emploeon_9: -96575896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
