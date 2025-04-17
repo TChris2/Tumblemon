@@ -19,7 +19,6 @@ public class MonParty
     public TMPro.TMP_Text LevelText;
     public TMPro.TMP_Text HealthText;
     public TMPro.TMP_Text TotalHealthText;
-    public Animator EffectAnimator;
     public Animator AttackAnimator;
     public Animator MonAnimator;
     public CanvasGroup TextBoxCanvas;

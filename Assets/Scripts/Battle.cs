@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
+    [SerializeField]
+    private float waitTime = 1;
     private MoveDatabase moveDatabase;
     private PartySelect partySelect;
     // Used if a mon has run out power points on all of their moves
@@ -17,19 +19,29 @@ public class Battle : MonoBehaviour
     bool trainer2Loss = false;
     // Displays Action Text
     TMPro.TMP_Text ActionText;
-    [SerializeField]
-    private float waitTime = 1;
     private ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect typewriter;
     private bool isTextDone = false;
     private bool isAnimationDone = false;
+    private bool isCountingDone = false;
+    private bool isSwappingDone = false;
+    private bool isAttackingDone = true;
+
+    // HP health colors
+    [SerializeField]
+    private Color green;
+    [SerializeField]
+    private Color yellow;
+    [SerializeField]
+    private Color red;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        // Gets struggle from the move datebase
         moveDatabase = FindObjectOfType<MoveDatabase>();
-        partySelect = moveDatabase.GetComponent<PartySelect>();
         struggle = moveDatabase.GetMoveByName("Struggle");
+        partySelect = moveDatabase.GetComponent<PartySelect>();
         Trainer1Party = partySelect.Trainer1Party;
         Trainer2Party = partySelect.Trainer2Party;
         
@@ -45,30 +57,24 @@ public class Battle : MonoBehaviour
         Trainer1Party.TotalHealthText = GameObject.Find("Back Total Health Text").GetComponent<TMPro.TMP_Text>();
         Trainer1Party.LevelText = GameObject.Find("Back Lvl Text").GetComponent<TMPro.TMP_Text>();
         // Animators
-        Trainer1Party.EffectAnimator = GameObject.Find("Back").GetComponent<Animator>();
-        Trainer1Party.TextBoxCanvas = Trainer1Party.EffectAnimator.GetComponent<CanvasGroup>();
+        Trainer1Party.MonAnimator = GameObject.Find("Back").GetComponent<Animator>();
+        Trainer1Party.TextBoxCanvas = GameObject.Find("Back Mon TextBox").GetComponent<CanvasGroup>();
         Trainer1Party.AttackAnimator = GameObject.Find("Back Attack").GetComponent<Animator>();
-        Trainer1Party.MonAnimator = GameObject.Find("Back Mon").GetComponent<Animator>();
         // Trainer 2
         // Text Stuff
         Trainer2Party.HealthBar = GameObject.Find("Fore Health Bar").GetComponent<Image>();
         Trainer2Party.NameText = GameObject.Find("Fore Name Text").GetComponent<TMPro.TMP_Text>();
         Trainer2Party.LevelText = GameObject.Find("Fore Lvl Text").GetComponent<TMPro.TMP_Text>();
         // Animators
-        Trainer2Party.EffectAnimator = GameObject.Find("Fore").GetComponent<Animator>();
-        Trainer2Party.TextBoxCanvas = Trainer2Party.EffectAnimator.GetComponent<CanvasGroup>();
+        Trainer2Party.MonAnimator = GameObject.Find("Fore").GetComponent<Animator>();
+        Trainer2Party.TextBoxCanvas = GameObject.Find("Fore Mon TextBox").GetComponent<CanvasGroup>();
         Trainer2Party.AttackAnimator = GameObject.Find("Fore Attack").GetComponent<Animator>();
-        Trainer2Party.MonAnimator = GameObject.Find("Fore Mon").GetComponent<Animator>();
 
+        // Starts Battles
         StartCoroutine(TumblemonBattle());
     }
-    
 
-    private void OnTypewriterDone()
-    {
-        isTextDone = true;
-    }
-
+    // Waits for animation
     private IEnumerator WaitForAnimation(Animator animator, string stateName)
     {
         // Wait for the animator to enter the state
@@ -78,6 +84,12 @@ public class Battle : MonoBehaviour
         // Wait until it finishes
         while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
             yield return null;
+    }
+
+    // Stuff used by typewriter script
+    private void OnTypewriterDone()
+    {
+        isTextDone = true;
     }
 
     void OnEnable()
@@ -90,97 +102,220 @@ public class Battle : MonoBehaviour
         ChristinaCreatesGames.Typography.Typewriter.TypewriterEffect.CompleteTextRevealed -= OnTypewriterDone;
     }
 
+    // Updates textboxes with new information during a swap / send in of a mon
     IEnumerator UpdateMonTextboxSwap(MonParty ActingParty, string text, bool isTrainer1)
     {
-        ActionText.text = text;
+        Debug.Log($"{ActingParty.Trainer.name} has entered UpdateMonTextboxSwap");
+        isAnimationDone = false;
+        
+        // Updates textboxes
         ActingParty.NameText.text = ActingParty.MonTeam[ActingParty.currentMon].name;
         ActingParty.LevelText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].level}";
+        // Updates visible HP for Trainer 1
         if (isTrainer1) 
         {
             ActingParty.HealthText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].stats.health}";
             ActingParty.TotalHealthText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].stats.total_health}";
         }
-        typewriter.SendMessage("PrepareForNewText", ActionText);
-        ActingParty.MonAnimator.Play($"{ActingParty.MonTeam[ActingParty.currentMon].name}");
-        ActingParty.EffectAnimator.Play("Send");
-        ActingParty.EffectAnimator.Play("TextBox Move Onscreen");
 
-        yield return StartCoroutine(WaitForAnimation(Trainer2Party.EffectAnimator, "Send"));
+        // Updates to show mon's hp amt
+        ActingParty.HealthBar.fillAmount = (float)ActingParty.MonTeam[ActingParty.currentMon].stats.health / 
+            ActingParty.MonTeam[ActingParty.currentMon].stats.total_health;
+        // Updates color of hp bar
+        ActingParty.HealthBar.color = GetHPBarColor(ActingParty);
+
+        // Gives a pause to display the text
+        isTextDone = false;
+        ActionText.text = text;
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+        
+        // Sends out the new mon
+        ActingParty.MonAnimator.Play($"{ActingParty.MonTeam[ActingParty.currentMon].name}");
+        ActingParty.MonAnimator.Play("Send");
+        ActingParty.MonAnimator.Play("TextBox Move Onscreen");
+
+        // Waits till animation is done
+        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, "Send"));
+
+        Debug.Log($"{ActingParty.Trainer.name} has exitted UpdateMonTextboxSwap");
+        // Sends a signal to move on the next thing
         isAnimationDone = true;
     }
+
+    // Updates the HP Bar
+    private IEnumerator HealthBarTicker(MonParty DefParty, int amt, bool isTrainer1, bool isHealing)
+    {
+        Debug.Log($"{DefParty.Trainer.name} has entered HealthBarTicker");
+        int currentHealth = 0;
+        // If healing
+        if (isHealing)
+            currentHealth = DefParty.MonTeam[DefParty.currentMon].stats.health;
+        // If being attacked
+        else 
+        {
+            currentHealth = DefParty.MonTeam[DefParty.currentMon].stats.health - amt;
+            // Ensures hp stays at 0
+            if (currentHealth <= 0)
+                currentHealth = 0;
+        }
+
+        Debug.Log($"Health tick {currentHealth}");
+
+        // Loops until hp matches
+        do
+        {
+            if (DefParty.MonTeam[DefParty.currentMon].stats.health <= 0)
+                break;
+            // Slight pause for the ticker
+            yield return new WaitForSeconds(.025f);
+
+            // Also updates trainer1's hp textboxes
+            if (isTrainer1) 
+            {
+                DefParty.HealthText.text = $"{DefParty.MonTeam[DefParty.currentMon].stats.health}";
+                DefParty.TotalHealthText.text = $"{DefParty.MonTeam[DefParty.currentMon].stats.total_health}";
+            }
+
+            // Updates hp bar
+            DefParty.HealthBar.fillAmount = (float)DefParty.MonTeam[DefParty.currentMon].stats.health / DefParty.MonTeam[DefParty.currentMon].stats.total_health;
+            // Updates color of hp bar
+            DefParty.HealthBar.color = GetHPBarColor(DefParty);
+            // Increases health if healing
+            if (isHealing)
+                DefParty.MonTeam[DefParty.currentMon].stats.health++;
+            // Decrease's health if getting attacked
+            else
+                DefParty.MonTeam[DefParty.currentMon].stats.health--;
+
+        } while (DefParty.MonTeam[DefParty.currentMon].stats.health != currentHealth);
+
+        // Also updates trainer1's hp textboxes
+        if (isTrainer1) 
+        {
+            DefParty.HealthText.text = $"{DefParty.MonTeam[DefParty.currentMon].stats.health}";
+            DefParty.TotalHealthText.text = $"{DefParty.MonTeam[DefParty.currentMon].stats.total_health}";
+        }
+        // Updates hp bar
+        DefParty.HealthBar.fillAmount = (float)DefParty.MonTeam[DefParty.currentMon].stats.health / DefParty.MonTeam[DefParty.currentMon].stats.total_health;
+        // Updates color of hp bar
+        DefParty.HealthBar.color = GetHPBarColor(DefParty);
+        
+        Debug.Log($"{DefParty.Trainer.name} has exitted HealthBarTicker");
+        // Sends a signal signifying counting is done
+        isCountingDone = true;
+    }
+
+    // Gets color of hp bar depending on how much health the user has
+    Color GetHPBarColor(MonParty ActingParty)
+    {
+        // Green if above 50%
+        if (ActingParty.HealthBar.fillAmount >= .5f)
+        {
+            return green;
+        }
+        // Yellow if between 50-20%
+        else if (ActingParty.HealthBar.fillAmount < .5f && ActingParty.HealthBar.fillAmount >= .20f)
+        {
+            return yellow;
+        }
+        // Red for below 20%
+        else
+        {
+            return red;
+        }
+    }
     
+    // Battle itself
     private IEnumerator TumblemonBattle()
     {
         yield return null;
+        Debug.Log("Start of Battle");
+        Debug.Log("-------------------------------------------------------------------------------------");
 
-
-        // Intializes vars
-        var(AtkParty, DefParty) = (Trainer1Party, Trainer1Party);
-
-        Trainer1Party = partySelect.Trainer1Party;
-        Trainer2Party = partySelect.Trainer2Party;
-        
+        // Starting Text
+        Debug.Log($"{Trainer1Party.Trainer.name} is challenged by {Trainer2Party.Trainer.name}!");
+        isTextDone = false;
         ActionText.text = $"{Trainer1Party.Trainer.name} is challenged by {Trainer2Party.Trainer.name}!";
         typewriter.SendMessage("PrepareForNewText", ActionText);
         yield return new WaitUntil(() => isTextDone);
         yield return new WaitForSeconds(waitTime);
 
-        StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+        yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
         yield return new WaitUntil(() => isTextDone && isAnimationDone);
         yield return new WaitForSeconds(waitTime);
 
-        StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"{Trainer1Party.Trainer.name} sent out {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
-        yield return new WaitUntil(() => isTextDone);
+        yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+        yield return new WaitUntil(() => isTextDone && isAnimationDone);
         yield return new WaitForSeconds(waitTime);
 
         // Loops until on of the trainers runs out of mons
         while (true)
         {
-            Debug.Log("NEW TURN");
+            Debug.Log("Trainers are deciding...");
             Debug.Log("-------------------------------------------------------------------------------------");
+
+            isTextDone = false;
+            ActionText.text = $"Trainers are deciding...";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
             yield return new WaitForSeconds(waitTime);
 
             // Trainer 1 action decision
             var (T1action, T1moveSelected, T1currentMon) = TrainerActionDecide(Trainer1Party, Trainer2Party);
             Trainer1Party.action = T1action;
             Trainer1Party.moveSelected = T1moveSelected;
-
+            Debug.Log($"{Trainer1Party.Trainer.name} has decided to {Trainer1Party.action}");
             Debug.Log("-------------------------------------------------------------------------------------");
-            yield return new WaitForSeconds(waitTime);
 
             // Trainer 2 action decision
             var (T2action, T2moveSelected, T2currentMon) = TrainerActionDecide(Trainer2Party, Trainer1Party);
             Trainer2Party.action = T2action;
             Trainer2Party.moveSelected = T2moveSelected;
-
+            Debug.Log($"{Trainer2Party.Trainer.name} has decided to {Trainer2Party.action}");
             Debug.Log("-------------------------------------------------------------------------------------");
-            yield return new WaitForSeconds(waitTime);
 
             // Swapping current mon
             if (Trainer1Party.action == "Swap")
             {
-                Swap(Trainer1Party, T1currentMon);
+                Debug.Log($"{Trainer1Party.Trainer.name} is swapping {Trainer1Party.MonTeam[Trainer1Party.currentMon].name} to {Trainer1Party.MonTeam[T1currentMon].name}");
                 Debug.Log("-------------------------------------------------------------------------------------");
+
+                yield return StartCoroutine(Swap(Trainer1Party, T1currentMon, $"{Trainer1Party.MonTeam[Trainer1Party.currentMon].name}, switch out!\nCome Back!"));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                yield return new WaitForSeconds(waitTime);
+                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
             }
             if (Trainer2Party.action == "Swap")
             {
-                Swap(Trainer2Party, T2currentMon);
+                Debug.Log($"{Trainer2Party.Trainer.name} is swapping {Trainer2Party.MonTeam[Trainer2Party.currentMon].name} to {Trainer2Party.MonTeam[T2currentMon].name}");
                 Debug.Log("-------------------------------------------------------------------------------------");
+                yield return StartCoroutine(Swap(Trainer2Party, T2currentMon, $"{Trainer2Party.Trainer.name} switched out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!"));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                yield return new WaitForSeconds(waitTime);
+                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
             }
             
             // Healing current mon
             if (Trainer1Party.action == "Heal")
             {
-                Heal(Trainer1Party);
+                Debug.Log($"{Trainer1Party.Trainer.name} is healing {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}");
                 Debug.Log("-------------------------------------------------------------------------------------");
+                yield return StartCoroutine(Heal(Trainer1Party, $"{Trainer1Party.Trainer.name} used a Full Restore.", true));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone && isCountingDone && isAttackingDone);
                 yield return new WaitForSeconds(waitTime);
             }
             if (Trainer2Party.action == "Heal")
             {
-                Heal(Trainer2Party);
+                Debug.Log($"{Trainer2Party.Trainer.name} is healing {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}");
                 Debug.Log("-------------------------------------------------------------------------------------");
+                yield return StartCoroutine(Heal(Trainer2Party, $"{Trainer2Party.Trainer.name} used a Full Restore.", false));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone && isCountingDone && isAttackingDone);
                 yield return new WaitForSeconds(waitTime);
             }
 
@@ -190,47 +325,47 @@ public class Battle : MonoBehaviour
                 yield return new WaitForSeconds(waitTime);
 
                 Debug.Log($"{Trainer1Party.Trainer.name} GOES FIRST! {Trainer2Party.Trainer.name} GOES SECOND!");
+                Debug.Log("-------------------------------------------------------------------------------------");
 
                 if (Trainer1Party.action == "Attack") 
                 {
-                    (AtkParty, DefParty) = Attack(Trainer1Party, Trainer2Party, true);
-                    Trainer1Party = AtkParty;
-                    Trainer2Party = DefParty;
+                    Debug.Log($"{Trainer1Party.Trainer.name} is attacking with {Trainer1Party.moveSelected.name}");
                     Debug.Log("-------------------------------------------------------------------------------------");
+                    yield return StartCoroutine(Attack(Trainer1Party, Trainer2Party, true));
+                    yield return new WaitUntil(() => isTextDone && isAnimationDone && isCountingDone && isAttackingDone);
                     yield return new WaitForSeconds(waitTime);
                 }
 
                 if (Trainer2Party.action == "Attack" && Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health > 0) 
                 {
-                    (AtkParty, DefParty) = Attack(Trainer2Party, Trainer1Party, false);
-                    Trainer2Party = AtkParty;
-                    Trainer1Party = DefParty;
+                    Debug.Log($"{Trainer2Party.Trainer.name} is attacking with {Trainer2Party.moveSelected.name}");
                     Debug.Log("-------------------------------------------------------------------------------------");
+                    yield return StartCoroutine(Attack(Trainer2Party, Trainer1Party, false));
+                    yield return new WaitUntil(() => isTextDone && isAnimationDone && isCountingDone && isAttackingDone);
                     yield return new WaitForSeconds(waitTime);
                 }
             }
             // Trainer 2 goes first
             else
             {
-                yield return new WaitForSeconds(waitTime);
-
                 Debug.Log($"{Trainer2Party.Trainer.name} GOES FIRST! {Trainer1Party.Trainer.name} GOES SECOND!");
+                Debug.Log("-------------------------------------------------------------------------------------");
 
                 if (Trainer2Party.action == "Attack") 
                 {
-                    (AtkParty, DefParty) = Attack(Trainer2Party, Trainer1Party, false);
-                    Trainer2Party = AtkParty;
-                    Trainer1Party = DefParty;
+                    Debug.Log($"{Trainer2Party.Trainer.name} is attacking with {Trainer2Party.moveSelected.name}");
                     Debug.Log("-------------------------------------------------------------------------------------");
+                    yield return StartCoroutine(Attack(Trainer2Party, Trainer1Party, false));
+                    yield return new WaitUntil(() => isTextDone && isAnimationDone && isCountingDone);
                     yield return new WaitForSeconds(waitTime);
                 }
 
                 if (Trainer1Party.action == "Attack" && Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health > 0) 
                 {
-                    (AtkParty, DefParty) = Attack(Trainer1Party, Trainer2Party, true);
-                    Trainer1Party = AtkParty;
-                    Trainer2Party = DefParty;
+                    Debug.Log($"{Trainer1Party.Trainer.name} is attacking with {Trainer1Party.moveSelected.name}");
                     Debug.Log("-------------------------------------------------------------------------------------");
+                    yield return StartCoroutine(Attack(Trainer1Party, Trainer2Party, true));
+                    yield return new WaitUntil(() => isTextDone && isAnimationDone && isCountingDone);
                     yield return new WaitForSeconds(waitTime);
                 }
             }
@@ -246,32 +381,59 @@ public class Battle : MonoBehaviour
                     winningTrainer = Trainer1Party.Trainer.name;
                 break;
             }
-
+            
             // If their current mon has fainted
             if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.health <= 0)
-                Trainer1Party.currentMon = FaintedMonSwap(Trainer1Party, Trainer2Party);
+            {
+                yield return StartCoroutine(FaintedMonSwap(Trainer1Party, Trainer2Party));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                yield return new WaitForSeconds(waitTime);
+
+                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                yield return new WaitForSeconds(waitTime);
+            }
             if (Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.health <= 0)
-                Trainer2Party.currentMon = FaintedMonSwap(Trainer2Party, Trainer1Party);
-            
+            {
+                yield return StartCoroutine(FaintedMonSwap(Trainer2Party, Trainer1Party));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                yield return new WaitForSeconds(waitTime);
+
+                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+                yield return new WaitUntil(() => isTextDone && isAnimationDone);
+                yield return new WaitForSeconds(waitTime);
+                
+            }
+
+            Debug.Log("End of turn");
+            Debug.Log("-------------------------------------------------------------------------------------");
+            isTextDone = false;
+            ActionText.text = $" ";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
+            yield return new WaitForSeconds(waitTime);
         }
         Debug.Log("-------------------------------------------------------------------------------------");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("BATTLE OVER");
-        ActionText.text = "BATTLE OVER";
         Debug.Log("-------------------------------------------------------------------------------------");
         yield return new WaitForSeconds(waitTime);
+        isTextDone = false;
         Debug.Log($"{winningTrainer} WON!");
         ActionText.text = $"{winningTrainer} WON!";
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
     }
 
     // Checks to see if trainer has run of mons
     bool IsPartyDead(MonParty p) => p.MonTeam.TrueForAll(mon => mon.stats.health <= 0);
 
     // If a trainer's mon died in battle but has not run out of mons to swap to
-    int FaintedMonSwap(MonParty ActingParty, MonParty OpParty)
+    IEnumerator FaintedMonSwap(MonParty ActingParty, MonParty OpParty)
     {
-        Debug.Log($"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} HAS FAINTED!");
-        ActionText.text = $"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} HAS FAINTED!";
+        Debug.Log($"{ActingParty.Trainer.name} has entered FaintedMonSwap");
+        isAnimationDone = false;
 
         // Clones parties to simulate them
         MonParty simMy = ActingParty.Clone();
@@ -280,29 +442,64 @@ public class Battle : MonoBehaviour
         Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity, true,
                 out string action, out MoveInfo move, out int swapIndex);
 
-        ActionText.text = $"{ActingParty.Trainer.name} SWAPS {ActingParty.MonTeam[ActingParty.currentMon].name} TO {ActingParty.MonTeam[swapIndex].name}";
-        Debug.Log($"{ActingParty.Trainer.name} SWAPS {ActingParty.MonTeam[ActingParty.currentMon].name} TO {ActingParty.MonTeam[swapIndex].name}"); 
-        return swapIndex;
+        Debug.Log($"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} fainted!");
+        Debug.Log("-------------------------------------------------------------------------------------");
+
+        isTextDone = false;
+        ActionText.text = $"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} fainted!";
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+
+        ActingParty.MonAnimator.Play($"Faint");
+        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, $"Faint"));
+
+        ActingParty.currentMon = swapIndex;
+
+        Debug.Log($"{ActingParty.Trainer.name} has exited FaintedMonSwap");
+        isAnimationDone = true;
     }
 
     // Enacts Trainer Attack
-    (MonParty, MonParty) Attack(MonParty AtkParty, MonParty DefParty, bool isTrainer1)
+    IEnumerator Attack(MonParty AtkParty, MonParty DefParty, bool isTrainer1)
     {
+        Debug.Log($"{AtkParty.Trainer.name} has entered Attack");
+        isAnimationDone = false;
+        isCountingDone = false;
+        isAttackingDone = false;
+
         int trainerDmg = 0;
 
-        Debug.Log($"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} USES {AtkParty.moveSelected.name}");
-        ActionText.text = $"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} USES {AtkParty.moveSelected.name}";
+        //Debug.Log($"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} USES {AtkParty.moveSelected.name}");
+        if (AtkParty.moveSelected.name == "Struggle")
+        {
+            isTextDone = false;
+            ActionText.text = $"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} has no moves left it can use!";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
+            yield return new WaitForSeconds(waitTime);
+        }
+
+        isTextDone = false;
+        ActionText.text = $"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} used {AtkParty.moveSelected.name}!";
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+
+        AtkParty.TextBoxCanvas.alpha = 0;
+        DefParty.TextBoxCanvas.alpha = 0;
+
+        AtkParty.AttackAnimator.Play($"{AtkParty.moveSelected.name}");
+
+        yield return StartCoroutine(WaitForAnimation(AtkParty.AttackAnimator, $"{AtkParty.moveSelected.name}"));
+
+        isAnimationDone = true;
         
         // Decreases the attacking mon move's power points
         AtkParty.moveSelected.pp--;
 
         // Gets damage info
         trainerDmg = DamageCal(AtkParty, DefParty, AtkParty.moveSelected);
-        // Deals damage to defending mon 
-        DefParty.MonTeam[DefParty.currentMon].stats.health -= trainerDmg;
-
-        if (DefParty.MonTeam[DefParty.currentMon].stats.health < 0)
-            DefParty.MonTeam[DefParty.currentMon].stats.health = 0;
 
         // Updates damage for counter moves
         if (isTrainer1)
@@ -314,54 +511,131 @@ public class Battle : MonoBehaviour
             DefParty.currentDmg = trainerDmg;
         }
 
+        AtkParty.TextBoxCanvas.alpha = 1;
+        DefParty.TextBoxCanvas.alpha = 1;
+        yield return StartCoroutine(HealthBarTicker(DefParty, trainerDmg, !isTrainer1, false));
+
         if (AtkParty.moveSelected.recoilType != "None")
         {
-            Debug.Log($"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} SUFFERED RECOIL DAMAGE");
-            ActionText.text = $"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} SUFFERED RECOIL DAMAGE";
+            Debug.Log($"{AtkParty.MonTeam[AtkParty.currentMon].name} is damaged by recoil!");
+            isTextDone = false;
+            ActionText.text = $"{AtkParty.MonTeam[AtkParty.currentMon].name} is damaged by recoil!";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
+            yield return new WaitForSeconds(waitTime);
 
             if (AtkParty.moveSelected.recoilType != "Total Health")
-            AtkParty.MonTeam[AtkParty.currentMon].stats.health -= (int)(
-                AtkParty.MonTeam[AtkParty.currentMon].stats.total_health * AtkParty.moveSelected.recoil);
+                trainerDmg = (int)(AtkParty.MonTeam[AtkParty.currentMon].stats.total_health * AtkParty.moveSelected.recoil);
+
+            AtkParty.TextBoxCanvas.alpha = 1;
+            DefParty.TextBoxCanvas.alpha = 1;
+            yield return StartCoroutine(HealthBarTicker(AtkParty, trainerDmg, isTrainer1, false));
         }
 
-        return (AtkParty, DefParty);
+        float type_modifier = TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type1) *
+            TypeCheck(AtkParty.moveSelected.type, DefParty.MonTeam[DefParty.currentMon].type2);
+
+        if (type_modifier >= 2)
+        {
+            isTextDone = false;
+            ActionText.text = $"It's super effective!";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
+            yield return new WaitForSeconds(waitTime);
+        }
+        if (type_modifier == .5)
+        {
+            isTextDone = false;
+            ActionText.text = $"It's was not very effective...";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
+            yield return new WaitForSeconds(waitTime);
+        }
+        if (type_modifier == 0)
+        {
+            isTextDone = false;
+            ActionText.text = $"It doesn't effect ${DefParty.MonTeam[DefParty.currentMon].name}";
+            typewriter.SendMessage("PrepareForNewText", ActionText);
+            yield return new WaitUntil(() => isTextDone);
+            yield return new WaitForSeconds(waitTime);
+        }
+        
+        Debug.Log($"{AtkParty.Trainer.name} has exitted Attack");
+        isAttackingDone = true;
     }
 
     // Heals Current Mon
-    MonParty Heal(MonParty ActingParty)
-    {
-        Debug.Log($"{ActingParty.Trainer.name} HEALS {ActingParty.MonTeam[ActingParty.currentMon].name}");
-        ActionText.text = $"{ActingParty.Trainer.name} HEALS {ActingParty.MonTeam[ActingParty.currentMon].name}";
+    IEnumerator Heal(MonParty ActingParty, string text, bool isTrainer1)
+    {   
+        Debug.Log($"{ActingParty.Trainer.name} has entered Heal");
+        isAnimationDone = false;
+        isCountingDone = false;
+
+        isTextDone = false;
+        ActionText.text = text;
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+
+        if (isTrainer1)
+            ActingParty.MonAnimator.Play("Heal");
+
+        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, "Heal"));
+
+        isAnimationDone = true;
+
+        yield return StartCoroutine(HealthBarTicker(ActingParty, 0, isTrainer1, true));
+
+        isTextDone = false;
+        ActionText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].name} HP was restored.";
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
 
         ActingParty.MonTeam[ActingParty.currentMon].stats.health = ActingParty.MonTeam[ActingParty.currentMon].stats.total_health;
         ActingParty.MonTeam[ActingParty.currentMon].status = "None";
-        ActingParty.potionCount--;
+        ActingParty.potionCount--;    
 
-        return ActingParty;
+        Debug.Log($"{ActingParty.Trainer.name} has exited Heal");
     }
 
     // Swaps Current Mon
-    MonParty Swap(MonParty ActingParty, int newMon)
+    IEnumerator Swap(MonParty ActingParty, int newMon, string text)
     {
-        ActionText.text = $"{ActingParty.Trainer.name} SWAPS {ActingParty.MonTeam[ActingParty.currentMon].name} TO {ActingParty.MonTeam[newMon].name}";
-        Debug.Log($"{ActingParty.Trainer.name} SWAPS {ActingParty.MonTeam[ActingParty.currentMon].name} TO {ActingParty.MonTeam[newMon].name}"); 
-        ActingParty.currentMon = newMon;        
+        Debug.Log($"{ActingParty.Trainer.name} has entered Swap");
+        isAnimationDone = false;
 
-        return ActingParty;
+        isTextDone = false;
+        ActionText.text = text;
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+        
+        ActingParty.TextBoxCanvas.alpha = 0;
+
+        ActingParty.MonAnimator.Play("Recall");
+        Debug.Log("Playing recall");
+
+        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, "Recall"));
+
+        ActingParty.currentMon = newMon; 
+
+        Debug.Log($"{ActingParty.Trainer.name} has exitted Swap");
+        isAnimationDone = true;       
     }
 
     // Decides Trainer action
     (string, MoveInfo, int) TrainerActionDecide(MonParty myParty, MonParty opponentParty)
     {
-        Debug.Log($"{myParty.Trainer.name} IS DECIDING ...");
+        Debug.Log($"{myParty.Trainer.name}'s currentMon: {myParty.currentMon} (HP: {myParty.MonTeam[myParty.currentMon].stats.health})");
         // Clones parties to simulate them
         MonParty simMy = myParty.Clone();
         MonParty simOpponent = opponentParty.Clone();
 
-        Minimax(simMy, simOpponent, 4, true, float.NegativeInfinity, float.PositiveInfinity, false,
+        Minimax(simMy, simOpponent, 5, true, float.NegativeInfinity, float.PositiveInfinity, false,
                 out string action, out MoveInfo move, out int swapIndex);
+        Debug.Log($"AI decided: action={action}, move={move?.name}, swapIndex={swapIndex}");
 
-        Debug.Log($"{myParty.Trainer.name} IS GOING TO {action}");
         return (action, move, swapIndex);
     }
 
@@ -389,16 +663,17 @@ public class Battle : MonoBehaviour
                     score += 0.25f * my.Trainer.attack_priority;
                 else
                 {   
-                    Debug.Log(mv.name);
+                    //Debug.Log(mv.name);
                     int predictedDamage = DamageCal(my, opp, mv);
                     int targetHP = opp.MonTeam[opp.currentMon].stats.health;
                     if (predictedDamage >= targetHP || my.MonTeam[my.currentMon].stats.health >= 1){
-                        Debug.Log($" Attack KO Score {score}");
+                        //Debug.Log($" Attack KO Score {score}");
                         score += 2 * my.Trainer.attack_priority;}
                     else
                     {
                         score += my.Trainer.attack_priority;
-                        Debug.Log($" Attack Normal Score {score}");}
+                        //Debug.Log($" Attack Normal Score {score}");
+                    }
                 }
             }
             else if (act == "Heal")
@@ -410,12 +685,13 @@ public class Battle : MonoBehaviour
                 }
                 else {
                     score += my.Trainer.heal_priority;
-                    Debug.Log($" Heal Normal Score {score}");}
+                    //Debug.Log($" Heal Normal Score {score}");
+                }
             }
             else if (act == "Swap")
             {
                 score += my.Trainer.swap_priority;
-                Debug.Log($" Swap Normal Score {score}");
+                //Debug.Log($" Swap Normal Score {score}");
             }
 
             if (isMax && score > bestScore)
@@ -439,7 +715,21 @@ public class Battle : MonoBehaviour
         var actions = new List<(string, MoveInfo, int)>();
         var mon = party.MonTeam[party.currentMon];
 
-        if (!isSwapping)
+        Debug.Log($"[AI] {party.Trainer.name}'s simulated currentMon is: {party.currentMon}, HP: {party.MonTeam[party.currentMon].stats.health}");
+
+
+        if (mon.stats.health <= 0 || party.MonTeam[party.currentMon].stats.health <= 0)
+        {
+            // Only add swap options
+            for (int i = 0; i < party.MonTeam.Count; i++)
+            {
+                if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
+                    actions.Add(("Swap", null, i));
+            }
+            return actions;
+        }
+
+        if (!isSwapping && mon.stats.health > 0)
         {
             // Gets all moves that have power points
             foreach (var move in mon.moves)
@@ -456,7 +746,10 @@ public class Battle : MonoBehaviour
         // Gets all available mons which have not fainted yet
         for (int i = 0; i < party.MonTeam.Count; i++)
             if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
+            {
+                Debug.Log($"{party.Trainer.name}'s {party.MonTeam[i].name}");
                 actions.Add(("Swap", null, i));
+            }
 
         return actions;
     }
