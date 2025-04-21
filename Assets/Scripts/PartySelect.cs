@@ -50,7 +50,7 @@ public class PartySelect : MonoBehaviour
     private void TestPartySelect1()
     {   
         Trainer1Party.potionCount = 3;
-        AddTrainer(Trainer1Party, "Jade");
+        AddTrainer(Trainer1Party, "Small Child");
         SelectMon(Trainer1Party, "Garchomp");
         AddMove(Trainer1Party, 0, "Dragon Breath");
         AddMove(Trainer1Party, 0, "Crunch");
