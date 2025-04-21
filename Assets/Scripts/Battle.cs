@@ -24,6 +24,7 @@ public class Battle : MonoBehaviour
     private bool isAnimationDone = false;
     private bool isCountingDone = false;
     private bool isAttackingDone = true;
+    private Animator fadeAnimator;
 
     // HP health colors
     [SerializeField]
@@ -32,6 +33,11 @@ public class Battle : MonoBehaviour
     private Color yellow;
     [SerializeField]
     private Color red;
+    private AudioSource audiosource;
+    [SerializeField]
+    private AudioClip winMusic;
+    private bool isFirstTurn = true;
+    AudioClip clip;
 
 
     // Start is called before the first frame update
@@ -40,6 +46,7 @@ public class Battle : MonoBehaviour
         // Gets struggle from the move datebase
         moveDatabase = FindObjectOfType<MoveDatabase>();
         typeDatabase = FindObjectOfType<TypeDatabase>();
+        audiosource = moveDatabase.GetComponent<AudioSource>();
         struggle = moveDatabase.GetMoveByName("Struggle");
         partySelect = moveDatabase.GetComponent<PartySelect>();
         Trainer1Party = partySelect.Trainer1Party;
@@ -58,6 +65,7 @@ public class Battle : MonoBehaviour
         Trainer1Party.LevelText = GameObject.Find("Back Lvl Text").GetComponent<TMPro.TMP_Text>();
         // Animators
         Trainer1Party.MonAnimator = GameObject.Find("Back").GetComponent<Animator>();
+        Trainer1Party.audiosource = Trainer1Party.MonAnimator.GetComponent<AudioSource>();
         Trainer1Party.TextBoxCanvas = GameObject.Find("Back Mon TextBox").GetComponent<CanvasGroup>();
         Trainer1Party.AttackAnimator = GameObject.Find("Back Attack").GetComponent<Animator>();
         // Trainer 2
@@ -67,8 +75,11 @@ public class Battle : MonoBehaviour
         Trainer2Party.LevelText = GameObject.Find("Fore Lvl Text").GetComponent<TMPro.TMP_Text>();
         // Animators
         Trainer2Party.MonAnimator = GameObject.Find("Fore").GetComponent<Animator>();
+        Trainer2Party.audiosource = Trainer2Party.MonAnimator.GetComponent<AudioSource>();
         Trainer2Party.TextBoxCanvas = GameObject.Find("Fore Mon TextBox").GetComponent<CanvasGroup>();
         Trainer2Party.AttackAnimator = GameObject.Find("Fore Attack").GetComponent<Animator>();
+        
+        fadeAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
 
         // Starts Battles
         StartCoroutine(TumblemonBattle());
@@ -103,7 +114,7 @@ public class Battle : MonoBehaviour
     }
 
     // Updates textboxes with new information during a swap / send in of a mon
-    IEnumerator UpdateMonTextboxSwap(MonParty ActingParty, string text, bool isTrainer1)
+    IEnumerator UpdateMonTextboxSwap(MonParty ActingParty, string text, bool isTrainer1, bool isIntro)
     {
         Debug.Log($"{ActingParty.Trainer.name} has entered UpdateMonTextboxSwap");
         isAnimationDone = false;
@@ -128,16 +139,38 @@ public class Battle : MonoBehaviour
         isTextDone = false;
         ActionText.text = text;
         typewriter.SendMessage("PrepareForNewText", ActionText);
+        if (!isTrainer1 && isIntro)
+        {
+            clip = Resources.Load<AudioClip>($"SFX/{ActingParty.Trainer.introSFX}");
+            ActingParty.audiosource.PlayOneShot(clip);
+            yield return new WaitForSeconds(waitTime/4);
+        }
         yield return new WaitUntil(() => isTextDone);
-        yield return new WaitForSeconds(waitTime);
-        
+        if (!isIntro)
+            yield return new WaitForSeconds(waitTime);
+
         // Sends out the new mon
         ActingParty.MonAnimator.Play($"{ActingParty.MonTeam[ActingParty.currentMon].name}");
-        ActingParty.MonAnimator.Play("Send");
-        ActingParty.MonAnimator.Play("TextBox Move Onscreen");
+        if (isIntro)
+            ActingParty.MonAnimator.Play("Trainer Exit", -1, 0f);
+        else
+            ActingParty.MonAnimator.Play("Send");
+
+        if (isTrainer1)
+            yield return new WaitForSeconds(2f);
+        else
+            yield return new WaitForSeconds(.7f);
+
+        ActingParty.TextBoxCanvas.alpha = 1;
+        ActingParty.MonAnimator.Play("TextBox Move Onscreen", -1, 0f);
+        clip = Resources.Load<AudioClip>($"SFX/Intro SFX/{ActingParty.MonTeam[ActingParty.currentMon].name}");
+        ActingParty.audiosource.PlayOneShot(clip);
 
         // Waits till animation is done
-        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, "Send"));
+        if (isIntro)
+            yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, "Trainer Exit"));
+        else
+            yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, "Send"));
 
         Debug.Log($"{ActingParty.Trainer.name} has exitted UpdateMonTextboxSwap");
         // Sends a signal to move on the next thing
@@ -230,7 +263,7 @@ public class Battle : MonoBehaviour
     // Battle itself
     private IEnumerator TumblemonBattle()
     {
-        yield return null;
+        yield return StartCoroutine(WaitForAnimation(fadeAnimator, "Intro"));
         Debug.Log("Start of Battle");
         Debug.Log("-------------------------------------------------------------------------------------");
 
@@ -242,11 +275,11 @@ public class Battle : MonoBehaviour
         yield return new WaitUntil(() => isTextDone);
         yield return new WaitForSeconds(waitTime);
 
-        yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+        yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false, true));
         yield return new WaitUntil(() => isTextDone && isAnimationDone);
         yield return new WaitForSeconds(waitTime);
 
-        yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+        yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true, true));
         yield return new WaitUntil(() => isTextDone && isAnimationDone);
         yield return new WaitForSeconds(waitTime);
 
@@ -276,6 +309,13 @@ public class Battle : MonoBehaviour
             Debug.Log($"{Trainer2Party.Trainer.name} has decided to {Trainer2Party.action}");
             Debug.Log("-------------------------------------------------------------------------------------");
 
+            yield return null;
+            if (isFirstTurn)
+            {
+                isFirstTurn = false;
+                fadeAnimator.enabled = false;
+            }
+
             // Swapping current mon
             if (Trainer1Party.action == "Swap")
             {
@@ -285,7 +325,7 @@ public class Battle : MonoBehaviour
                 yield return StartCoroutine(Swap(Trainer1Party, T1currentMon, $"{Trainer1Party.MonTeam[Trainer1Party.currentMon].name}, switch out!\nCome Back!"));
                 yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
-                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true, false));
                 yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
             }
@@ -296,7 +336,7 @@ public class Battle : MonoBehaviour
                 yield return StartCoroutine(Swap(Trainer2Party, T2currentMon, $"{Trainer2Party.Trainer.name} switched out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!"));
                 yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
-                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+                yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false, false));
                 yield return new WaitUntil(() => isTextDone && isAnimationDone);
                 yield return new WaitForSeconds(waitTime);
             }
@@ -319,8 +359,11 @@ public class Battle : MonoBehaviour
                 yield return new WaitForSeconds(waitTime);
             }
 
+            bool Trainer1First = Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.speed > Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.speed
+                || Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.speed == Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.speed && UnityEngine.Random.value < 0.5f;
+
             // Trainer 1 goes first
-            if (Trainer1Party.MonTeam[Trainer1Party.currentMon].stats.speed > Trainer2Party.MonTeam[Trainer2Party.currentMon].stats.speed)
+            if (Trainer1First)
             {
                 yield return new WaitForSeconds(waitTime);
 
@@ -387,7 +430,7 @@ public class Battle : MonoBehaviour
                 // Allows them to swap to another mon
                 else
                 {
-                    yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true));
+                    yield return StartCoroutine(UpdateMonTextboxSwap(Trainer1Party, $"Go {Trainer1Party.MonTeam[Trainer1Party.currentMon].name}!", true, false));
                     yield return new WaitUntil(() => isTextDone && isAnimationDone);
                     yield return new WaitForSeconds(waitTime);
                 }
@@ -408,7 +451,7 @@ public class Battle : MonoBehaviour
                 // Allows them to swap to another mon
                 else 
                 {
-                    yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false));
+                    yield return StartCoroutine(UpdateMonTextboxSwap(Trainer2Party, $"{Trainer2Party.Trainer.name} sent out {Trainer2Party.MonTeam[Trainer2Party.currentMon].name}!", false, false));
                     yield return new WaitUntil(() => isTextDone && isAnimationDone);
                     yield return new WaitForSeconds(waitTime);
                 }
@@ -417,23 +460,37 @@ public class Battle : MonoBehaviour
 
             Debug.Log("End of turn");
             Debug.Log("-------------------------------------------------------------------------------------");
-            isTextDone = false;
-            ActionText.text = $" ";
-            typewriter.SendMessage("PrepareForNewText", ActionText);
-            yield return new WaitUntil(() => isTextDone);
-            yield return new WaitForSeconds(waitTime);
+            ActionText.text = " \n\n\n\n\n\naaaaaaa";
+            yield return null;
         }
         Debug.Log("-------------------------------------------------------------------------------------");
-        yield return new WaitForSeconds(waitTime);
         Debug.Log("BATTLE OVER");
         Debug.Log("-------------------------------------------------------------------------------------");
-        yield return new WaitForSeconds(waitTime);
+
+        audiosource.clip = winMusic;
+        audiosource.Play();
+
         isTextDone = false;
         Debug.Log($"{winningTrainer.name} defeated {lossingTrainer.name}!");
         ActionText.text = $"{winningTrainer.name} defeated {lossingTrainer.name}!";
         typewriter.SendMessage("PrepareForNewText", ActionText);
+        Trainer2Party.MonAnimator.Play("Trainer Enter");
         yield return new WaitUntil(() => isTextDone);
         yield return new WaitForSeconds(waitTime);
+
+        isTextDone = false;
+
+        if (winningTrainer.name == Trainer2Party.Trainer.name)
+            ActionText.text = $"{Trainer2Party.Trainer.winText}";
+        else
+            ActionText.text = $"{Trainer2Party.Trainer.loseText}";
+
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime+10);
+        
+        fadeAnimator.enabled = true;
+        fadeAnimator.Play("Fade To Black");
     }
 
     // Checks to see if trainer has run of mons
@@ -444,6 +501,24 @@ public class Battle : MonoBehaviour
     {
         Debug.Log($"{ActingParty.Trainer.name} has entered FaintedMonSwap");
         isAnimationDone = false;
+        
+        Debug.Log($"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} fainted!");
+        Debug.Log("-------------------------------------------------------------------------------------");
+
+        isTextDone = false;
+        ActionText.text = $"{ActingParty.MonTeam[ActingParty.currentMon].name} fainted!";
+        typewriter.SendMessage("PrepareForNewText", ActionText);
+        yield return new WaitUntil(() => isTextDone);
+        yield return new WaitForSeconds(waitTime);
+
+        ActingParty.MonAnimator.Play($"Faint");
+        clip = Resources.Load<AudioClip>($"SFX/Faint SFX/{ActingParty.MonTeam[ActingParty.currentMon].name}");
+        ActingParty.audiosource.PlayOneShot(clip);
+        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, $"Faint"));
+
+        ActingParty.TextBoxCanvas.alpha = 0;
+
+        ActingParty.MonTeam.RemoveAt(ActingParty.currentMon);
 
         // Clones parties to simulate them
         MonParty simMy = ActingParty.Clone();
@@ -451,18 +526,6 @@ public class Battle : MonoBehaviour
 
         Minimax(simMy, simOpponent, 5, true, float.NegativeInfinity, float.PositiveInfinity, true,
                 out string action, out MoveInfo move, out int swapIndex);
-
-        Debug.Log($"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} fainted!");
-        Debug.Log("-------------------------------------------------------------------------------------");
-
-        isTextDone = false;
-        ActionText.text = $"{ActingParty.Trainer.name}'s {ActingParty.MonTeam[ActingParty.currentMon].name} fainted!";
-        typewriter.SendMessage("PrepareForNewText", ActionText);
-        yield return new WaitUntil(() => isTextDone);
-        yield return new WaitForSeconds(waitTime);
-
-        ActingParty.MonAnimator.Play($"Faint");
-        yield return StartCoroutine(WaitForAnimation(ActingParty.MonAnimator, $"Faint"));
 
         ActingParty.currentMon = swapIndex;
 
@@ -484,24 +547,25 @@ public class Battle : MonoBehaviour
         if (AtkParty.moveSelected.name == "Struggle")
         {
             isTextDone = false;
-            ActionText.text = $"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} has no moves left it can use!";
+            ActionText.text = $"{AtkParty.MonTeam[AtkParty.currentMon].name} has no moves left it can use!";
             typewriter.SendMessage("PrepareForNewText", ActionText);
             yield return new WaitUntil(() => isTextDone);
             yield return new WaitForSeconds(waitTime);
         }
 
         isTextDone = false;
-        ActionText.text = $"{AtkParty.Trainer.name}'s {AtkParty.MonTeam[AtkParty.currentMon].name} used {AtkParty.moveSelected.name}!";
+        ActionText.text = $"{AtkParty.MonTeam[AtkParty.currentMon].name} used {AtkParty.moveSelected.name}!";
         typewriter.SendMessage("PrepareForNewText", ActionText);
         yield return new WaitUntil(() => isTextDone);
         yield return new WaitForSeconds(waitTime);
-
         AtkParty.TextBoxCanvas.alpha = 0;
         DefParty.TextBoxCanvas.alpha = 0;
+        yield return new WaitForSeconds(waitTime/5);
 
-        AtkParty.AttackAnimator.Play($"{AtkParty.moveSelected.name}");
+        AtkParty.AttackAnimator.Play($"{AtkParty.moveSelected.name}", -1, 0f);
 
         yield return StartCoroutine(WaitForAnimation(AtkParty.AttackAnimator, $"{AtkParty.moveSelected.name}"));
+        yield return new WaitForSeconds(waitTime/2);
 
         isAnimationDone = true;
         
@@ -539,8 +603,6 @@ public class Battle : MonoBehaviour
             if (AtkParty.moveSelected.recoilType != "Total Health")
                 trainerDmg = (int)(AtkParty.MonTeam[AtkParty.currentMon].stats.total_health * AtkParty.moveSelected.recoil);
 
-            AtkParty.TextBoxCanvas.alpha = 1;
-            DefParty.TextBoxCanvas.alpha = 1;
             yield return StartCoroutine(HealthBarTicker(AtkParty, trainerDmg, isTrainer1, false));
         }
 
@@ -734,9 +796,13 @@ public class Battle : MonoBehaviour
     List<(string, MoveInfo, int)> GetAllActions(MonParty party, MonParty opponent, bool isSwapping)
     {
         var actions = new List<(string, MoveInfo, int)>();
+        if (party.currentMon < 0 || party.currentMon >= party.MonTeam.Count)
+        {
+            party.currentMon = 0;
+        }
         var mon = party.MonTeam[party.currentMon];
 
-        Debug.Log($"[AI] {party.Trainer.name}'s simulated currentMon is: {party.currentMon}, HP: {party.MonTeam[party.currentMon].stats.health}");
+        //Debug.Log($"[AI] {party.Trainer.name}'s simulated currentMon is: {party.currentMon}, HP: {party.MonTeam[party.currentMon].stats.health}");
 
 
         if (mon.stats.health <= 0 || party.MonTeam[party.currentMon].stats.health <= 0)
@@ -767,9 +833,9 @@ public class Battle : MonoBehaviour
         // Gets all available mons which have not fainted yet
         for (int i = 0; i < party.MonTeam.Count; i++)
         {
-            if (i != party.currentMon && party.MonTeam[i].stats.health > 0)
+            if (i != party.currentMon && party.MonTeam[i].stats.health > 0 || party.MonTeam[i].stats.health > 0 && isSwapping)
             {
-                Debug.Log($"{party.Trainer.name}'s {party.MonTeam[i].name}");
+                //Debug.Log($"{party.Trainer.name}'s {party.MonTeam[i].name}");
                 actions.Add(("Swap", null, i));
             }
         }
@@ -865,7 +931,6 @@ public class Battle : MonoBehaviour
     float TypeCheck(string moveType, string defType)
     {
         TypeInfo targetType = typeDatabase.GetTypeByName(moveType);
-
         if (moveType == "Typeless")
             return 1f;
         // No 2nd type
@@ -886,16 +951,22 @@ public class Battle : MonoBehaviour
     }
 
     float EvaluateGameState(MonParty myParty, MonParty opponentParty)
+{
+    float myScore = 0;
+    float opponentScore = 0;
+
+    foreach (var mon in myParty.MonTeam)
     {
-        float myScore = 0;
-        float opponentScore = 0;
-
-        foreach (var mon in myParty.MonTeam)
-            myScore += mon.stats.health;
-
-        foreach (var mon in opponentParty.MonTeam)
-            opponentScore += mon.stats.health;
-
-        return myScore - opponentScore;
+        float ratio = mon.stats.health / (float)mon.stats.total_health;
+        myScore += mon.stats.health + (ratio < 0.3f ? -20 : 0); // Penalize low-HP mons
     }
+
+    foreach (var mon in opponentParty.MonTeam)
+    {
+        float ratio = mon.stats.health / (float)mon.stats.total_health;
+        opponentScore += mon.stats.health + (ratio < 0.3f ? -20 : 0);
+    }
+
+    return myScore - opponentScore;
+}
 }

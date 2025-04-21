@@ -11,8 +11,12 @@ public class TrainerInfo
     public int heal_priority;
     public int swap_priority;
     public string spriteName;
+    public string winText;
+    public string loseText;
+    public string introSFX;
 
-    public TrainerInfo(string name, int attack_priority, int heal_threshold, int heal_priority, int swap_priority, string spriteName)
+    public TrainerInfo(string name, int attack_priority, int heal_threshold, int heal_priority, int swap_priority, string spriteName, 
+        string winningText, string lossingText, string introSFX)
     {
         this.name = name;
         this.attack_priority = attack_priority;
@@ -20,6 +24,9 @@ public class TrainerInfo
         this.heal_priority = heal_priority;
         this.swap_priority = swap_priority;
         this.spriteName = spriteName;
+        this.winText = winningText;
+        this.loseText = lossingText;
+        this.introSFX = introSFX;
     }
 
     public TrainerInfo Clone()
@@ -30,7 +37,10 @@ public class TrainerInfo
             heal_threshold,
             heal_priority,
             swap_priority,
-            spriteName
+            spriteName,
+            winText,
+            loseText,
+            introSFX
         );
     }
 }

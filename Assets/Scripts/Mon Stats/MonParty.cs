@@ -22,6 +22,7 @@ public class MonParty
     public Animator AttackAnimator;
     public Animator MonAnimator;
     public CanvasGroup TextBoxCanvas;
+    public AudioSource audiosource;
 
     public MonParty() 
     {

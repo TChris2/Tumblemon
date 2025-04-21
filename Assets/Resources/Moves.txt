@@ -94,8 +94,8 @@ Recoil: 0
 Recoil Type: None
 Animation Name: None
 
-Name: Posion Jab
-Type: Posion
+Name: Poison Jab
+Type: Poison
 Attack Type: Physical
 Power: 80
 Accuracy: 100
@@ -178,8 +178,8 @@ Recoil: 0
 Recoil Type: None
 Animation Name: None
 
-Name: Cross Posion
-Type: Posion
+Name: Cross Poison
+Type: Poison
 Attack Type: Physical
 Power: 70
 Accuracy: 100
@@ -202,7 +202,7 @@ Recoil: 0
 Recoil Type: None
 Animation Name: None
 
-Name: Nigth Slash
+Name: Night Slash
 Type: Dark
 Attack Type: Physical
 Power: 70

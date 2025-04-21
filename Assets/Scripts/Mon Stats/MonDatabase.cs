@@ -94,6 +94,7 @@ public class MonDatabase : MonoBehaviour
                         string[] moves = value.Split(new string[] { ", " }, System.StringSplitOptions.None);
                         foreach (string move in moves)
                         {
+                            Debug.Log(move.Trim());
                             MoveInfo monMove = moveDatabase.GetMoveByName(move.Trim());
                             if (monMove.name != "")
                                 currentMon.moveList.Add(monMove);

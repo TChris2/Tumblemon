@@ -1,13 +1,39 @@
 Name: Trainer 1
-Attack Priority: 20
+Attack Priority: 0
 Heal Threshold: 60
-Heal Priority: 10
-Swap Priority: 1
+Heal Priority: 0
+Swap Priority: 0
 Sprite Name: None
+Win Text: \n\n\naaa
+Lose Text: \n\n\naaa
+Intro SFX: \n\n\naaa
 
 Name: Trainer 2
-Attack Priority: 30
+Attack Priority: 10
+Heal Threshold: 80
+Heal Priority: 0
+Swap Priority: 0
+Sprite Name: None
+Win Text: \n\n\naaa
+Lose Text: \n\n\naaa
+Intro SFX: \n\n\naaa
+
+Name: Jade
+Attack Priority: 3
 Heal Threshold: 60
-Heal Priority: 10
+Heal Priority: 1
+Swap Priority: 2
+Sprite Name: None
+Win Text: \n\n\naaa
+Lose Text: \n\n\naaa
+Intro SFX: \n\n\naaa
+
+Name: John Golf
+Attack Priority: 5
+Heal Threshold: 80
+Heal Priority: 0
 Swap Priority: 1
 Sprite Name: None
+Win Text: I'll see you in court!
+Lose Text: Damn brat... I'll sue!
+Intro SFX: I'll Show You A Job

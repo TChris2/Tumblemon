@@ -8,7 +8,7 @@ Special Attack: 80
 Defense: 95
 Special Defense: 85
 Speed: 102
-Moves: Dragon Breath, Crunch
+Moves: Dragon Breath, Crunch, Earthquake
 Sprite Name: None
 
 Name: Dewott
@@ -34,7 +34,7 @@ Special Attack: 111
 Defense: 88
 Special Defense: 101
 Speed: 60
-Moves: Surf, Rock Slide
+Moves: Surf, Rock Slide, Blizzard
 Sprite Name: None
 
 Name: Crobat
@@ -47,7 +47,7 @@ Special Attack: 70
 Defense: 80
 Special Defense: 80
 Speed: 130
-Moves: Aerial Ace, Shadow Ball
+Moves: Aerial Ace, Shadow Ball, Cross Poison
 Sprite Name: None
 
 Name: Rapidash
@@ -60,10 +60,10 @@ Special Attack: 80
 Defense: 70
 Special Defense: 80
 Speed: 105
-Moves: Posion Jab, Flamethrower
+Moves: Poison Jab, Flamethrower
 Sprite Name: None
 
-Name: Gaedevoir
+Name: Gardevoir
 Type1: Psychic
 Type2:
 Level: 50
@@ -87,4 +87,43 @@ Defense: 79
 Special Defense: 79
 Speed: 70
 Moves: Crunch, Thunderbolt
+Sprite Name: None
+
+Name: Samurai Dan
+Type1: Steel
+Type2: Fighting
+Level: 50
+Health: 70
+Attack: 110
+Special Attack: 115
+Defense: 70
+Special Defense: 70
+Speed: 90
+Moves: Aerial Ace, Night Slash, Cross Poison, Shadow Ball
+Sprite Name: None
+
+Name: Rumble Toad Game
+Type1: Grass
+Type2: Poison
+Level: 50
+Health: 90
+Attack: 100
+Special Attack: 90
+Defense: 60
+Special Defense: 60
+Speed: 80
+Moves: Crunch, Poison Jab, Cross Poison, Body Slam, Thunderbolt
+Sprite Name: None
+
+Name: Drift Queen
+Type1: Ground
+Type2: Steel
+Level: 50
+Health: 109
+Attack: 81
+Special Attack: 66
+Defense: 99
+Special Defense: 84
+Speed: 32
+Moves: Aerial Ace, Rock Slide, Earthquake, Body Slam
 Sprite Name: None

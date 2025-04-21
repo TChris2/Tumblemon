@@ -9,15 +9,22 @@ public class PartySelect : MonoBehaviour
     private MonDatabase monDatabase;
     private MoveDatabase moveDatabase;
     private TrainerDatabase trainerDatabase;
+    private Animator animator;
     
     public MonParty Trainer1Party;
     public MonParty Trainer2Party;
+    private AudioSource audiosource;
+    [SerializeField]
+    private AudioClip battleMusic;
 
     private void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
+        audiosource = FindObjectOfType<AudioSource>();
         monDatabase = GetComponent<MonDatabase>();
         moveDatabase = GetComponent<MoveDatabase>();
         trainerDatabase = GetComponent<TrainerDatabase>();
+        animator = GameObject.Find("Canvas").GetComponent<Animator>();
 
         if (SceneManager.GetActiveScene().name == "Team Select")
         {
@@ -43,21 +50,39 @@ public class PartySelect : MonoBehaviour
     private void TestPartySelect1()
     {   
         Trainer1Party.potionCount = 3;
-        AddTrainer(Trainer1Party, "Trainer 1");
-        SelectMon(Trainer1Party, "Dewott");
-        AddMove(Trainer1Party, 0, "Razor Shell");
+        AddTrainer(Trainer1Party, "Jade");
         SelectMon(Trainer1Party, "Garchomp");
-        AddMove(Trainer1Party, 1, "Dragon Breath");
+        AddMove(Trainer1Party, 0, "Dragon Breath");
+        AddMove(Trainer1Party, 0, "Crunch");
+        SelectMon(Trainer1Party, "Crobat");
+        AddMove(Trainer1Party, 1, "Aerial Ace");
+        AddMove(Trainer1Party, 1, "Cross Posion");
+        AddMove(Trainer1Party, 1, "Shadow Ball");
+        SelectMon(Trainer1Party, "Empoleon");
+        AddMove(Trainer1Party, 2, "Surf");
+        AddMove(Trainer1Party, 2, "Rock Slide");
+        AddMove(Trainer1Party, 2, "Blizzard");
     }
 
     private void TestPartySelect2()
     {
-        Trainer2Party.potionCount = 3;
-        AddTrainer(Trainer2Party, "Trainer 2");
-        SelectMon(Trainer2Party, "Garchomp");
-        AddMove(Trainer2Party, 0, "Dragon Breath");
-        SelectMon(Trainer2Party, "Dewott");
-        AddMove(Trainer2Party, 1, "Razor Shell");
+        Trainer2Party.potionCount = 0;
+        AddTrainer(Trainer2Party, "John Golf");
+        SelectMon(Trainer2Party, "Samurai Dan");
+        AddMove(Trainer2Party, 0, "Aerial Ace");
+        AddMove(Trainer2Party, 0, "Night Slash");
+        AddMove(Trainer2Party, 0, "Cross Posion");
+        AddMove(Trainer2Party, 0, "Shadow Ball");
+        SelectMon(Trainer2Party, "Rumble Toad Game");
+        AddMove(Trainer2Party, 1, "Crunch");
+        AddMove(Trainer2Party, 1, "Posion Jab");
+        AddMove(Trainer2Party, 1, "Cross Posion");
+        AddMove(Trainer2Party, 1, "Body Slam");
+        SelectMon(Trainer2Party, "Drift Queen");
+        AddMove(Trainer2Party, 2, "Aerial Ace");
+        AddMove(Trainer2Party, 2, "Rock Slide");
+        AddMove(Trainer2Party, 2, "Earthquake");
+        AddMove(Trainer2Party, 2, "Blizzard");
     }
 
     public void SelectMon(MonParty party, string monName)
@@ -126,7 +151,8 @@ public class PartySelect : MonoBehaviour
 
     public void StartBattle()
     {
-        DontDestroyOnLoad(this.gameObject);
-        SceneManager.LoadScene("Battle");
+        audiosource.clip = battleMusic;
+        audiosource.Play();
+        animator.Play("Battle Start");
     }
 }
