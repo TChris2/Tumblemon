@@ -18,7 +18,7 @@ Win Text: \n\n\naaa
 Lose Text: \n\n\naaa
 Intro SFX: \n\n\naaa
 
-Name: Jade
+Name: Small Child
 Attack Priority: 3
 Heal Threshold: 60
 Heal Priority: 1
